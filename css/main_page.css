@@ -234,3 +234,10 @@ body {
     }
 }
 
+.container_white {         /* container of body of aboutus page */
+    background-color: rgb(255, 255, 255);
+ }
+ 
+.smallerCard {
+    margin:0px 100px 0px 100px;
+}
