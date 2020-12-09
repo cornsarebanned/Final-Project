@@ -1,0 +1,37 @@
+[
+    {
+        "productId": 1,
+        "productName": "Chocolate Cake",
+        "description": "Best Seller",
+        "price": 19.95,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+        "productId": 2,
+        "productName": "Strawberry Cake",
+        "description": "Best Seller",
+        "price": 19.95,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+        "productId": 3,
+        "productName": "Pandan Cake",
+        "description": "Best Seller",
+        "price": 19.95,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+        "productId": 4,
+        "productName": "Banana Cake",
+        "description": "Best Seller",
+        "price": 19.95,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+        "productId": 5,
+        "productName": "Ice Cream Cake",
+        "description": "Best Seller",
+        "price": 19.95,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    }
+]
