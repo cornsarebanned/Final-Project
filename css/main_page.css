@@ -96,7 +96,7 @@ body {
 
 .carousel-item > img{               /* size of images on carousel*/
     object-fit:cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
-    height:350px !important;        /* to resize height of carousel*/
+    height:390px !important;        /* to resize height of carousel*/
 }
 
 #terms_fonts{
