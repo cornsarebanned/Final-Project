@@ -12,23 +12,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
   <!-- stylesheet main_page -->
   <link rel="stylesheet" type="text/css" href="css/cakes.css" media="screen" />
 
-  <title>APPEASEOFCAKE</title>
-
-
+  <title>A-CAKES</title>
 
 </head>
 
 <body>
   <header>
     <div class="container container_0">
-      <p id="free_deliv_font">Free delivery for orders above $150</p>
+      <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
     </div>
 
     <!--Navbar-->
-    <div class="container">
+    <div class="container container_nav">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
         <div class="company_logo navbar-brand">
@@ -51,36 +51,150 @@
           <ul class="navbar-nav ml-auto">
             <!--  shifting nav links to the right side of the page -->
             <li class="navbar-item active"><a href="#">Cakes</a></li>
-            <li class="navbar-item"><a href="#">About</a></li>
-            <li class="navbar-item"><a href="#">Contact</a></li>
-            <li class="navbar-item"><a href="#">Login</a></li>
-            <li class="navbar-item"><a href="#">Register</a></li>
+            <li class="navbar-item"><a href="about_us.html">About</a></li>
+            <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
+            <li class="navbar-item"><a href="#">Cart</a></li>
           </ul>
+
+          <!--Modal: Login / Register Form-->
+
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog cascading-modal" role="document">
+              <!--Content-->
+              <div class="modal-content">
+
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
+                          class="fas fa-user mr-1"></i>
+                        Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+                          class="fas fa-user-plus mr-1"></i>
+                        Register</a>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panels -->
+                  <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                      <!--Body-->
+                      <div class="modal-body mb-1">
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-envelope prefix"></i>
+                          <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-4">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                        </div>
+                        <div class="text-center mt-2">
+                          <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+                        </div>
+                      </div>
+                      <!--Footer-->
+                      <div class="modal-footer">
+                        <div class="options text-center text-md-right mt-1">
+                          <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                          <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                          data-dismiss="modal">Close</button>
+                      </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                      <!--Body-->
+                      <div class="modal-body">
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-envelope prefix"></i>
+                          <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-4">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                        </div>
+
+                        <div class="text-center form-sm mt-2">
+                          <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                        </div>
+
+                      </div>
+                      <!--Footer-->
+                      <div class="modal-footer">
+                        <div class="options text-right">
+                          <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                          data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    <!--/.Panel 8-->
+                  </div>
+
+                </div>
+              </div>
+              <!--/.Content-->
+            </div>
+          </div>
+          <!--End of Modal: Login / Register Form-->
+
+          <div class="text-center">
+            <a href="" class="btn btn-link" data-toggle="modal" data-target="#modalLRForm">Login / Register</a>  <!--Login Button for Modal Linkage-->
+          </div>
+
         </div>
         <!--closing for unlisted items -->
-
-
       </nav>
       <!--closing for nav -->
     </div>
     <!--closing for container -->
 
   </header>
-  <br>
-  <h1>Our Cakes</h1>
+
+
+  <div class="container">
+      <h3>Our Cakes</h3>
+  </div>
+  
+<div id="container_products" class="container">
   <div class="product-container">
     <div class="product">
-      <img class="product-img" src="images/cakes_images/chocolate_drizzle_cake.jpg">
+      <img class="product-img" src="images/cakes_images/chocolate_drizzle_cake_lg.jpg">
       <p class="product-description">Classic Chocolate Drip</p>
       <p class="product-price">$59.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/macaron_cake_small.jpg">
+      <img class="product-img" src="images/cakes_images/macaron_cake.jpg">
       <p class="product-description">Macaron</p>
       <p class="product-price">$49.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/caramel_strawberry_cake.jpg">
+      <img class="product-img" src="images/cakes_images/caramel_strawberry_cake_lg.jpg">
       <p class="product-description">Caramel Strawberry</p>
       <p class="product-price">$69.95</p>
     </div>
@@ -95,12 +209,12 @@
       <p class="product-price">$79.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/wrap_strawberry_cake.jpg">
+      <img class="product-img" src="images/cakes_images/wrap_strawberry_cake_lg.jpg">
       <p class="product-description">Strawberry Wrap</p>
       <p class="product-price">$59.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/white_apple_cake.jpg">
+      <img class="product-img" src="images/cakes_images/white_apple_cake_lg.jpg">
       <p class="product-description">White Apple</p>
       <p class="product-price">$59.95</p>
     </div>
@@ -110,16 +224,17 @@
       <p class="product-price">$69.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/xmas_theme_cake.jpg">
+      <img class="product-img" src="images/cakes_images/xmas_theme_cake_lg.jpg">
       <p class="product-description">Christmas Drip</p>
       <p class="product-price">$69.95</p>
     </div>
     <div class="product">
-      <img class="product-img" src="images/cakes_images/gingerbread_cake.jpg">
+      <img class="product-img" src="images/cakes_images/gingerbread_cake_lg.jpg">
       <p class="product-description">Gingerbread</p>
       <p class="product-price">$49.95</p>
     </div>
   </div>
+</div>
 
 
 
