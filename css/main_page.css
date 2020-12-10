@@ -1,15 +1,18 @@
+ /*                                      NAVBAR css                             */
+ 
  .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
-    background-color:#f2f4f5; /* nav background color */
+    background-color:#f2f4f5;  /*nav background color */
+    
  }
 
  .container_0{
      /* background-color: transparent; */
      background-color: #343346;
-     padding: 0px 0px;
+     padding: 1px 0px;
      margin-top:9px;
  }
 
@@ -66,12 +69,36 @@ body {
     width: 100%;
 }
 
-/* carousel css */
-.carousel-inner > .item > img {
+/*                                      carousel css                                */
+
+.carousel{
     width:100%;
-    height:100vh;
+    border: 4px solid #343346;  
   }
 
+.carousel-inner{
+   height:100%;              /* make sure .items will get correct height */
+   width:100%;  
+}
+
+.carousel-item{                     /* the sliding pages on carousel */
+    background-size:cover;
+    background-position: 50% 50%;
+    width:100%;
+    height:100%;     
+} 
+
+.carousel-item > img{               /* size of images on carousel*/
+    object-fit:cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+    height:300px !important;        /* to resize height of carousel*/
+}
+
+#terms_fonts{
+    font-size: smaller;
+}
+
+
+  
 /* media queries */
 @media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
     .navbar_toggler{
