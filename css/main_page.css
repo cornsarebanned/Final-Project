@@ -6,16 +6,22 @@
     margin-right:auto;
     margin-left:auto;
     background-color:#f2f4f5;  /*nav background color */
-    
+    padding-top:0px; 
  }
 
  .container_0{
      /* background-color: transparent; */
      background-color: #343346;
-     padding: 1px 0px;
-     margin-top:9px;
+     padding: 0px 0px;
+     margin-top:7px;
+     line-height:26px;
  }
 
+ .container_nav{                    
+     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
+     margin-top: -5px;
+ }
+ 
   #free_deliv_font{          /*"Free delivery font", first row */
      color: white;
      font-size: small;
