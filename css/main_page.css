@@ -1,4 +1,4 @@
- /*                                      NAVBAR css                             */
+ /*-------------------------------------(start)NAVBAR css ----------------------------------*/
  
  .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
@@ -74,8 +74,9 @@ body {
     height: 100%;
     width: 100%;
 }
+/*-------------------------------------(end)NAVBAR css ----------------------------------*/
 
-/*                                      carousel css                                */
+/*--------------------------------------(start)carousel css-------------------------------*/
 
 .carousel{
     width:100%;
@@ -103,8 +104,12 @@ body {
     font-size: smaller;
 }
 
+/*--------------------------------------(end)carousel css-------------------------------*/
 
   
+
+/*-------------------------------(start)Media queries for navbar------------------------*/
+
 /* media queries */
 @media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
     .navbar_toggler{
@@ -271,10 +276,6 @@ body {
     }
 }
 
-.container_white {         /* container of body of aboutus page */
-    background-color: rgb(255, 255, 255);
- }
- 
-.smallerCard {
-    margin:0px 100px 0px 100px;
-}
+/*-------------------------------(end)Media queries for navbar------------------------*/
+
+

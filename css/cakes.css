@@ -1,19 +1,27 @@
-.container {         /* container of navigation bar, bs containers are padded, need to remove them*/
+ /*-------------------------------------(start)NAVBAR css ----------------------------------*/
+ 
+ .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
-    background-color:#f2f4f5 /* nav background color */
-    ;
+    background-color:#f2f4f5;  /*nav background color */
+    padding-top:0px; 
  }
 
  .container_0{
      /* background-color: transparent; */
      background-color: #343346;
      padding: 0px 0px;
-     margin-top:9px;
+     margin-top:7px;
+     line-height:26px;
  }
 
+ .container_nav{                    
+     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
+     margin-top: -5px;
+ }
+ 
   #free_deliv_font{          /*"Free delivery font", first row */
      color: white;
      font-size: small;
@@ -23,8 +31,8 @@
 
 
 .logo_image{                /* cake image */
-    height:45px;
-    width:45px;
+    height:44px;
+    width:44px;
     position: relative;
     left: 15px;    
 }
@@ -61,6 +69,14 @@ ul > li >a{                 /*change font for <li> items*/
     padding-right: 3px;
     margin-left: 20px;
 }
+
+body {
+    height: 100%;
+    width: 100%;
+}
+/*-------------------------------------(end)NAVBAR css----------------------------------*/
+
+/*------------------------------ (start) Cakes Cards------------------------------------*/
 
 .container > h3{
     background-color:white;
@@ -112,12 +128,9 @@ h3 {
 }
 
 
+/*------------------------------ (start) Cakes Cards------------------------------------*/
 
-
-
-
-
-
+/*-------------------------------(start)Media queries for navbar------------------------*/
 
 /* media queries */
 @media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
@@ -285,3 +298,4 @@ h3 {
     }
 }
 
+/*-------------------------------(end)Media queries for navbar------------------------*/
