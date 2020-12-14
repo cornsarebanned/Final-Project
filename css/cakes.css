@@ -1,19 +1,27 @@
+/*-------------------------------------(start)NAVBAR css ----------------------------------*/
+ 
 .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
-    background-color:#f2f4f5 /* nav background color */
-    ;
+    background-color:#f2f4f5;  /*nav background color */
+    padding-top:0px; 
  }
 
  .container_0{
      /* background-color: transparent; */
      background-color: #343346;
      padding: 0px 0px;
-     margin-top:9px;
+     margin-top:7px;
+     line-height:26px;
  }
 
+ .container_nav{                    
+     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
+     margin-top: -5px;
+ }
+ 
   #free_deliv_font{          /*"Free delivery font", first row */
      color: white;
      font-size: small;
@@ -23,8 +31,8 @@
 
 
 .logo_image{                /* cake image */
-    height:45px;
-    width:45px;
+    height:44px;
+    width:44px;
     position: relative;
     left: 15px;    
 }
@@ -62,42 +70,46 @@ ul > li >a{                 /*change font for <li> items*/
     margin-left: 20px;
 }
 
-.container > h3{
-    background-color:white;
+body {
+    height: 100%;
+    width: 100%;
+}
+/*-------------------------------------(end)NAVBAR css ----------------------------------*/
+/*-------------------------------------(start)Cards css ----------------------------------*/
+.container_caketitle{       
+    background:white;
+    margin-top: 20px;   
+    position: relative;
+    text-align:center;
 }
 
-h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto Slab', serif;
-    /* font-size: 58px; */
-    margin-top:19px;
+h3{
+    color: #343346;
 }
 
 #container_products{
     background-color:white;
+    margin-top:20px;
 }
-
-/* .product-img {
-    width: 300px;
-    height: 380px;
-    margin: 25px 40px 10px 40px;
-    object-fit: cover; 
-} */
 
 .product-description {
     display: flex;
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:bold;
+    font-size: 16px;
     justify-content: center;
     align-items: center;
 }
 
+.indi-product{
+    margin-top:-10px;
+}
+
+
 .product-price {
     display: flex;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 21px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
     justify-content: center;
     align-items: center;
 }
@@ -172,8 +184,9 @@ h3 {
     margin: 0%;
 }
 
+/*-------------------------------------(end)Cards css ----------------------------------*/
 
-
+/*-------------------------------------(start)Media queries for Navbar----------------------------------*/
 
 /* media queries */
 @media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
@@ -340,4 +353,5 @@ h3 {
         width: 41px; 
     }
 }
+/*-------------------------------------(end) Media queries for Navbar----------------------------------*/
 
