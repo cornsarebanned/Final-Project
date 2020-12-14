@@ -1,27 +1,19 @@
- /*-------------------------------------(start)NAVBAR css ----------------------------------*/
- 
- .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
+.container {         /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
-    background-color:#f2f4f5;  /*nav background color */
-    padding-top:0px; 
+    background-color:#f2f4f5 /* nav background color */
+    ;
  }
 
  .container_0{
      /* background-color: transparent; */
      background-color: #343346;
      padding: 0px 0px;
-     margin-top:7px;
-     line-height:26px;
+     margin-top:9px;
  }
 
- .container_nav{                    
-     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
-     margin-top: -5px;
- }
- 
   #free_deliv_font{          /*"Free delivery font", first row */
      color: white;
      font-size: small;
@@ -31,8 +23,8 @@
 
 
 .logo_image{                /* cake image */
-    height:44px;
-    width:44px;
+    height:45px;
+    width:45px;
     position: relative;
     left: 15px;    
 }
@@ -70,14 +62,6 @@ ul > li >a{                 /*change font for <li> items*/
     margin-left: 20px;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-}
-/*-------------------------------------(end)NAVBAR css----------------------------------*/
-
-/*------------------------------ (start) Cakes Cards------------------------------------*/
-
 .container > h3{
     background-color:white;
 }
@@ -95,13 +79,12 @@ h3 {
     background-color:white;
 }
 
-.product-img {
-    border: 3px solid black;
+/* .product-img {
     width: 300px;
     height: 380px;
     margin: 25px 40px 10px 40px;
     object-fit: cover; 
-}
+} */
 
 .product-description {
     display: flex;
@@ -127,10 +110,70 @@ h3 {
     flex-wrap: wrap;
 }
 
+.product-container .product-hvr{
+    position:relative;
+    width: 355px;
+    height:355px;
+    /* background:pink; */
+    margin: 15px 10px 10px 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
 
-/*------------------------------ (start) Cakes Cards------------------------------------*/
+.product-container .product-hvr .product{
+    position: relative;
+    overflow: hidden;
+}
 
-/*-------------------------------(start)Media queries for navbar------------------------*/
+.product-container .product-hvr .product img{
+    object-fit: cover; 
+    min-width: 100% !important;   
+    height: 355px !important; 
+    transition: transform 1.2s;
+}
+
+.product-container .product-hvr:hover .product img{
+    transform: scale(1.2);
+}
+
+.product-container .product-hvr .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    transform: scaleY(0);
+    transition:transform 1s;
+}
+
+.product-container .product-hvr:hover .details{
+    transform: scaleY(1);
+}
+
+.product-container .product-hvr .details .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.product-container .product-hvr .details .content h5{
+    color: orange;
+}
+
+.container .product-container .indi-product {
+    margin-bottom: 30px;
+}
+
+.container .product-container .indi-product p {
+    margin: 0%;
+}
+
+
+
 
 /* media queries */
 @media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
@@ -298,4 +341,3 @@ h3 {
     }
 }
 
-/*-------------------------------(end)Media queries for navbar------------------------*/
