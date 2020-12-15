@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+  <!-- stylesheet main_page -->
+  <link rel="stylesheet" type="text/css" href="css/cakes.css" media="screen" />
+
+  <title>A-CAKES</title>
+
+</head>
+
+<body>
+  <!----------------------------------------------------------(start)NAVBAR--------------------------------------------------------->
+  <header>
+    <div class="container container_0">
+      <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+    </div>
+
+    <!--Navbar-->
+    <div class="container container_nav">
+      <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
+
+        <div class="company_logo navbar-brand">
+          <!--div created to contain the cake image and name of company together -->
+          <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png"
+              alt="company logo"></a>
+        </div>
+        <h6 class="appeaseofcake_font">appeaseofcake</h6>
+
+
+        <div>
+          <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
+            aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
+              class="navbar-toggler-icon"></span></button>
+          <!--Button to toggle nav collapse -->
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarContents">
+          <!--collapsing nav -->
+          <ul class="navbar-nav ml-auto">
+            <!--  shifting nav links to the right side of the page -->
+            <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
+            <li class="navbar-item"><a href="about_us.html">About</a></li>
+            <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
+            <li class="navbar-item"><a href="#">Cart</a></li>
+          </ul>
+
+          <!--Modal: Login / Register Form-->
+
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog cascading-modal" role="document">
+              <!--Content-->
+              <div class="modal-content">
+
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
+                          class="fas fa-user mr-1"></i>
+                        Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+                          class="fas fa-user-plus mr-1"></i>
+                        Register</a>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panels -->
+                  <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                      <!--Body-->
+                      <div class="modal-body mb-1">
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-envelope prefix"></i>
+                          <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-4">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                        </div>
+                        <div class="text-center mt-2">
+                          <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+                        </div>
+                      </div>
+                      <!--Footer-->
+                      <div class="modal-footer">
+                        <div class="options text-center text-md-right mt-1">
+                          <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                          <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                          data-dismiss="modal">Close</button>
+                      </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                      <!--Body-->
+                      <div class="modal-body">
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-envelope prefix"></i>
+                          <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-5">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-4">
+                          <i class="fas fa-lock prefix"></i>
+                          <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                          <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                        </div>
+
+                        <div class="text-center form-sm mt-2">
+                          <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                        </div>
+
+                      </div>
+                      <!--Footer-->
+                      <div class="modal-footer">
+                        <div class="options text-right">
+                          <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                          data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    <!--/.Panel 8-->
+                  </div>
+
+                </div>
+              </div>
+              <!--/.Content-->
+            </div>
+          </div>
+          <!--End of Modal: Login / Register Form-->
+
+          <div class="text-center">
+            <a href="" class="btn btn-link" data-toggle="modal" data-target="#modalLRForm">Login / Register</a>  <!--Login Button for Modal Linkage-->
+          </div>
+
+        </div>
+        <!--closing for unlisted items -->
+      </nav>
+      <!--closing for nav -->
+    </div>
+    <!--closing for container -->
+
+
+  </header>
+ <!----------------------------------------------------------(End)NAVBAR------------------------------------------------------------>
+ <!----------------------------------------------------------(Start)title"CAKE"----------------------------------------------------->
+ <div class="container container_caketitle">
+      <h3>CAKES</h3>
+ </div>
+ <!----------------------------------------------------------(End)title"CAKE"----------------------------------------------------->
+ <!----------------------------------------------------------(Start)Cards------------------------------------------------------------>
+  <div id="container_products" class="container">
+    <div class="product-container">
+      <div class="row">
+        <div class="col">
+          <img src="images/cakes_images/artistic_cake_grass.jpg" width="300" height="400">
+        </div>
+        <div class="col">
+          <h1 id="cake-title">CAKE CAKE CAKE</h1>
+          <p id="cake-des">THIS IS A CAKETHIS IS A CAKETHIS IS A CAKETHIS IS A CAKE</p>
+          <ul>
+            <li>100% Organic</li>
+            <li>100% Delicious</li>
+            <li>Same Day Delivery</li>
+          </ul>
+          <form action="/cart.php">
+            <label for="size">Choose Cake Size: </label>
+            <select name="cake_size" id="size">
+              <option value="6_inch">6 Inch</option>
+              <option value="8_inch">8 Inch</option>
+              <option value="10_inch">10 Inch</option>
+            </select><br>
+            <label for="candles">Birthday Candles:</label>
+            <select name="candles" id="candles">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select><br>
+            <label for="number_of_candles">Number of Candles: </label>
+              <input type="number" id="number" name="number_of_candles" min="1" max="120">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!----------------------------------------------------------(End)Cards------------------------------------------------------------>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
