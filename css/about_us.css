@@ -1,0 +1,249 @@
+/*-------------------------------------(start)NAVBAR css ----------------------------------*/
+ 
+.container {         /* container of navigation bar, bs containers are padded, need to remove them*/
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#f2f4f5;  /*nav background color */
+    padding-top:0px; 
+ }
+
+ .container_0{
+     /* background-color: transparent; */
+     background-color: #343346;
+     padding: 0px 0px;
+     margin-top:7px;
+     line-height:26px;
+ }
+
+ .container_nav{                    
+     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
+     margin-top: -5px;
+ }
+ 
+  #free_deliv_font{          /*"Free delivery font", first row */
+     color: white;
+     font-size: small;
+     font-family: 'Montserrat', sans-serif;
+     text-align: center;
+ }
+
+
+.logo_image{                /* cake image */
+    height:44px;
+    width:44px;
+    position: relative;
+    left: 15px;    
+}
+
+.company_logo{              /* div that wraps around company logo and name */
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:0;
+    padding:2px;
+/*  margin-left:auto;
+    margin-right:auto; */   /* if logo wants to be centered */
+}
+
+.appeaseofcake_font{        /* font "appeaseofcake" <h6> */
+    position: relative;
+    left: 0px;
+    top: 8px;
+    color:#fa2871;
+    font-size: 22px;
+    font-family: 'PT Mono', monospace;
+    letter-spacing: 3px;
+           
+}
+
+ul > li{                    /*remove dot from listed items*/
+    list-style-type: none;
+    
+}
+
+ul > li >a{                 /*change font for <li> items*/
+    color: grey;    
+    font-size: 16px;
+    font-family: 'PT Mono', monospace;
+    padding-right: 3px;
+    margin-left: 20px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+/*-------------------------------------(end)NAVBAR css ----------------------------------*/
+
+
+
+/*-------------------------------(start)Media queries for navbar------------------------*/
+
+/* media queries */
+@media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
+    .navbar_toggler{
+        visibility:hidden;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    ul > li >a{                     
+        font-size: 15px;
+        padding-right: 9px;
+    }
+
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 22px;
+    }
+
+    .logo_image{                
+        height:43px;
+        width:43px;  
+    }
+}
+
+@media screen and (max-width: 994px){
+    ul > li >a{                     
+        font-size: 13px;
+        padding-right: 8px;
+    }
+
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 20px;
+    }
+
+    .logo_image{                
+        height:41px;
+        width:41px;  
+    }
+}
+
+@media screen and (max-width: 961px){
+    ul > li >a{                     
+        font-size: 12px;
+        padding-right: 2px;
+    }
+
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 18px;
+    }
+
+    .logo_image{                
+        height:39px;
+        width:39px;  
+    }
+}
+
+@media screen and (max-width: 768px){
+    ul > li >a{                     
+        font-size: 12px;
+        padding-right: 2px;
+    }
+
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 25px; 
+    }
+
+    .logo_image{                
+        margin-left: 0px;
+        height:42px;
+        width: 42px; 
+    }
+}
+
+@media screen and (max-width: 574px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 27px; 
+    }
+
+    .logo_image{                
+        margin-left: 0px;
+        height:43px;
+        width: 43px; 
+    }
+}
+
+@media screen and (max-width: 526px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 26px; 
+    }
+
+    .logo_image{                
+        margin-left: 0px;
+        height:42px;
+        width: 42px; 
+    }
+}
+
+@media screen and (max-width: 451px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 24px; 
+    }
+
+    .logo_image{                
+        margin-left: 0px;
+        height:41px;
+        width: 41px; 
+    }
+}
+
+@media screen and (max-width: 412px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 24px;
+        letter-spacing:2px; 
+    }
+
+    .logo_image{                
+        margin-left: 0px;
+        height:40px;
+        width: 40px; 
+    }
+}
+
+@media screen and (max-width: 388px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 22px;
+        letter-spacing:2px; 
+    }
+
+    .logo_image{                
+        height:39px;
+        width: 39px; 
+    }
+}
+
+@media screen and (max-width: 349px){
+    .appeaseofcake_font{        
+        top: 8px;
+        font-size: 20px;
+        letter-spacing:2px; 
+    }
+
+    .logo_image{                
+        height:39px;
+        width: 39px; 
+    }
+}
+
+@media screen and (max-width: 331px){
+    .appeaseofcake_font{        
+        font-size: 0px;
+    }
+
+    .logo_image{                
+        height:41px;
+        width: 41px; 
+    }
+}
+
+/*-------------------------------(end)Media queries for navbar------------------------*/
