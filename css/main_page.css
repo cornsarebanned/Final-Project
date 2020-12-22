@@ -27,6 +27,7 @@
      font-size: small;
      font-family: 'Montserrat', sans-serif;
      text-align: center;
+     letter-spacing: 0.02em;
  }
 
 
@@ -74,13 +75,24 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.modal_button{                  /*change fonts for login/register button*/
+    text-decoration: none;
+    /* color: #fa2871; */
+    color: grey;   
+    font-family: 'PT Mono', monospace;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
 /*-------------------------------------(end)NAVBAR css ----------------------------------*/
 
 /*--------------------------------------(start)carousel css-------------------------------*/
 
 .carousel{
     width:100%;
-    border: 4px solid #343346;  
+    /* border: 4px solid #343346;   */
   }
 
 .carousel-inner{
@@ -106,7 +118,271 @@ body {
 
 /*--------------------------------------(end)carousel css-------------------------------*/
 
-  
+/*--------------------------------------(start)Login Modal css-------------------------------*/
+
+ .login_text{
+    font-family: 'Questrial', sans-serif;  /*change tab modal font*/
+}
+
+ .register_text{
+    font-family: 'Questrial', sans-serif;  /*change tab modal font*/ 
+} 
+
+
+#email_font{
+    font-family: 'Questrial', sans-serif;   /*change Login/Register Email and password font*/ 
+    font-size:16px;
+}
+
+#password_font{
+    font-family: 'Questrial', sans-serif;   /*change Login password font*/ 
+    font-size:16px;
+}
+
+input {
+    font-size: 14px;       
+    font-family: 'Questrial', sans-serif; 
+}
+
+input::-webkit-input-placeholder {  /*change login/register modal placeholder size*/
+    font-size: 14px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.login_btn{                         /*login button*/
+    font-family: 'Questrial', sans-serif;  
+    /* border-radius: 7px; */
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.signup_click{
+    font-family: 'Questrial', sans-serif;   /*Login: edit Login Sign Up link */ 
+    font-size:13px;
+}
+
+.password_click{                            /*Login: edit Login Password link */ 
+    font-family: 'Questrial', sans-serif; 
+    font-size:13px;
+}
+
+.reg_login{                                 /*Register: "Log in" link */ 
+    font-family: 'Questrial', sans-serif; 
+    font-size:13px;
+}
+
+.close_btn_modal{                           /*Register/Login Tab(Footer): Close button fonts*/
+    font-family: 'Questrial', sans-serif;
+}
+
+#notamember_font{                           /*Register/Login Tab: Footer texts fonts (non-links texts)*/
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+}
+
+.modal .modal-popout-bg {
+    background-image: url("../images/cakes_images/modal-background2.jpg");
+    /* background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80"); */
+    background-repeat : no-repeat;
+    background-size: cover;  
+    background-position: center;
+}
+
+/*--------------------------------------(end)Login Modal css-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------(start) Footer-------------------------------*/
+
+#f2020_2021{
+    font-size: 8px;
+    position: relative;
+    left: 21px;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+
+#content_box{
+    margin:0px;
+    /* border:5px dotted blue; */
+    position: relative;
+    left: 100px;
+    top: 24px;
+}
+
+.listed_item1, .listed_item2, .listed_item3{                 /* WRITE TO US (start) */
+    position: relative;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    letter-spacing: 0.09em ;
+    color: white;
+}
+
+.writetous_font_footer{                 /*  WRITE TO US (GMAIL) */
+    /* color: grey; */
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-weight: bold; */
+    position: relative;
+    top: -4px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.writetous_font_footer:hover, .writetous_font_footer2:hover{
+    color:hotpink;
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.writetous_font_footer1{                /*  WRITE TO US (HP NO.) */
+    /* color: grey; */
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+    top: 1px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.writetous_font_footer1:hover{          /*  WRITE TO US (HP NO.) HOVER */
+    color:hotpink;
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.writetous_font_footer2{                /* WRITE TO US (contact/abt us) */
+    /* color: grey; */
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    top: 2px;
+    font-weight: bold;
+    color: white;
+}
+
+/*  LOCATE US (start) */
+
+
+.address_font_footer{          /* LOCATE US (43 Tampines Ave 1) */         
+    /* color: grey; */
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    /* left: 34px; */
+    left: 16px;
+}
+
+#location_font_footer{       /* LOCATE US (Glocal Connect Village) */
+    /* color: grey; */
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    position: relative;
+    left: 16px;
+    color: white;
+}
+
+#op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+    /* color: grey; */
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    left: 16px;
+    color: white;
+}
+
+/*  FOLLOW US  (start) */
+
+
+.fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+    color:white;
+}
+
+.fa-facebook:hover{
+    color: #4267B2;
+}
+
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+
+.fa-instagram:hover{
+    color:hotpink;
+}
+
+.fa-linkedin:hover{
+    color:#0072b1;            
+}
+
+hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+    margin: 0rem 2rem 1rem 1rem;
+    border-color: grey;
+}
+
+/***************************************** copyright *****************************************/
+
+.container_copyright{
+    /* border: 5px dotted blue;  */
+    /* background-color: #343346; */
+    background-color: black;
+    padding: 1px;
+}
+
+#copyright{
+    text-align: center;
+    font-size: 9px;
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    line-height: center;
+    position: relative;
+    top: 9px;
+}
+/*----------------------------------------------(end) Footer------------------------------------*/
+
+/*------------------------------------(start) adjust footer padding ------------------------------*/
+.footer-container-1{                            
+    /* border: 2px solid blue; */                   /*To adjust padding of footer*/
+    padding-top:25px;
+    padding-bottom:75px;
+}
+
+.footer-container{
+    background-color: #343346;                /*background color for footer*/
+}
+/*------------------------------------(start) adjust footer padding ------------------------------*/
+
+
+
+
+/*-------------------------------- Footer Button (Back to top) starts here ---------------------------*/
+.container_backtotop{
+    background-color:#343346;
+    text-align: center;
+    padding-bottom:50px;
+}
+
+/* .top_button{
+    font-family: 'Montserrat', sans-serif;
+} */
+
+/*-------------------------------- Footer Button (Back to top) ends here ---------------------------*/
 
 /*-------------------------------(start)Media queries for navbar------------------------*/
 
