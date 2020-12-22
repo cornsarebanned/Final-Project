@@ -77,19 +77,19 @@ else {
 
 //Take input data and store as a new object in key/value pairs
 
-function addNewUser(regEmail,regPw,regPwAgain) {
-    var addNewUserList = JSON.parse(localStorage.getItem("addNewUserList") || "[]");
+// function addNewUser(regEmail,regPw,regPwAgain) {
+//     var addNewUserList = JSON.parse(localStorage.getItem("addNewUserList") || "[]");
       
-    var newUser = {
-      email: regEmail,
-      password: regPw,
-      passwordAgain: regPwAgain
-    };
+//     var newUser = {
+//       email: regEmail,
+//       password: regPw,
+//       passwordAgain: regPwAgain
+//     };
     
-    addNewUserList.push(newUser);
-    // addNewUserList.push(JSON.parse(localStorage.getItem('addNewUserList')));
-    console.log(addNewUserList);
+//     addNewUserList.push(newUser);
+//     // addNewUserList.push(JSON.parse(localStorage.getItem('addNewUserList')));
+//     console.log(addNewUserList);
 
-    localStorage.setItem("addNewUserList", JSON.stringify(addNewUserList));
-};
+//     localStorage.setItem("addNewUserList", JSON.stringify(addNewUserList));
+// };
     

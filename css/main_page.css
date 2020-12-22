@@ -77,14 +77,16 @@ body {
 }
 
 .modal_button{                  /*change fonts for login/register button*/
-    text-decoration: none;
-    /* color: #fa2871; */
-    color: grey;   
+    color: #2329AE;
+    /* color: grey;    */
     font-family: 'PT Mono', monospace;
     font-size: 16px;
     margin-left: 10px;
 }
 
+.modal_button:hover{
+    text-decoration: underline;
+}
 
 /*-------------------------------------(end)NAVBAR css ----------------------------------*/
 
