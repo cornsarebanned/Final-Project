@@ -1,69 +1,67 @@
- /*-------------------------------------(start)NAVBAR css ----------------------------------*/
+ /*-------------------------------------(start)NAVBAR css -----------------------------------*/
  
- .container {         /* container of navigation bar, bs containers are padded, need to remove them*/
+ .container {                           /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
-    background-color:#f2f4f5;  /*nav background color */
+    background-color:#f2f4f5;         /*nav background color */
     padding-top:0px; 
  }
 
- .container_0{
-     /* background-color: transparent; */
+ .container_0{                           /*free deliv container */
      background-color: #343346;
      padding: 0px 0px;
-     margin-top:7px;
-     line-height:26px;
+     margin-top: 7px;
+     line-height:27px;
  }
 
  .container_nav{                    
-     /* border: 5px dotted red; */    /* nav margin-top push up whitespace */
-     margin-top: -5px;
+     /* border: 5px dotted red; */       /* nav margin-top push up whitespace */
+     margin-top: -12px;
  }
  
-  #free_deliv_font{          /*"Free delivery font", first row */
+  #free_deliv_font{                      /*"Free delivery font", first row */
      color: white;
-     font-size: small;
+     font-size: 13px;
      font-family: 'Montserrat', sans-serif;
      text-align: center;
-     letter-spacing: 0.02em;
+     letter-spacing: 0.03em;
  }
 
-
-.logo_image{                /* cake image */
-    height:44px;
-    width:44px;
-    position: relative;
-    left: 15px;    
+.logo_image{                             /* cake image */
+    height:47px;
+    width:53px;
+    position: relative; 
+    left: 12px;
+    bottom:1px;
 }
 
-.company_logo{              /* div that wraps around company logo and name */
+.company_logo{                           /* div that wraps around company logo and name */
     margin-top:0;
     margin-bottom:0;
     margin-left:0;
     padding:2px;
 /*  margin-left:auto;
-    margin-right:auto; */   /* if logo wants to be centered */
+    margin-right:auto; */                /* if logo wants to be centered */
 }
 
-.appeaseofcake_font{        /* font "appeaseofcake" <h6> */
-    position: relative;
-    left: 0px;
-    top: 8px;
+.appeaseofcake_font{                     /* font "appeaseofcake" <h6> */
+    position: absolute;
+    bottom: 12px;    
+    left: 90px;
     color:#fa2871;
     font-size: 22px;
     font-family: 'PT Mono', monospace;
     letter-spacing: 3px;
-           
 }
 
-ul > li{                    /*remove dot from listed items*/
+ul > li{                                  /*remove dot from listed items*/
     list-style-type: none;
     
 }
 
-ul > li >a{                 /*change font for <li> items*/
+ul > li >a{                               /*change font for <li> items*/
     color: grey;    
     font-size: 16px;
     font-family: 'PT Mono', monospace;
@@ -76,12 +74,11 @@ body {
     width: 100%;
 }
 
-.modal_button{                  /*change fonts for login/register button*/
-    color: #2329AE;
-    /* color: grey;    */
+.modal_button{                            /*change fonts for login/register button*/
     font-family: 'PT Mono', monospace;
     font-size: 16px;
-    margin-left: 10px;
+    margin-left: 20px;
+    color: #3F45D7;
 }
 
 .modal_button:hover{
@@ -92,33 +89,93 @@ body {
 
 /*--------------------------------------(start)carousel css-------------------------------*/
 
+/* .cont_carousel{                if container-fluid, and you want full width 
+    padding :0;
+} */
+
 .carousel{
     width:100%;
     /* border: 4px solid #343346;   */
   }
 
 .carousel-inner{
-   height:100%;              /* make sure .items will get correct height */
+   height:100%;                      /* make sure .items will get correct height */
    width:100%;  
 }
 
-.carousel-item{                     /* the sliding pages on carousel */
-    background-size:cover;
+.carousel-item{                      /* the sliding pages on carousel */
+    background-size: cover;
     background-position: 50% 50%;
-    width:100%;
-    height:100%;     
+    width: 100%;
+    height: 100%;     
 } 
 
-.carousel-item > img{               /* size of images on carousel*/
-    object-fit:cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
-    height:390px !important;        /* to resize height of carousel*/
+.carousel-item > img{                /* size of images on carousel*/
+    object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+    height: 450px !important;        /* to resize height of carousel*/
 }
 
-#terms_fonts{
-    font-size: smaller;
+/************************ fonts adjustments on imgs ************************/
+.carousel_blueberry_img{                        /* blueberry*/
+    color: black;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 31px;
+    position: relative;
+    top: 12px;
+    letter-spacing: 0.05em;
 }
 
-/*--------------------------------------(end)carousel css-------------------------------*/
+.carousel_blueberry_img1{                       /* blueberry*/
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    position: relative;
+    top: 11px;
+    font-weight: bold;
+}
+
+.carousel_fruits_img{                           /* artistic fruits*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    right: 66px;
+    letter-spacing: 0.07em;
+    bottom: 210px;
+    color:white;
+}
+
+.carousel_fruits_img1{                          /* artistic fruits*/
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.8px;
+    position: relative;
+    right: 65px;
+    bottom: 210px;
+}
+
+.carousel_sparkles_img{                        /* colorful sparkles*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    /* font-size: 1.5em; */
+    font-size:120%;
+    position: relative;
+    left:45px;
+    bottom:250px;
+    letter-spacing:0.1em;
+}
+
+.carousel_sparkles_img1{                        /* colorful sparkles*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5px;
+    position: relative;
+    left:45px;
+    bottom:250px;
+    letter-spacing:0.1em;
+}
+/*--------------------------------------(end)carousel css------------------------------------*/
 
 /*--------------------------------------(start)Login Modal css-------------------------------*/
 
@@ -146,12 +203,12 @@ input {
     font-family: 'Questrial', sans-serif; 
 }
 
-input::-webkit-input-placeholder {  /*change login/register modal placeholder size*/
+input::-webkit-input-placeholder {          /*change login/register modal placeholder size*/
     font-size: 14px;
     font-family: 'Questrial', sans-serif;
 }
 
-.login_btn{                         /*login button*/
+.login_btn{                                 /*login button*/
     font-family: 'Questrial', sans-serif;  
     /* border-radius: 7px; */
     padding-left:16px;
@@ -190,154 +247,477 @@ input::-webkit-input-placeholder {  /*change login/register modal placeholder si
     background-position: center;
 }
 
-/*--------------------------------------(end)Login Modal css-------------------------------*/
+.fa-question-circle{            /*font awesome qn mark logo register tab modal*/
+    position: relative;
+    bottom: 2px;
+    color:  #343346;
+}
+
+.fa-question-circle:hover{            /*font awesome qn mark logo register tab modal*/
+    color: hotpink;
+}
+
+a[data-tool-tip]{
+    position: relative;
+}
+
+a[data-tool-tip]::after{
+    content: attr(data-tool-tip);
+    display: block;
+    width: 310px;
+    background-color: #0F2776;
+    padding: 4px 7px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.80em;      /*85% of the parent fonts "Your password"*/
+    position: absolute;
+    bottom: 100%;
+    left: 46%;
+    /* white-space:nowrap; */
+    /* display: none; */
+    letter-spacing: 1px;
+    transform: scale(0);
+    transition: transform ease-out 300ms;
+}
+
+a[data-tool-tip]:hover::after{
+    transform: scale(1);
+}
+
+
+/*--------------------------------------(end)Login Modal css-------------------------------------*/
+
+/*-------------------------(start) 3rd row (3 images below carousel row)-------------------------*/
+
+.container_4images{
+    padding: 0;
+    margin: 0 auto;
+    position: relative;         /* parent */
+    top: 13px;
+    background-color: white;
+}
+
+.container_4images_row{
+    padding: 0;
+    margin: 0 auto;
+    position: relative;         /* parent */
+}
+
+#img_resize{
+    padding-left: 0;
+    margin: 0 auto;
+    position: relative;         /* parent */
+    /* border: 3px dotted red;  */
+    -webkit-filter: grayscale(65%); 
+    filter: grayscale(65%);
+    /* opacity: 0.8; */
+}
+
+#img_resize > img {
+    max-width: 100%;
+    height: 340px !important;
+    object-fit: cover;
+    /* object-position: right top; */
+    object-position: center;
+    /* border: 3px solid blue; */
+}
+
+#img_resize > #img_resize_1{
+    object-position: left;
+}
+
+#img_resize > #img_resize_2{
+    object-position: right;
+    /* object-position: center; */
+    -webkit-filter: grayscale(80%); 
+    filter: grayscale(80%);
+}
+
+#img_resize:hover{
+    opacity: 0.8;
+}
+
+#one, #two, #three{
+    color: orange;
+    text-decoration: none;
+    text-decoration-thickness: 0px;
+}
+
+.whiteblack_title3{
+   position:absolute;
+   top: 18%;
+   bottom: 50%;
+   left: 24.5%;
+   color: orange;
+   width: 100%;
+}
+
+.whiteblack_title1{
+    position:absolute;
+    top: 18.5%;
+    bottom: 50%;
+    left: 30%;
+    color: orange;
+    width: 100%;
+ }
+ 
+ .whiteblack_title2{
+    position:absolute;
+    top: 80%;
+    bottom: 0%;
+    left: 43%;
+    color: orange;
+    width: 100%;
+ }
+ 
+#one:hover, #three:hover{
+    cursor: pointer;
+    color:blue;
+}
+
+#two:hover{
+    cursor: pointer;
+    color:rgb(102, 102, 250);
+}
+
+
+/*----------------------------(end) 3rd row (3 images below carousel row) -----------------------*/
+
+
+/*-------------------------------(start) 4th row Our Signatures (words)--------------------------*/
+
+.container_oursignatures{
+    margin-top: 120px;
+    /* box-sizing: border-box; */
+    /* border: 5px solid lightgrey;  */
+}
+
+.row_signature_cakes, .row_lorem{
+    margin:0;
+    padding:0;
+}
+
+.col_signature_cakes{
+    text-align: center;
+    background-color: white;
+}
+
+.signature_font{                                
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    position: relative;
+    top: 25px;
+    color: #121178;
+    display: block;
+}
+
+
+.signature_font::after{
+    content: url(../images/txt_border.png);
+    display: block;
+    margin-top: 8px;
+    width: 250px;
+    position: relative;
+    left: 425px;
+}
+
+/*-----------------------------------(end) 4th row Our Signatures (words)----------------------------*/
+
+/*---------------------------(start) 5th row (words) "The ultimate sanctuary..."---------------------*/
+
+.container_ultimatesanctuary{
+    /* border: 5px solid red; */
+    padding: 0;
+    margin: 0 auto;
+    /* margin-top: 10px; */
+    box-sizing: border-box;
+}
+
+.col_lorem{
+    text-align: center;
+    padding-top: 0px;
+    background-color: white;
+    /* border: 5px solid red; */
+}
+
+#lorem_font{
+    font-size: 117%;
+    letter-spacing: 0.02em;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: bold; */
+}
+
+/*--------------------------(end) 5th row (words) "The ultimate sanctuary..."--------------------*/
+
+/*-------------------------------------(start) 6th row (aos)-------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    /* background: #F1F0F4; */
+    /* background: #F9FAFC; */
+    background: #F4F1FB;
+    opacity: 0.2;
+    margin-bottom: 5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card h3{
+    margin-bottom: 2rem;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card:nth-child(even) img {
+    order: 2;
+}
+
+.card > div {
+    padding: 2rem;
+}
+
+.container_aos{
+    max-width: 1000px;                
+    margin: auto;
+    margin-top: 70px;
+    overflow: hidden;
+    padding: 0 2rem;
+    background:white;                   
+}
+
+#aos_chocolate_cake{
+    height:100%;
+}
+
+.btn{
+    display: inline-block;
+    position: relative;
+    left: -12px;
+}
+
+#button_font{
+    color: #3F45D7;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+}
+
+#button_font:hover{
+    color: hotpink;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        display: block;
+    }
+}
+
+/*-------------------------------(end) 6th row (animate on scroll)---------------------------------*/
+
+/*-------------------------- Parallax scrolling x fixed bckgnd (starts) ---------------------------*/
+
+.parallax{
+    /* border: 5px solid red; */
+    background-image: url("../images/cakes_images/colored_stars_lg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;     /* height of image */
+}
+
+.parallax-inner{
+    /* border: 5px dotted blue; */
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#font_parallax{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 7em;
+}
+
+.margin{
+    /* border: 5px dotted blue; */
+    margin: 10% 0;
+}
+
+/*------------------------- Parallax scrolling x fixed bckgnd (ends) -----------------------*/
 
 
 
 
+/*---------------------------------------(start) Footer-------------------------------------*/
 
-
-
-
-
-
-
-/*--------------------------------------(start) Footer-------------------------------*/
+.logo1{                                             /* footer cake logo adjust width/height */
+    width: 128px;
+    height: 115px;
+}
 
 #f2020_2021{
-    font-size: 8px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
     position: relative;
-    left: 21px;
+    left: 28px;
     font-family: 'Montserrat', sans-serif;
     color:white;
 }
 
-#content_box{
+#content_box{                                               /* footer cake logo adjust position */
     margin:0px;
     /* border:5px dotted blue; */
     position: relative;
-    left: 100px;
-    top: 24px;
+    left: 75px;
+    top: 20px;
 }
 
-.listed_item1, .listed_item2, .listed_item3{                 /* WRITE TO US (start) */
+.listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
     position: relative;
-    left: 20px;
+    left: -15px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80%;
+    font-size: 90%;
     font-weight: bold;
     letter-spacing: 0.09em ;
     color: white;
 }
 
-.writetous_font_footer{                 /*  WRITE TO US (GMAIL) */
-    /* color: grey; */
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    /* font-family: 'Comfortaa', cursive; */
-    /* font-weight: bold; */
-    position: relative;
+.writetous_font_footer{                                      /*  WRITE TO US (GMAIL) */
     top: -4px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.writetous_font_footer:hover, .writetous_font_footer2:hover{
-    color:hotpink;
-    text-decoration: none;
-    font-weight:bolder;
+.writetous_font_footer1{                                     /*  WRITE TO US (HP NO.) */
+    top: 2.5px;
 }
 
-.writetous_font_footer1{                /*  WRITE TO US (HP NO.) */
-    /* color: grey; */
-    font-size: 12px;
-    letter-spacing: 0.1em;
+.writetous_font_footer, .writetous_font_footer1{             /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+    font-size: 13.5px;
+    letter-spacing: 0.095em;
     position: relative;
-    top: 1px;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    left: -36px;
 }
 
-.writetous_font_footer1:hover{          /*  WRITE TO US (HP NO.) HOVER */
-    color:hotpink;
+.writetous_font_footer:hover, .writetous_font_footer1:hover, .writetous_font_footer2:hover{
+    color:hotpink;                                      /*  WRITE TO US (GMAIL), (HP NO.), CONTACT US, WHO WE ARE: HOVER */
     text-decoration: none;
     font-weight:bolder;
 }
 
-.writetous_font_footer2{                /* WRITE TO US (contact/abt us) */
-    /* color: grey; */
-    font-size: 12px;
-    letter-spacing: 0.1em;
+.writetous_font_footer2{                                  /* WRITE TO US (contact us/abt us) */
+    font-size: 12.5px;
+    letter-spacing: 0.15em;
     font-family: 'Comfortaa', cursive;
     position: relative;
-    top: 2px;
+    top: 9px;
     font-weight: bold;
     color: white;
+    left: -36px;
 }
+
+/*  WRITE TO US (end) */
 
 /*  LOCATE US (start) */
 
-
-.address_font_footer{          /* LOCATE US (43 Tampines Ave 1) */         
-    /* color: grey; */
-    font-size: 11px;
+#location_font_footer, .address_font_footer, #op_hours_footer{/* LOCATE US (Glocal Connect Village),(43 Tampines Ave 1),(Bold 10-6pm Daily) */
     letter-spacing: 0.1em;
     font-family: 'Comfortaa', cursive;
     position: relative;
-    /* left: 34px; */
-    left: 16px;
+    color: white;
+    left: -15px;
+    top: 1px;
 }
 
-#location_font_footer{       /* LOCATE US (Glocal Connect Village) */
-    /* color: grey; */
-    font-size: 11px;
+#location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+    font-size: 13.2px;
     letter-spacing: 0.1em;
-    font-family: 'Comfortaa', cursive;
     font-weight: bold;
-    position: relative;
-    left: 16px;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+    font-size: 11.1px;
+    letter-spacing: 0.15em;
 }
 
 #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
-    /* color: grey; */
-    font-size: 10px;
+    font-size: 10.5px;
     letter-spacing: 0.1em;
-    font-family: 'Comfortaa', cursive;
-    position: relative;
-    left: 16px;
-    color: white;
 }
 
-/*  FOLLOW US  (start) */
+/*  LOCATE US (end) */
 
+/*  FOLLOW US (start) */
 
 .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
     color:white;
+    position: relative;
 }
 
 .fa-facebook:hover{
     color: #4267B2;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
 }
 
 .fa-twitter:hover{
     color: #1DA1F2;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
 }
 
 .fa-instagram:hover{
     color:hotpink;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
 }
 
 .fa-linkedin:hover{
-    color:#0072b1;            
+    color:#0072b1;  
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;          
 }
+
+.fa-facebook{
+    right: 35px;
+}
+
+.fa-twitter{
+    right: 25px;
+}
+
+.fa-instagram{
+    right: 15px;
+}
+
+.fa-linkedin{
+    right: 5px;
+}
+
+/*  FOLLOW US (end) */
 
 hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
-    margin: 0rem 2rem 1rem 1rem;
+    margin: 0rem 1rem 1rem 2rem;
     border-color: grey;
+    position: relative;
+    left: -50px;
 }
 
-/***************************************** copyright *****************************************/
+/************************************** copyright (start)**************************************/
 
 .container_copyright{
     /* border: 5px dotted blue;  */
@@ -348,7 +728,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
 
 #copyright{
     text-align: center;
-    font-size: 9px;
+    font-size: 9.7px;
     color: white;
     letter-spacing: 0.2em;
     font-family: 'Montserrat', sans-serif;
@@ -356,204 +736,279 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     position: relative;
     top: 9px;
 }
+/***************************************** copyright (end)***************************************/
+
 /*----------------------------------------------(end) Footer------------------------------------*/
 
-/*------------------------------------(start) adjust footer padding ------------------------------*/
+/*------------------------------------(start) adjust footer padding ----------------------------*/
 .footer-container-1{                            
-    /* border: 2px solid blue; */                   /*To adjust padding of footer*/
+    /* border: 2px solid blue; */              /*To adjust padding of footer*/
     padding-top:25px;
-    padding-bottom:75px;
+    padding-bottom:70px;
 }
 
 .footer-container{
-    background-color: #343346;                /*background color for footer*/
+    background-color:#252B34;                /*background color for footer*/
 }
-/*------------------------------------(start) adjust footer padding ------------------------------*/
+
+/*-----------------------------------(start) adjust footer padding ------------------------------*/
 
 
+/*-------------------------------- Footer Button (Back to top) starts here ----------------------*/
 
-
-/*-------------------------------- Footer Button (Back to top) starts here ---------------------------*/
 .container_backtotop{
-    background-color:#343346;
+    background-color:#252B34;
     text-align: center;
-    padding-bottom:50px;
+    padding-bottom: 58px;
 }
 
-/* .top_button{
-    font-family: 'Montserrat', sans-serif;
-} */
+/*----------------------------- Footer Button (Back to top) ends here ---------------------------*/
 
-/*-------------------------------- Footer Button (Back to top) ends here ---------------------------*/
 
-/*-------------------------------(start)Media queries for navbar------------------------*/
+
+
+
+/*----------------------------------(start)Media queries for navbar------------------------------*/
 
 /* media queries */
-@media screen and (min-width: 768px){     /*Hide button when screen > 992px*/
+@media screen and (min-width: 768px){            /* hide toggle button*/
     .navbar_toggler{
         visibility:hidden;
     }
-}
+}                                     
+                                                   
+@media screen and (max-width: 1199px){             /* use max-width because resize from browser down */
 
-@media screen and (max-width: 1199px){
+/* navbar start*/
+
     ul > li >a{                     
-        font-size: 15px;
-        padding-right: 9px;
+        font-size: 15.5px;                         /* decrease by 0.5 */
+        padding-right: 2.8px;                      /* decrease by 0.2 */
+        margin-left: 18px;                         /* decrease by 2 */
+    }
+
+    .modal_button{                                  /* change fonts for login/register button */
+        font-size: 15.5px;                          /* decrease by 0.5 */
+        margin-left: 9.5px;                         /* decrease by 0.5 */
     }
 
     .appeaseofcake_font{        
-        top: 8px;
-        font-size: 22px;
+        position: absolute;
+        bottom: 12px;    
+        left: 90px;
+        font-size: 21px;                            /* decrease by 1 */
+        letter-spacing: 2.9px;                      /* decrease by 0.1 */
     }
 
     .logo_image{                
-        height:43px;
-        width:43px;  
+        height:46px;                                /* decrease by 1 */
+        width:52px;                                 /* decrease by 1 */
+        position: relative; 
+        left: 12px;
+        bottom:1px; 
     }
+
+    #free_deliv_font{                               /*"Free delivery font", first row */
+        font-size: 12.5px;                          /* decrease by 0.5 */
+        letter-spacing: 0.04em;                     /* increase by 0.01 */
+    }
+
+/* navbar end*/
+
+/* carousel start*/
+
+            /************************ fonts adjustments on imgs ************************/
+
+    .carousel_blueberry_img{                        /* blueberry*/
+        font-size: 30px;                            /* decrease by 1 */
+        letter-spacing: 0.05em;
 }
 
-@media screen and (max-width: 994px){
-    ul > li >a{                     
-        font-size: 13px;
-        padding-right: 8px;
+    .carousel_blueberry_img1{                       /* blueberry*/
+        font-size: 16px;                            /* decrease by 1 */
+        letter-spacing: 0.09em;                     /* decrease by 0.01 */
     }
 
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 20px;
+    .carousel_fruits_img{                           /* artistic fruits*/
+        font-size: 18px;                            /* decrease by 2 */
+        letter-spacing: 0.07em;
     }
 
-    .logo_image{                
-        height:41px;
-        width:41px;  
+    .carousel_fruits_img1{                          /* artistic fruits*/
+        letter-spacing: 0.1em;
+        font-size: 13px;                          /* decrease by 0.8 */
     }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+        font-size: 110%;                           /* decrease by 10% */
+        letter-spacing: 0.09em;                    /* decrease by 0.01*/
+    }
+
+    .carousel_sparkles_img1{                       /* colorful sparkles*/
+        font-size: 10.2px;
+        letter-spacing:0.2em;
+    }
+
+    /* carousel end */
+
+    /* footer start */
+
+    #content_box{                                  /* footer cake logo adjust position */
+        left: 55px;                                /* decrease by 20 from 75*/ 
+        top: 20px;
+    }
+
+    .logo1{                                        /* footer cake logo adjust width/height */
+        width: 118px;                              /* decrease by 10 from 128*/ 
+        height: 105px;                             /* decrease by 10 115*/ 
+    }
+    
+    #f2020_2021{
+        font-size: 8.8px;
+        letter-spacing: 0.2em;
+        left: 23px;                                /* decrease by 1*/
+    }
+    
+    .listed_item1, .listed_item2, .listed_item3{   /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+        left: -26.5px;                             /* decrease by -2.5 from -15*/
+        font-size: 82%;                            /* decrease by 8%*/
+        letter-spacing: 0.09em ;
+    }
+    
+    .writetous_font_footer{                        /*  WRITE TO US (GMAIL) */
+        top: -4px;
+    }
+    
+    .writetous_font_footer1{                       /*  WRITE TO US (HP NO.) */
+        top: 2.5px;
+    }
+    
+    .writetous_font_footer, .writetous_font_footer1{  /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+        font-size: 11.5px;                         /* decrease by 2 from 13.5*/
+        letter-spacing: 0.092em;                   /* decrease by 0.003 from 0.095*/
+        left: -44px;                               /* decrease by 8 from -36*/
+    }
+
+    .writetous_font_footer2{                       /* WRITE TO US (contact us/abt us) */
+        font-size: 11px;                           /* decrease by 1.5 from 12.5*/
+        letter-spacing: 0.13em;                    /* decrease by 0.02 from 0.15em*/
+        top: 9px;                                  /* decrease by 0 from 9*/
+        left: -44px;                               /* decrease by 8 from -36*/
+    }
+
+    hr{                                            /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 1rem 1rem 2rem;
+        left: -60px;                               /* decrease by -10 from -50*/
+    }
+    
+    /*  WRITE TO US (end) */
+    
+    /*  LOCATE US (start) */
+    
+    #location_font_footer, .address_font_footer, #op_hours_footer{ /* LOCATE US (Glocal Connect Village),(43 Tampines Ave 1),(Bold 10-6pm Daily) */
+        letter-spacing: 0.1em;
+        left: -26px;                               /* decrease by -11 from -15*/
+        top: 1.1px;                                /* increase by 0.1 from 1*/
+    }
+    
+    #location_font_footer{                         /* LOCATE US (Glocal Connect Village) */
+        font-size: 12px;                           /* decrease by 1.2 from 13.2*/
+        letter-spacing: 0.1em;
+    }
+    
+    .address_font_footer{                          /* LOCATE US (43 Tampines Ave 1) */         
+        font-size: 10px;                           /* decrease by 1.1 from 11.1*/
+        letter-spacing: 0.15em;
+    }
+    
+    #op_hours_footer{                              /* LOCATE US (Bold 10-6pm Daily) */
+        font-size: 9.4px;                          /* decrease by 1.1 from 10.5*/
+        letter-spacing: 0.1em;
+        top: 5px;
+    }
+    
+    /*  LOCATE US (end) */
+    
+    /*  FOLLOW US (start) */
+
+    .fa{                                           /* adjust size of font awesome icons*/
+        font-size: 1.2em !important;                            
+    }
+    
+    .fa-facebook{
+        right: 42px;                               /* increase by 7 from 35*/
+    }
+    
+    .fa-twitter{
+        right: 32px;                               /* increase by 7 from 25*/
+    }
+    
+    .fa-instagram{                  
+        right: 22px;                               /* increase by 7 from 15*/
+    }
+    
+    .fa-linkedin{
+        right: 12px;                               /* increase by 7 from 5*/
+    }
+    
+    /*  FOLLOW US (end) */
+
+    /* footer end */
+    
+    /* footer copyright start */
+    
+    #copyright{
+        font-size: 9.5px;                           /* decrease by 0.2 from 9.7*/
+        letter-spacing: 0.2em;
+        top: 8px;                                    /* decrease by 1 from 9*/
+    }
+
+    /* footer copyright end */
+    
+    /*--------------------------------(start) adjust footer padding ----------------------------*/
+
+    .footer-container-1{                                   
+        /* border: 2px solid blue;*/
+        padding-top:28px;                            /* increase by 1 from 27*/ 
+        padding-bottom:70px;                         
+    }
+
+    /*-------------------------------(start) adjust footer padding ------------------------------*/
+
+     /* footer button start */
+    
+    .container_backtotop{
+        background-color:#252B34;
+        text-align: center;
+        padding-bottom: 58px;
+    }
+    
+     /* footer button end */
+
+   
 }
-
-@media screen and (max-width: 961px){
-    ul > li >a{                     
-        font-size: 12px;
-        padding-right: 2px;
-    }
-
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 18px;
-    }
-
-    .logo_image{                
-        height:39px;
-        width:39px;  
-    }
-}
-
+                                                
+/* @media screen and (max-width: 994px)
+    
+@media screen and (max-width: 961px)
+    
 @media screen and (max-width: 768px){
-    ul > li >a{                     
-        font-size: 12px;
-        padding-right: 2px;
-    }
-
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 25px; 
-    }
-
-    .logo_image{                
-        margin-left: 0px;
-        height:42px;
-        width: 42px; 
-    }
-}
 
 @media screen and (max-width: 574px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 27px; 
-    }
-
-    .logo_image{                
-        margin-left: 0px;
-        height:43px;
-        width: 43px; 
-    }
-}
 
 @media screen and (max-width: 526px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 26px; 
-    }
-
-    .logo_image{                
-        margin-left: 0px;
-        height:42px;
-        width: 42px; 
-    }
-}
 
 @media screen and (max-width: 451px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 24px; 
-    }
-
-    .logo_image{                
-        margin-left: 0px;
-        height:41px;
-        width: 41px; 
-    }
-}
 
 @media screen and (max-width: 412px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 24px;
-        letter-spacing:2px; 
-    }
-
-    .logo_image{                
-        margin-left: 0px;
-        height:40px;
-        width: 40px; 
-    }
-}
 
 @media screen and (max-width: 388px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 22px;
-        letter-spacing:2px; 
-    }
-
-    .logo_image{                
-        height:39px;
-        width: 39px; 
-    }
-}
 
 @media screen and (max-width: 349px){
-    .appeaseofcake_font{        
-        top: 8px;
-        font-size: 20px;
-        letter-spacing:2px; 
-    }
 
-    .logo_image{                
-        height:39px;
-        width: 39px; 
-    }
-}
+@media screen and (max-width: 331px){   */
+ 
 
-@media screen and (max-width: 331px){
-    .appeaseofcake_font{        
-        font-size: 0px;
-    }
-
-    .logo_image{                
-        height:41px;
-        width: 41px; 
-    }
-}
-
-/*-------------------------------(end)Media queries for navbar------------------------*/
+/*-------------------------------(end)Media queries for navbar-----------------------------------*/
 
 

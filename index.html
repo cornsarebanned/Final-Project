@@ -9,6 +9,8 @@
   <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <!--Gooogle fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -18,13 +20,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 
+  <!--Animate on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <!--Font Awesome CDN-->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <!--load all styles -->
 
   <!-- stylesheet main_page -->
   <link rel="stylesheet" type="text/css" href="css/main_page.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/main_aos.css" media="screen" />
 
   <title>APPEASEOFCAKE</title>
 
@@ -40,7 +44,7 @@
     <!-------------------------------------------------- Free Delivery (ends) -------------------------------------------------------->
 
     <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------->
-    <div class="container container_nav">
+    <div class="container container_nav pt-2 pb-2">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
         <div class="company_logo navbar-brand">
@@ -63,13 +67,15 @@
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a href="#">Cart</a></li>
+            <li class="navbar-item"><a id="shopping_cart_icon" href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
           </ul>
 
           <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
+          <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
 
-          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" data-keyboard="false"
-            data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
+              
+              aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
               <!--Content-->
               <div class="modal-content modal-popout-bg">
@@ -159,10 +165,11 @@
                           <div class="md-form form-sm mb-5">
                             <i class="fas prefix"></i>
                             <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
-                              password</label>
+                              password <a href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
                             <input type="password" name="password" id="regPw"
                               class="form-control form-control-sm validate" placeholder="Enter password">
                           </div>
+
 
                           <div class="md-form form-sm mb-3">
                             <i class="fas prefix"></i>
@@ -204,7 +211,7 @@
           <!--------------(start)Login/Register Button to toggle Modal---------------->
           <div class="text-center">
             <a href="" class="btn btn-link modal_button" data-toggle="modal"
-              data-target="#modalLRForm">Login/Register</a>
+              data-target="#modalLRForm">Login / Register</a>
             <!--Login Button for Modal Linkage-->
           </div>
           <!--------------(end)Login/Register Button to toggle Modal---------------->
@@ -218,10 +225,10 @@
 
 
   </header>
-  <!---------------------------------- navbar ends here -------------------------------->
+  <!---------------------------------- navbar ends here -------------------------------------->
 
-  <!-------------------------------- carousel starts here ------------------------------>
-  <div class="container">
+  <!-------------------------------- carousel starts here ------------------------------------>
+  <div class="container cont_carousel">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -230,28 +237,28 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="img-fluid d-block w-100" src="images/cakes_images/artistic_cake_grass.jpg" alt="First slide">
-          <div class="carousel-caption text-left">
-            <h3>Healthier Choice</h3>
-            <p>Bringing endless joy to life through guilt-free treats</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img class="img-fluid d-block w-100" src="images/cakes_images/white_apple_cake_lg.jpg" alt="Second slide">
-          <div class="carousel-caption text-left">
-            <h3>Gluten-free options available</h3>
-            <p>Apeaseofcake, a peace of mind!</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img class="img-fluid d-block w-100" src="images/cakes_images/sparkles_cake_lg.jpg" alt="Third slide">
+          <img class="img-fluid d-block w-100" src="images/cakes_images/sparkles_cake_lg.jpg" alt="First slide">
           <div class="carousel-caption text-right">
-            <h3>Up to 20% off during this festive season</h3>
-            <p id="terms_fonts">Terms and conditions apply</p>
+            <h3 class="carousel_sparkles_img">Up to 20% off during this festive season</h3>
+            <p class="carousel_sparkles_img1">*Terms and conditions apply</p>
           </div>
         </div>
+
+        <div class="carousel-item">
+          <img class="img-fluid d-block w-100" src="images/cakes_images/blue_raspberry_cake_lg_copy.jpg" alt="Second slide">
+          <div class="carousel-caption text-middle">
+            <h3 class="carousel_blueberry_img">Healthier Choice</h3>
+            <p class="carousel_blueberry_img1">Bringing endless joy to life through guilt-free treats</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="img-fluid d-block w-100" src="images/cakes_images/artistic_cake_grass_copy1.jpg" alt="Thirdslide">
+          <div class="carousel-caption text-left">
+            <h3 class="carousel_fruits_img">Gluten-free options available</h3>
+            <p class="carousel_fruits_img1">Appeaseofcake, a peace of mind!</p>
+          </div>
+        </div>        
       </div>
       <!--closing carousel inner div-->
 
@@ -270,27 +277,135 @@
   </div>
   <!--closing container div-->
 
-  <!-------------------------------- carousel ends here ------------------------------>
+  <!-------------------------------- carousel ends here --------------------------------------->
 
-  <!-------------------------------- 3rd row starts here ------------------------------>
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col">
+  <!------------------------------------- 3rd row starts here --------------------------------->
+  <div class="container container_4images">
+    <div class="row container_4images_row">
 
+      <div id="img_resize" class="col-lg-4 col-md-6 col-sm-12 img-fluid ">
+        <img id="img_resize_1" src="images/cakes_images/pexels-eva-elijas-5742674.jpg" alt="img1">
+        <div class="whiteblack_title1">
+          <h1><a id="one" href="cakes.html">CAKES</a></h1>
+          
+        </div>
       </div>
-      <div class="col">
 
+      <div id="img_resize" class="col-lg-4  col-md-6 col-sm-12 img-fluid ">
+        <img id="img_resize_2" src="images/cakes_images/eggs_flour.jpg" alt="img2">
+        <div class="whiteblack_title2">
+          <h1><a id="two" href="about_us.html">ABOUT</a></h1>
+        </div>
+      </div>
+
+      <div id="img_resize" class="col-lg-4  col-md-6 col-sm-12 img-fluid pr-0">
+        <img src="images/cakes_images/nikolai-chernichenko-LSuIc8Riv9I-unsplash.jpg" alt="img3">
+        <div class="whiteblack_title3">
+          <h1><a id="three" href="contact_us.html">CONTACT</a></h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+ 
+  <!------------------------------------- 3rd row ends here ----------------------------------->
+
+ 
+
+
+  <!------------------------------------- 4th row starts here --------------------------------->
+
+  <div class="container container_oursignatures" data-aos="fade-up">
+    <div class="row row_signature_cakes">
+      <div class="col-12 col_signature_cakes">
+        <h5 class="signature_font">Our Signatures</h5>
       </div>
     </div>
-  </div> -->
+  </div>
+
+  <!------------------------------------- 4th row ends here ------------------------------------>
+
+  <!------------------------------------- 5th row starts here ---------------------------------->
+  
+  <div class="container container_ultimatesanctuary mt-5" data-aos="fade-up">
+    <div class="row row_lorem">
+      <div class="col-12 col_lorem">
+        <p id="lorem_font">
+          The ultimate sanctuary for cake lovers,
+          each and every one freshly baked by our dedicated <br> team of dessert chefs, for your ultimate enjoyment.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------- 5th row ends here ------------------------------------>
+    
 
 
+  <!------------------------------------ 6th row starts here (aos) ----------------------------->
 
-  <!------------------------------------- 3rd row ends here ------------------------------------>
+    <main class="container container_aos">
+      <section class="card" data-aos="fade-up-right">
+        <img id="aos_img" src="images/cakes_images/cake_burnout_candles_lg_copy.jpg" alt="fresh pink marbled cake with macarons">
+        <div>
+          <h3 id="big_font">Fresh Pink Marbled Cake with Macarons</h3>
+          <p id="small_font">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. 
+            
+          </p>
+          <a id="button_font" href="cakes.html" class="btn">More</a>
+        </div>
+      </section>
 
+      <section class="card" data-aos="fade-up-left">
+        <img id="aos_chocolate_cake" src="images/cakes_images/heritage_chocolate_cake.jpg" alt="vanilla cake with chocolate drizzle">
+        <div>
+          <h3 id="big_font">Vanilla Cake with Chocolate Drizzle</h3>
+          <p id="small_font">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. 
+            
+          </p>
+          <a id="button_font" href="cakes.html" class="btn">More</a>
+        </div>
+      </section>
 
+      <section class="card" data-aos="fade-up-right">
+        <img src="images/cakes_images/blueberries_syrup_lg_copy.jpg" alt="blueberries crusted cheesecake">
+        <div>
+          <h3 id="big_font">Blueberries Crusted Cheesecake</h3>
+          <p id="small_font">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. 
+            
+          </p>
+          <a id="button_font" href="cakes.html" class="btn">More</a>
+        </div>
+      </section>
+      
+    </main>
 
+  <!------------------------------------- 6th row ends here (aos) --------------------------------->
 
+  <!-------------------------- Parallax scrolling x fixed bckgnd (starts) ------------------------->
+  <div class="container container_parallax">
+    <div class="margin"></div> <!--Create whitespace above img-->
+
+      <section class="parallax">
+        <div class="parallax-inner">
+          <h1 id="font_parallax">APPEASEOFCAKES</h1>
+        </div>
+      </section>
+
+      <div class="margin"></div>  <!--Create whitespace at bottom of img-->
+  </div>  <!-- div for container --> 
+  <!-------------------------- Parallax scrolling x fixed bckgnd (ends) --------------------------->
 
 
 
@@ -303,7 +418,7 @@
       <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
 
         <div id="content_box" class="col-3">
-          <img class="logo1" src="images/logo1.png" alt="" width="90" height="85">
+          <img class="logo1" src="images/logo1.png" alt="footer cake logo">
           <p id="f2020_2021">&copy; 2020-2021</p>
         </div>
 
@@ -331,11 +446,11 @@
         <div class="col-3">
           <h5 class="listed_item3">FOLLOW US</h5>
           <hr>
-          <ul class="list-unstyled">
-            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-sm"></i></a></li>
-            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-sm" ></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-sm" ></i></a></li>
-            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-sm" ></i></a></li> 
+          <ul class="list-unstyled d-flex">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
           </ul>
         </div>
       </div>
@@ -357,7 +472,7 @@
   <!-------------------------------- copyright footer starts here --------------------------------->
   <div class="container container_copyright">
     <div id="copyright" class="col-12">
-      <p>© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
+      <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
     </div>
   </div>
   <!---------------------------- copyright footer ends here ---------------------------------------->
@@ -383,9 +498,12 @@
     crossorigin="anonymous"></script>
 
   <!---------- Javascript aos --------->
-  <script src="js/main_aos.js"></script>
-  <script type="text/javascript">
-    AOS.init();
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000
+    });
   </script>
 
   <!---------- Javascript --------->
