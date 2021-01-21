@@ -1,4 +1,4 @@
-var cakeProduct = [
+var cakeProducts = [
     {
         "productId": 1,
         "productName": "Blueberries and Vanilla Cake",
@@ -74,8 +74,10 @@ var cakeProduct = [
 document.getElementById("cakes").innerHTML = `
 <div id="container_products" class="container">
 <div class="product-container">
-${cakeProduct.map(function(cake) {
+
+${cakeProducts.map(function (cake) {
     return ` 
+    <a href ="cake_template.html?img=${cake.imageUrl}&name=${cake.productName}&desc=${cake.description}&price=${cake.price}">
     <div class="indi-product">
         <div class="product-hvr">
             <div class="product">
@@ -91,8 +93,10 @@ ${cakeProduct.map(function(cake) {
         <p class="product-description">${cake.productName}</p>
         <p class="product-price">From ${cake.price}</p>
     </div>
+    </a>
 `
 }).join('')}
 </div>
     </div>
 `
+
