@@ -96,8 +96,21 @@ h3 {
 
 #productImg {
     display: flex;
-    width: 350px;
-    height: 450px;
+    justify-content: center;
+
+}
+
+#productPrice {
+    display: flex;
+    justify-content: left;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#cart-btn {
+    display: flex;
+    justify-content: center;
 }
 
 /*-------------------------------------(end)Cards css ----------------------------------*/

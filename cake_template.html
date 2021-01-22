@@ -190,6 +190,31 @@
         </div>
         <div class="col-6">
           <div id="productDesc"></div>
+          <br>
+          <div id="productPrice"></div>
+          <br>
+          <h5>Size Selection : </h5>
+          <form class="selection">
+            <input type="radio" id="6-inch" name="cake-size" value="6-inch">
+            <label for="6-inch">6 Inch</label><br>
+            <input type="radio" id="8-inch" name="cake-size" value="8-inch">
+            <label for="8-inch">8 Inch <span style="font-size: 13px; font-family: italic;">(+$12.00)</span></label><br>
+            <input type="radio" id="10-inch" name="cake-size" value="10-inch">
+            <label for="10-inch">10 Inch <span
+                style="font-size: 13px; font-family: italic;">(+$18.00)</span></label><br>
+            <br>
+            <h5>Candle : </h5>
+            <input type="radio" id="candle" name="candle" value="true">
+            <label for="6-inch">Yes</label>
+            <input type="radio" id="candle" name="candle" value="false">
+            <label for="6-inch">No</label><br>
+            <label for="quantity">Candles Required :</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100">
+          </form>
+          <br>
+          <div id="cart-btn">
+            <button type="button" class="btn btn-success">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
