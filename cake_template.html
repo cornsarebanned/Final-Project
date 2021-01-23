@@ -2,33 +2,54 @@
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+  <!--------------------------------------- Bootstrap CSS --------------------------------------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <!--Gooogle fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+  <!--Animate on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Font Awesome CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--load all styles -->
+
   <!-- stylesheet main_page -->
   <link rel="stylesheet" type="text/css" href="css/cake_template.css" media="screen" />
 
-  <title>A-CAKES</title>
+  <!--google map api-->
+   <script defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiLcRpWIwNNf_wLXt0jPwKDlh9Odr1oGs&callback=initMap">
+  </script>
+
+  <title>CAKES PAGE</title>
 
 </head>
 
 <body>
-  <!----------------------------------------------------------(start)NAVBAR--------------------------------------------------------->
+
   <header>
+    <!---------------------------- Free Delivery (starts) here -------------------------------->
     <div class="container container_0">
       <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
     </div>
+    <!------------------------------ Free Delivery (ends) ------------------------------------->
 
-    <!--Navbar-->
-    <div class="container container_nav">
+    <!----------------------------- Navbar (starts) here -------------------------------------->
+    <div class="container container_nav pt-2 pb-2">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
         <div class="company_logo navbar-brand">
@@ -37,78 +58,95 @@
         </div>
         <h6 class="appeaseofcake_font">appeaseofcake</h6>
 
-
         <div>
           <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
             aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
               class="navbar-toggler-icon"></span></button>
-          <!--Button to toggle nav collapse -->
+          <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
         </div>
 
         <div class="collapse navbar-collapse" id="navbarContents">
-          <!--collapsing nav -->
+          <!----------------------collapsing nav ------------------->
           <ul class="navbar-nav ml-auto">
             <!--  shifting nav links to the right side of the page -->
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a href="#">Cart</a></li>
+            <li class="navbar-item"><a id="shopping_cart_icon" href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
           </ul>
 
-          <!--Modal: Login / Register Form-->
+          <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
+          <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
 
-          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog cascading-modal" role="document">
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
+              
+              aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog cascading-modal" style="max-width: 50%;" role="document">  <!--Increase width of modal-->
               <!--Content-->
-              <div class="modal-content">
+              <div class="modal-content modal-popout-bg">
+                <!--Add backgnd image-->
 
                 <!--Modal cascading tabs-->
                 <div class="modal-c-tabs">
 
-                  <!-- Nav tabs -->
+                  <!-- Modal tabs Login/Register starts here-->
                   <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <!--If want to change Tabs background-->
                     <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                          class="fas fa-user mr-1"></i>
+                      <a class="login_text nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
+                          class="fas"></i>
                         Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                          class="fas fa-user-plus mr-1"></i>
+                      <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+                          class="fas"></i>
                         Register</a>
                     </li>
                   </ul>
+                  <!-- Modal tabs Login/Register ends here-->
 
-                  <!-- Tab panels -->
+                  <!-- Modal Tab panels -->
                   <div class="tab-content">
                     <!--Panel 7-->
+
                     <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
 
-                      <!--Body-->
-                      <div class="modal-body mb-1">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
-                        </div>
+                      <!--Login Body-->
+                      <div class="modal-body mb-1 modalOne">
+                        <!--Your Email-->
+                        <form role="form">   <!-----------------------------------LOGIN FORM (START)------------------------------------>
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
+                              Address</label>
+                            <input type="email" id="logEmail" class="form-control form-control-sm validate"
+                              placeholder="Enter email">
+                          </div>
 
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
-                        </div>
-                        <div class="text-center mt-2">
-                          <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
+                          <div class="md-form form-sm mb-4">
+                            <!--Your Password-->
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right"
+                              for="modalLRInput11">Password</label>
+                            <input type="password" id="logPw" class="form-control form-control-sm validate"
+                              placeholder="Enter password">
+                          </div>
+
+                          <div class="text-center mt-2">
+                            <!--Login Button-->
+                            <button id="login_btn" class="login_btn btn btn-warning" onclick="check()">Log in <i
+                                class="fas ml-1"></i></button>
+                          </div>
+                        </form>              <!-----------------------------------LOGIN FORM (END)--------------------------------------->
                       </div>
-                      <!--Footer-->
+                      <!--Footer of Login Tab "Not a member?" "Forgot Password"-->
                       <div class="modal-footer">
                         <div class="options text-center text-md-right mt-1">
-                          <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                          <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                          <p id="notamember_font">Not a member? <a href="#" class="blue-text signup_click">Sign Up</a>
+                          </p>
+                          <p id="notamember_font">Forgot <a href="#" class="blue-text password_click">Password?</a></p>
                         </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
                           data-dismiss="modal">Close</button>
                       </div>
 
@@ -118,39 +156,110 @@
                     <!--Panel 8-->
                     <div class="tab-pane fade" id="panel8" role="tabpanel">
 
-                      <!--Body-->
-                      <div class="modal-body">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
-                        </div>
+                      <!--Body (Modal Register Tab) (start)-->
+                      <!--EMAIL ADDRESS-->
+                      <div class="modal-body modalTwo">
+                        <form role="form" class="signup_form">   <!----------------SIGNUP Form (registration) starts here-------------->
+                         
+                          <div class="md-form form-sm mb-3">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name(in full)</label>
+                            <input type="text" name="email" id="regName" class="form-control form-control-sm validate"
+                              placeholder="Enter name ">
+                          </div>
 
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
-                        </div>
+                          <div class="md-form form-sm mb-3">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Email address</label>
+                            <input type="email" name="email" id="regEmail" class="form-control form-control-sm validate"
+                              placeholder="Enter email address ">
+                          </div>
 
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
-                        </div>
+                          <!--PASSWORD/PASSWORD AGAIN-->
+                          <div class="form-row signup_form">
+                            <div class="md-form form-sm mb-3 col-md-6">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
+                              password <a id="tooltipFont" href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                              <input type="password" name="email" id="regPw"
+                                class="form-control form-control-sm validate" placeholder="Enter password">
+                            </div>
 
-                        <div class="text-center form-sm mt-2">
-                          <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
+                            <div class="md-form form-sm mb-3 col-md-6">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
+                              password</label>
+                              <input type="password" name="email" id="regPwAgain"
+                                class="form-control form-control-sm validate" placeholder="Enter password again">
+                            </div>
+                            </div>  
+
+                            <!--HANDPHONE-->
+                            <div class="md-form form-sm mb-3">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
+                              <input type="number" name="email" id="regHP" class="form-control form-control-sm validate"
+                                placeholder="Enter handphone no. ">
+                            </div>
+                      
+                            <!--HOME ADDRESS-->
+                            <div class="md-form form-sm mb-3">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Home Address (street)</label>
+                              <input type="text" name="email" id="regHomeAdd" class="form-control form-control-sm validate"
+                                placeholder="Enter home address (street) ">
+                            </div>
+
+
+
+
+                            <!--CITY/UNIT/POSTAL CODE-->
+                            <div class="form-row signup_form">
+
+
+                              <div class="md-form form-sm mb-3 col-md-6">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">City</label>
+                                <input type="text" name="email" id="regCity" class="form-control form-control-sm validate"
+                                placeholder="Enter city ">
+                              </div>
+
+                              <div class="md-form form-sm mb-3 col-md-3">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Unit</label>
+                                <input type="text" name="email" id="regUnit" class="form-control form-control-sm validate"
+                                placeholder="Unit no. ">
+                              </div>
+
+                              <div class="md-form form-sm mb-3 col-md-3">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Postal Code</label>
+                                <input type="number" name="email" id="regPostal" class="form-control form-control-sm validate"
+                                placeholder="Postal code">
+                              </div>
+
+                            </div>
+                      
+                          
+
+
+                          <div class="text-center form-sm mt-2">
+                            <button type="submit" class="btn btn-info" id="signup_submit">Sign up</button>
+                          </div>
+                        </form>                                 <!---------------------------SIGNUP Form (registration) ends here------------------------>
+                        <!--Body (Modal Register Tab) (end)-->
 
                       </div>
-                      <!--Footer-->
+                      <!--Footer of Register Tab (Modal) (start)-->
                       <div class="modal-footer">
                         <div class="options text-right">
-                          <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                          <p id="notamember_font" class="pt-1">Already have an account? <a href="#"
+                              class="blue-text reg_login">Log In</a></p>
                         </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
                           data-dismiss="modal">Close</button>
                       </div>
+                      <!--Footer of Register Tab (Modal) (end)-->
                     </div>
                     <!--/.Panel 8-->
                   </div>
@@ -162,10 +271,13 @@
           </div>
           <!--End of Modal: Login / Register Form-->
 
+          <!--------------(start)Login/Register Button to toggle Modal---------------->
           <div class="text-center">
-            <a href="" class="btn btn-link" data-toggle="modal" data-target="#modalLRForm">Login / Register</a>
+            <a href="" class="btn btn-link modal_button" data-toggle="modal"
+              data-target="#modalLRForm">Login / Register</a>
             <!--Login Button for Modal Linkage-->
           </div>
+          <!--------------(end)Login/Register Button to toggle Modal------------------>
 
         </div>
         <!--closing for unlisted items -->
@@ -176,53 +288,82 @@
 
 
   </header>
-  <!----------------------------------------------------------(End)NAVBAR------------------------------------------------------------>
-  <div class="container">
-    <div id="container_selection">
-      <br>
-      <h3>Your Selection</h3>
-      <!----------------------------------------------------------(Start)Cards------------------------------------------------------------>
-      <div id="productName"></div>
-      <br>
-      <div class="row">
-        <div class="col-6">
-          <div id="productImg" class="img-fluid"></div>
-        </div>
-        <div class="col-6">
-          <div id="productDesc"></div>
-          <br>
-          <div id="productPrice"></div>
-          <br>
-          <h5>Size Selection : </h5>
-          <form class="selection">
-            <input type="radio" id="6-inch" name="cake-size" value="6-inch">
-            <label for="6-inch">6 Inch</label><br>
-            <input type="radio" id="8-inch" name="cake-size" value="8-inch">
-            <label for="8-inch">8 Inch <span style="font-size: 13px; font-family: italic;">(+$12.00)</span></label><br>
-            <input type="radio" id="10-inch" name="cake-size" value="10-inch">
-            <label for="10-inch">10 Inch <span
-                style="font-size: 13px; font-family: italic;">(+$18.00)</span></label><br>
-            <br>
-            <h5>Candle : </h5>
-            <input type="radio" id="candle" name="candle" value="true">
-            <label for="6-inch">Yes</label>
-            <input type="radio" id="candle" name="candle" value="false">
-            <label for="6-inch">No</label><br>
-            <label for="quantity">Candles Required :</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="100">
-          </form>
-          <br>
-          <div id="cart-btn">
-            <button type="button" class="btn btn-success">Add to Cart</button>
-          </div>
-        </div>
-      </div>
+  
+  <!---------------------------------- navbar ends here ---------------------------------------->
+
+  <!-------------------------------- "Selection" text starts here ------------------------------>
+  <div class="container container_selection mt-5 bg-white">
+    <div id="container_selection mb-3">
+      <h3 id="your_selection_font">Your Selection</h3>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
+  <!---------------------------------"Selection" text ends here -------------------------------->
 
+  <!------------------------------------(Start)Cards-------------------------------------------->
+  <div class="container container_productname bg-white mt-3 mb-3">
+      <div id="productName"></div>
+  </div>
+
+  <div class="container product_cards_desc">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_img">
+          <div class="object_fit" style="border:2px solid black;">
+            <div id="productImg" class="img-fluid bg-white m-3"></div>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_desc">
+          <div class="mb-2" style="font-weight: bold; font-size:25px;">Description:</div>
+          <div id="productDesc" class="mb-3"></div>
+          <div id="productPrice" class="mb-3" style="font-size: 28px;"></div>
+
+          <!--Selection-->
+          <p class style="font-size:20px; font-weight: bold;" >Size Selection:</p>
+
+          <form class="selection">
+            <!--1st option-->
+            <div class="form-check my-3 ">
+                <input type="radio" id="six_inch" name="cake-size" value='A' unchecked>
+                <label class='form-check-label'>6" inch</label>
+            </div>
+            <!--2nd option-->
+            <div class="form-check my-3">
+              <input type="radio" id="eight_inch" name="cake-size" value='B' unchecked>  <!--The value is different but the name remains the same because they are both options for the first qns-->
+              <label class='form-check-label'>8" inch</label>
+            </div>
+            <!--3rd option-->
+            <div class="form-check mb-3">
+              <input type="radio" id="ten_inch" name="cake-size" value='C' unchecked>  <!--The value is different but the name remains the same because they are both options for the first qns-->
+              <label class='form-check-label'>10" inch</label>
+            </div>
+          <!-- </form> -->
+
+          <!--Candles-->
+
+          <p class style="font-size:20px; font-weight: bold;" >Number of Candles:</p>
+          <!-- <form class="Candle:"> -->
+            <!--1st option-->
+            <div class="form-check mb-3">
+              <input type="number" id="quantity" name="quantity" min="0" max="100" placeholder="0">
+            </div>
+          <!-- </form> -->
+
+          <div class='text-left my-5'>
+            <button type="submit" class="btn btn-success">Submit</button>
+         </div>
+        </form>
+
+
+
+        </div>
+
+        
+
+  </div>
+  
+
+
+ 
+  <!-------------------------------- Ending credits starts here -------------------------------->
   <div class="container footer-container">
     <footer class="border-top footer-container-1">
       <div class="row pt-5 pb-2 footer-container-row">
@@ -269,7 +410,7 @@
       </div>
     </footer>
   </div>
-  <!-------------------------------- Ending credits ends here -------------------------------->
+  <!-------------------------------- Ending credits ends here ------------------------------------>
 
   <!-------------------------------- Button (Back to top) starts here ---------------------------->
   <div class="container container_backtotop">
@@ -289,9 +430,16 @@
       <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
     </div>
   </div>
-  <!----------------------------------------------------------(End)Cards------------------------------------------------------------>
+  <!-------------------------------- copyright footer ends here ----------------------------------->
 
 
+  
+ 
+
+
+
+      
+    
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -304,7 +452,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/cake_template.js"></script>
+
+  <!---------- Javascript aos --------->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000
+    });
+  </script>
+
+  <!---------- Javascript --------->
+  <script src="js/cake_template.js"></script>
 </body>
 
 </html>
+  
