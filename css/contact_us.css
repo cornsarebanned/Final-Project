@@ -100,7 +100,12 @@ body {
 
 #email_font{
     font-family: 'Questrial', sans-serif;   /*change Login/Register Email and password font*/ 
-    font-size:16px;
+    font-size: 10px;
+}
+
+#tooltipFont{
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
 }
 
 #password_font{
@@ -150,8 +155,8 @@ input::-webkit-input-placeholder {          /*change login/register modal placeh
 }
 
 .modal .modal-popout-bg {
-    background-image: url("../images/cakes_images/modal-background2.jpg");
-    /* background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80"); */
+    /* background-image: url("../images/cakes_images/modal-background2.jpg"); */
+    background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80");
     background-repeat : no-repeat;
     background-size: cover;  
     background-position: center;
