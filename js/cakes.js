@@ -31,43 +31,43 @@ var cakeProducts = [
         "productId": 5,
         "productName": "Vanilla Cake with Chocolate Drizzle",
         "description": "Pastel pink floral cake with edible Dried Rose Petals with Classic Vanilla Cream.",
-        "price": 69.90,
-        "imageUrl": "images/cakes_images/heritage_chocolate_cake.jpg"
+        "price": 65.99,
+        "imageUrl": "images/cakes_images/heritage_chocolate_cake_crop_500x500.jpg"
     },
     {
         "productId": 6,
         "productName": "Red Velvet Macarons Cake",
         "description": "Rich valrhona chocolate cake layers, frosted with chocolate fudge cream cheese, finished with a salted caramel sauce drizzle wreath and cocoa nibs.",
         "price": 69.00,
-        "imageUrl": "images/cakes_images/macaron_cake.jpg"
+        "imageUrl": "images/cakes_images/macaron_cake_crop_500x500.jpg"
     },
     {
         "productId": 7,
         "productName": "Cranberries Summer Peach Cake",
         "description": "Maple infused cake layerd with in house cooked Blueberry & Blackberry jam, fluffy smooth Cream Cheese Swirls and Fresh Berries.",
         "price": 50.00,
-        "imageUrl": "images/cakes_images/xmas_redberry_cake.jpg"
+        "imageUrl": "images/cakes_images/xmas_redberry_crop_500x500.jpg"
     },
     {
         "productId": 8,
         "productName": "Raspberries and Chocolate Layered Cake",
         "description": "Adapted from the ever-so-popular Strawberries Shortcake, expect moist and Velvety Vanilla layers for this cake. Expect freshly Whipped Strawberries Chantilly and farm-picked sliced Strawberries.",
         "price": 55.00,
-        "imageUrl": "images/cakes_images/xmas_chocolate_cake.jpg"
+        "imageUrl": "images/cakes_images/xmas_chocolate_cake_crop_500x500.jpg"
     },
     {
         "productId": 9,
         "productName": "White Xmas Cake with Cherries and Cookies",
         "description": "Made with a Dark Stout Beer, Molasses, Ginger, Nutmeg, Cinnamon and Cardamom then topped with a Sweet Cream Cheese frosting. It's sweet, spicy, comforting and indulgent all at the same time.",
         "price": 55.00,
-        "imageUrl": "images/cakes_images/gingerbread_cake.jpg"
+        "imageUrl": "images/cakes_images/gingerbread_cake_lg_crop_1_500x500.jpg"
     },
     {
         "productId": 10,
         "productName": "Rainbow Sprinkled Star Shaped Funfetti Cake",
         "description": "Our very own rendition of the traditional Black Forest Cake. Moist Belgian Dark Chocolate Cake Sponge, layered with Chocolate Fudge and Madagascar Vanilla bean chantilly, textured with in-house cooked balsamic cherry jam with juicy plump cherry!",
         "price": 69.00,
-        "imageUrl": "images/cakes_images/sparkles_cake.jpg"
+        "imageUrl": "images/cakes_images/sparkles_cake_lg_crop1_500x500.jpg"
     }
 ];
 

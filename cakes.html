@@ -1,115 +1,148 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+  <!--------------------------------------- Bootstrap CSS --------------------------------------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <!--Gooogle fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+  <!--Animate on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Font Awesome CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--load all styles -->
+
   <!-- stylesheet main_page -->
   <link rel="stylesheet" type="text/css" href="css/cakes.css" media="screen" />
 
-  <title>A-CAKES</title>
+  <title>CONTACT</title>
 
 </head>
 
 <body>
-  <!----------------------------------------------------------(start)NAVBAR--------------------------------------------------------->
+
   <header>
+    <!---------------------------- Free Delivery (starts) here -------------------------------->
     <div class="container container_0">
       <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
     </div>
+    <!------------------------------ Free Delivery (ends) ------------------------------------->
 
-    <!--Navbar-->
-    <div class="container container_nav">
+    <!----------------------------- Navbar (starts) here -------------------------------------->
+    <div class="container container_nav pt-2 pb-2">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
         <div class="company_logo navbar-brand">
           <!--div created to contain the cake image and name of company together -->
-          <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png"
-              alt="company logo"></a>
+          <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
         </div>
         <h6 class="appeaseofcake_font">appeaseofcake</h6>
-
 
         <div>
           <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
             aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
               class="navbar-toggler-icon"></span></button>
-          <!--Button to toggle nav collapse -->
+          <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
         </div>
 
         <div class="collapse navbar-collapse" id="navbarContents">
-          <!--collapsing nav -->
+          <!----------------------collapsing nav ------------------->
           <ul class="navbar-nav ml-auto">
             <!--  shifting nav links to the right side of the page -->
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a href="#">Cart</a></li>
+            <li class="navbar-item"><a id="shopping_cart_icon" href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
           </ul>
 
-          <!--Modal: Login / Register Form-->
+          <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
+          <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
 
-          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
+              
+              aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
               <!--Content-->
-              <div class="modal-content">
+              <div class="modal-content modal-popout-bg">
+                <!--Add backgnd image-->
 
                 <!--Modal cascading tabs-->
                 <div class="modal-c-tabs">
 
-                  <!-- Nav tabs -->
+                  <!-- Modal tabs Login/Register starts here-->
                   <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <!--If want to change Tabs background-->
                     <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                          class="fas fa-user mr-1"></i>
+                      <a class="login_text nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
+                          class="fas"></i>
                         Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                          class="fas fa-user-plus mr-1"></i>
+                      <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+                          class="fas"></i>
                         Register</a>
                     </li>
                   </ul>
+                  <!-- Modal tabs Login/Register ends here-->
 
-                  <!-- Tab panels -->
+                  <!-- Modal Tab panels -->
                   <div class="tab-content">
                     <!--Panel 7-->
+
                     <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
 
                       <!--Body-->
                       <div class="modal-body mb-1">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
-                        </div>
+                        <!--Your Email-->
+                        <form role="form">
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
+                              Address</label>
+                            <input type="email" id="logEmail" class="form-control form-control-sm validate"
+                              placeholder="Enter email">
+                          </div>
 
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
-                        </div>
-                        <div class="text-center mt-2">
-                          <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
+                          <div class="md-form form-sm mb-4">
+                            <!--Your Password-->
+                            <i class="fas prefix"></i>
+                            <label id="password_font" data-error="wrong" data-success="right"
+                              for="modalLRInput11">Password</label>
+                            <input type="password" id="logPw" class="form-control form-control-sm validate"
+                              placeholder="Enter password">
+                          </div>
+
+                          <div class="text-center mt-2">
+                            <!--Login Button-->
+                            <button id="login_btn" class="login_btn btn btn-warning" onclick="check()">Log in <i
+                                class="fas ml-1"></i></button>
+                          </div>
+                        </form>
                       </div>
-                      <!--Footer-->
+                      <!--Footer of Login Tab "Not a member?" "Forgot Password"-->
                       <div class="modal-footer">
                         <div class="options text-center text-md-right mt-1">
-                          <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                          <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                          <p id="notamember_font">Not a member? <a href="#" class="blue-text signup_click">Sign Up</a>
+                          </p>
+                          <p id="notamember_font">Forgot <a href="#" class="blue-text password_click">Password?</a></p>
                         </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
                           data-dismiss="modal">Close</button>
                       </div>
 
@@ -119,39 +152,52 @@
                     <!--Panel 8-->
                     <div class="tab-pane fade" id="panel8" role="tabpanel">
 
-                      <!--Body-->
+                      <!--Body (Modal Register Tab) (start)-->
                       <div class="modal-body">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
-                        </div>
+                        <form role="form">
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Your
+                              email</label>
+                            <input type="email" name="email" id="regEmail" class="form-control form-control-sm validate"
+                              placeholder="Enter email">
+                          </div>
 
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
-                        </div>
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
+                              password <a href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                            <input type="password" name="password" id="regPw"
+                              class="form-control form-control-sm validate" placeholder="Enter password">
+                          </div>
 
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
-                        </div>
 
-                        <div class="text-center form-sm mt-2">
-                          <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
+                          <div class="md-form form-sm mb-3">
+                            <i class="fas prefix"></i>
+                            <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
+                              password</label>
+                            <input type="password" name="passwordAgain" id="regPwAgain"
+                              class="form-control form-control-sm validate" placeholder="Enter password again">
+                          </div>
+
+                          <div class="text-center form-sm mt-2">
+                            <button class="btn btn-info" onclick="signup()">Sign up <i
+                                class="fas ml-1"></i></button>
+                          </div>
+                        </form>
+                        <!--Body (Modal Register Tab) (end)-->
 
                       </div>
-                      <!--Footer-->
+                      <!--Footer of Register Tab (Modal) (start)-->
                       <div class="modal-footer">
                         <div class="options text-right">
-                          <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                          <p id="notamember_font" class="pt-1">Already have an account? <a href="#"
+                              class="blue-text reg_login">Log In</a></p>
                         </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                        <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
                           data-dismiss="modal">Close</button>
                       </div>
+                      <!--Footer of Register Tab (Modal) (end)-->
                     </div>
                     <!--/.Panel 8-->
                   </div>
@@ -163,9 +209,13 @@
           </div>
           <!--End of Modal: Login / Register Form-->
 
+          <!--------------(start)Login/Register Button to toggle Modal---------------->
           <div class="text-center">
-            <a href="" class="btn btn-link" data-toggle="modal" data-target="#modalLRForm">Login / Register</a>  <!--Login Button for Modal Linkage-->
+            <a href="" class="btn btn-link modal_button" data-toggle="modal"
+              data-target="#modalLRForm">Login / Register</a>
+            <!--Login Button for Modal Linkage-->
           </div>
+          <!--------------(end)Login/Register Button to toggle Modal------------------>
 
         </div>
         <!--closing for unlisted items -->
@@ -176,77 +226,93 @@
 
 
   </header>
- <!----------------------------------------------------------(End)NAVBAR------------------------------------------------------------>
- <!----------------------------------------------------------(Start)title"CAKE"----------------------------------------------------->
+<!--------------------------------------------------- navbar ends here ----------------------------------------------------->
+
+ <!--------------------------------------------------(Start)title"CAKE"----------------------------------------------------->
  <div class="container container_caketitle">
       <h3>CAKES</h3>
  </div>
- <!----------------------------------------------------------(End)title"CAKE"----------------------------------------------------->
- <!----------------------------------------------------------(Start)Cards------------------------------------------------------------>
+ <!---------------------------------------------------(End)title"CAKE"------------------------------------------------------->
+ <!--------------------------------------------------(Start)cards(json)------------------------------------------------------>
   <div id="cakes"></div>
-<!----------------------------------------------------------(End)Cards------------------------------------------------------------>
-<div class="container footer-container">
-  <footer class="border-top footer-container-1">
-    <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
+<!----------------------------------------------------(End)cards(json)------------------------------------------------------->
 
-      <div id="content_box" class="col-3">
-        <img class="logo1" src="images/logo1.png" alt="footer cake logo">
-        <p id="f2020_2021">&copy; 2020-2021</p>
+
+<!----------------------------------------------- Ending credits starts here ------------------------------------------------>
+
+  <div class="container footer-container">
+    <footer class="border-top footer-container-1">
+      <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
+
+        <div id="content_box" class="col-3">
+          <img class="logo1" src="images/logo1.png" alt="footer cake logo">
+          <p id="f2020_2021">&copy; 2020-2021</p>
+        </div>
+
+        <div class="col-3">
+          <h5 class="listed_item1">WRITE TO US</h5>
+          <hr>
+          <ul class="list-unstyled text-small">
+            <li><a class="writetous_font_footer" href="mailto:yqseah001@gmail.com">appeaseofcake@gmail.com</a></li>
+            <li><a class="writetous_font_footer1" href="tel:+6598338043">(HP)+65 98338043</a></li>
+            <li><a class="writetous_font_footer2" href="contact_us.html">Contact us</a></li>
+            <li><a class="writetous_font_footer2" href="about_us.html">Who we are</a></li>
+          </ul>
+        </div>
+
+        <div class="col-3">
+          <h5 class="listed_item2">LOCATE US</h5>
+          <hr>
+          <h6 id="location_font_footer">Glocal Connect Village</h6>
+          <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7" style="color:white">43 Tampines Ave 1, <br>Singapore 529762</p></a>
+          
+          <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,
+            <br> By Appointment Only</p>
+        </div>
+
+        <div class="col-3">
+          <h5 class="listed_item3">FOLLOW US</h5>
+          <hr>
+          <ul class="list-unstyled d-flex">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
+          </ul>
+        </div>
       </div>
+    </footer>
+  </div>
+  <!-------------------------------- Ending credits ends here ----------------------------------->
 
-      <div class="col-3">
-        <h5 class="listed_item1">WRITE TO US</h5>
-        <hr>
-        <ul class="list-unstyled text-small">
-          <li><a class="writetous_font_footer" href="mailto:yqseah001@gmail.com">appeaseofcake@gmail.com</a></li>
-          <li><a class="writetous_font_footer1" href="tel:+6598338043">(HP)+65 98338043</a></li>
-          <li><a class="writetous_font_footer2" href="contact_us.html">Contact us</a></li>
-          <li><a class="writetous_font_footer2" href="about_us.html">Who we are</a></li>
-        </ul>
-      </div>
-
-      <div class="col-3">
-        <h5 class="listed_item2">LOCATE US</h5>
-        <hr>
-        <h6 id="location_font_footer">Glocal Connect Village</h6>
-        <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7" style="color:white">43 Tampines Ave 1, <br>Singapore 529762</p></a>
-        
-        <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,
-          <br> By Appointment Only</p>
-      </div>
-
-      <div class="col-3">
-        <h5 class="listed_item3">FOLLOW US</h5>
-        <hr>
-        <ul class="list-unstyled d-flex">
-          <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
-          <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
-          <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
-          <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
-        </ul>
+  <!-------------------------------- Button (Back to top) starts here --------------------------->
+  <div class="container container_backtotop">
+    <div class="row">
+      <div class="col-12">
+        <!-- <a href="#free_deliv_font"><p>Back to top</p></a> -->
+        <button onclick="window.location.href='#free_deliv_font'" type="button" class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>
       </div>
     </div>
-  </footer>
-</div>
-<!-------------------------------- Ending credits ends here -------------------------------->
+  </div>
+  <!-------------------------------- Button (Back to top) ends here ----------------------------->
 
-<!-------------------------------- Button (Back to top) starts here ---------------------------->
-<div class="container container_backtotop">
-  <div class="row">
-    <div class="col-12">
-      <!-- <a href="#free_deliv_font"><p>Back to top</p></a> -->
-      <button onclick="window.location.href='#free_deliv_font'" type="button" class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>
+  <!-------------------------------- copyright footer starts here ------------------------------->
+  <div class="container container_copyright">
+    <div id="copyright" class="col-12">
+      <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
     </div>
   </div>
-</div>
-<!-------------------------------- Button (Back to top) ends here ------------------------------->
+  <!-------------------------------- copyright footer ends here --------------------------------->
 
-<!-------------------------------- copyright footer starts here --------------------------------->
-<div class="container container_copyright">
-  <div id="copyright" class="col-12">
-    <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
-  </div>
-</div>
+
+  
+ 
+
+
+
+      
+    
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -258,7 +324,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+  <!---------- Javascript aos --------->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000
+    });
+  </script>
+
+  <!---------- Javascript --------->
   <script type="text/javascript" src="js/cakes.js"></script>
 </body>
 
 </html>
+
+
+
+
