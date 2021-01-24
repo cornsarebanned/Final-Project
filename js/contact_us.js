@@ -1,12 +1,16 @@
-//Register Tab
 
 // ------------------------------- Register Tab(start)------------------------------- //
 
-const input = document.querySelectorAll('.signup_form > div > input');       //NodeList
-console.log(input);
+const input1 = document.querySelectorAll('.signup_form > div > input');       //NodeList
+console.log(input1);
 
 const form1 = document.querySelector('#panel8 > div.modal-body.modalTwo > .signup_form');     
 console.log(form1);
+// const errorFound = document.querySelector('#error_msg');
+// console.log(errorFound);
+
+const togglePw = document.querySelector('#toggleEye'); // pw eye toggle
+const togglePwAgain = document.querySelector('#toggleEye1'); // pw againeye toggle
 
 //foreach
 const name1 = document.querySelector('#regName');
@@ -28,53 +32,175 @@ console.log(homeUnit);
 const homePostalCode = document.querySelector('#regPostal');
 console.log(homePostalCode);
 
-const patterns = {
-    regName: /^([a-z]{1,50})$/i,
-    regEmail: /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/,  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
-    regPw: /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i,          // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ 
-    regPwAgain: /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i,
-    regHP: /^[0-9]{8}$/,                                //set to 8 digits
-    regHomeAdd: /^([a-z,A-Z,\d,\,]+)$/,                 //Blk123, Woodlands Dr 70 
-    regCity: /^[a-z,A-Z]{4,56}$/,                       //set to 4-56 alphabets eg: singaPore
-    regUnit: /^(\#?[\-,\d]+)$/,                         //#08-188 can opt not to use # as well
-    regPostal: /^[\d]{5,6}$/                            //postal code: 123456
-};
+const regNamePattern = /^([a-z,\s,\-]{1,50})$/i;   
+const regEmailPattern = /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/;  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
+const regPwPattern = /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ 
+const regPwAgainPattern = /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i;
+const regHPPattern = /^[0-9]{8}$/;                              //set to 8 digits
+const regHomeAddPattern = /^([a-z,A-Z,\d,\,\s]+)$/;             //Blk123, Woodlands Dr 70 
+const regCityPattern = /^[a-z,A-Z]{3,56}$/;                     //set to 4-56 alphabets eg: singaPore
+const regUnitPattern = /^(\#?[\-,\d]+)$/;                       //#08-188 can opt not to use # as well
+const regPostalPattern = /^[\d]{6}$/;                           //postal code: 123456
+
 
 form1.addEventListener('submit', function(e){
-    e.preventDefault();                                 //prevent signup "submit" from refreshing page
-    // console.log(name1.value);
-    // console.log(e.target);                           //refers to form1       
-    //regex testing   
-    const regNamePattern = /^([a-z]{1,50})$/i;            
-    let regexTest = regNamePattern.test(name1.value);
-    console.log(regexTest);
-    
 
+    e.preventDefault();                                 //prevent signup "submit" from refreshing page      
+           
+    let regexTestName = regNamePattern.test(name1.value);
+    console.log(regexTestName);
 
-//validation function
+    let regexTestEmail = regEmailPattern.test(email.value);
+    console.log(regexTestEmail);
 
+    let regexTestPw = regPwPattern.test(password.value);
+    console.log(regexTestPw);
 
+    let regexTestPwAgain = regPwAgainPattern.test(passwordAgain.value);
+    console.log(regexTestPwAgain);
 
-//function validate(field, patterns){             //returns true or false, returns true when field is valid and false when the input differs from the regex in the objects
-//    console.log(patterns.test(field.value));    //comparison of whether patterns is the same as the value in the textbox
-//    if(patterns.test(field.value)){             //if its a match it will give a class of "valid"
-//        field.classList = 'Valid';
-//        console.log("ok");
-//    }else{
-//        field.classList = 'Invalid';
-//        console.log("not ok");
-//    }
-//}
+    let regexTestHp = regHPPattern.test(handphone.value);
+    console.log(regexTestHp);
 
-// input.forEach((ip) => {
-//     ip.addEventListener('keyup',function(e){
-//         // console.log(e.target.attributes.name.value);
-//         validate(e.target, patterns[e.target.attributes.id.value]);
-//     })
-// });
+    let regexTestAddress = regHomeAddPattern.test(homeAddress.value);
+    console.log(regexTestAddress);
 
+    let regexTestCity = regCityPattern.test(homeCity.value);
+    console.log(regexTestCity);
 
+    let regexTestUnit = regUnitPattern.test(homeUnit.value);
+    console.log(regexTestUnit);
+
+    let regexTestPostal = regPostalPattern.test(homePostalCode.value);
+    console.log(regexTestPostal);
+
+    //setting local storage
+    localStorage.setItem('name1', name1.value);
+    localStorage.setItem('password', password.value);
+    localStorage.setItem('passwordAgain', passwordAgain.value);
+    localStorage.setItem('handphone', handphone.value);
+    localStorage.setItem('homeAddress', homeAddress.value);
+    localStorage.setItem('homeCity', homeCity.value);
+    localStorage.setItem('homeUnit', homeUnit.value);
+    localStorage.setItem('homePostalCode', homePostalCode.value);
 })
+
+//Add new class list to toggle border color (live updates)
+name1.addEventListener('keyup', function(ev){
+    // console.log(ev.target);
+    if(regNamePattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg').style.opacity = '1';
+    }
+})
+
+email.addEventListener('keyup', function(ev){
+    if(regEmailPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg1').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg1').style.opacity = '1';
+    }    
+})
+
+password.addEventListener('keyup', function(ev){
+    if(regPwPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg2').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg2').style.opacity = '1';
+    }    
+})
+
+passwordAgain.addEventListener('keyup', function(ev){
+    if(ev.target.value === password.value){
+        ev.target.classList = "green";
+        document.getElementById('error_msg3').style.opacity = '0';
+    }else if(ev.target.value !== password.value){
+        ev.target.classList = "red";
+        document.getElementById('error_msg3').style.opacity = '1';
+    }    
+})
+
+handphone.addEventListener('keyup', function(ev){
+    if(regHPPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg4').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg4').style.opacity = '1';
+    }    
+})
+
+homeAddress.addEventListener('keyup', function(ev){
+    if(regHomeAddPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg5').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg5').style.opacity = '1';
+    }    
+})
+
+homeCity.addEventListener('keyup', function(ev){
+    if(regCityPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg6').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg6').style.opacity = '1';
+    }    
+})
+
+homeUnit.addEventListener('keyup', function(ev){
+    if(regUnitPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg7').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg7').style.opacity = '1';
+    }    
+})
+
+homePostalCode.addEventListener('keyup', function(ev){
+    if(regPostalPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg8').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg8').style.opacity = '1';
+    }    
+})
+
+//toggle eye passwords
+togglePw.addEventListener('click',function(e){
+    const type = password.getAttribute('type')==='password' ? 'text': 'password';
+    password.setAttribute('type',type);
+    this.classList.toggle('fa-eye-slash');
+});
+
+//toggle eye passwords again
+togglePwAgain.addEventListener('click',function(e){
+    const type = passwordAgain.getAttribute('type')==='password' ? 'text': 'password';
+    passwordAgain.setAttribute('type',type);
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+//local storage
+if(window.localStorage){
+    console.log('Supported');
+    localStorage.setItem("","");
+}else{
+    console.log('Unsupported');
+}
+
+
 
 // ------------------------------- Register Tab(end)--------------------------------- //
 

@@ -155,8 +155,9 @@ input::-webkit-input-placeholder {          /*change login/register modal placeh
 }
 
 .modal .modal-popout-bg {
-    background-image: url("../images/cakes_images/modal-background2.jpg");
+    /* background-image: url("../images/cakes_images/modal-background2.jpg"); */
     /* background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80"); */
+    background-image: url("https://images.unsplash.com/photo-1581388646048-3c04adad37b3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
     background-repeat : no-repeat;
     background-size: cover;  
     background-position: center;
@@ -210,23 +211,34 @@ a[data-tool-tip]:hover::after{
     outline: none !important;
 }
 
-
-#error_msg{
+#error_msg, #error_msg1, #error_msg2, #error_msg3, #error_msg4, #error_msg5, #error_msg6, #error_msg7, #error_msg8{
     color: red;
     font-size: 12px;
     letter-spacing: 0.02em;
     opacity: 0;  /*MUST BE OPACITY:0 not display:none*/
 }
 
+.signup_form > div > .green{
+    border: 2px solid limegreen;
+}
 
+.signup_form > div > .red{
+    border: 2px solid orangered;
+}
 
-/* .signup_form > div > input.Invalid + #error_msg{
-    color: red;
-    font-size: 12px;
-    letter-spacing: 0.02em;
-    display: block;
-}  */
+#toggleEye{
+    position: absolute;
+    left: 88%;
+    top: 44px;
+    cursor: pointer;
+}
 
+#toggleEye1{
+    position: absolute;
+    left: 88%;
+    top: 44px;
+    cursor: pointer;
+}
 
 /*--------------------------------------(end)Login Modal css-------------------------------------*/
 
