@@ -163,38 +163,43 @@
                         <!--Body (Modal Register Tab) (start)-->
                         <!--EMAIL ADDRESS-->
                         <div class="modal-body modalTwo">
+                          <!----------------SIGNUP Form (registration) starts here-------------->
                           <form role="form" class="signup_form">   <!----------------SIGNUP Form (registration) starts here-------------->
                            
-                            <div class="md-form form-sm mb-3">
+                            <div class="mb-3">
                               <i class="fas prefix"></i>
-                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name(in full)</label>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name (in full)</label>
                               <input type="text" name="email" id="regName" class="form-control form-control-sm validate"
-                                placeholder="Enter name ">
+                                placeholder="Enter name (in full)">
+                                <p id="error_msg">Please enter a valid name (in full)</p>
                             </div>
   
-                            <div class="md-form form-sm mb-3">
+                            <div class="mb-3">
                               <i class="fas prefix"></i>
                               <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Email address</label>
                               <input type="email" name="email" id="regEmail" class="form-control form-control-sm validate"
                                 placeholder="Enter email address ">
+                              <p id="error_msg">Email must be a valid address, e.g. me@mydomain.com</p> <!--error msg  -->
                             </div>
   
                             <!--PASSWORD/PASSWORD AGAIN-->
                             <div class="form-row signup_form">
-                              <div class="md-form form-sm mb-3 col-md-6">
+                              <div class=" mb-0 col-md-6">
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
-                                password <a id="tooltipFont" href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                                password <a id="tooltipFont" href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, @, #, $, %, &, *, -, _, ?} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
                                 <input type="password" name="email" id="regPw"
                                   class="form-control form-control-sm validate" placeholder="Enter password">
+                                <p id="error_msg">Password must be alphanumeric (! @ # $ % & * - _ ?), with min 10 characters</p> <!--error msg  -->
                               </div>
   
-                              <div class="md-form form-sm mb-3 col-md-6">
+                              <div class=" mb-2 col-md-6">
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
                                 password</label>
                                 <input type="password" name="email" id="regPwAgain"
                                   class="form-control form-control-sm validate" placeholder="Enter password again">
+                                  <p id="error_msg">Please enter your password again</p> <!--error msg  -->
                               </div>
                               </div>  
   
@@ -204,6 +209,7 @@
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
                                 <input type="number" name="email" id="regHP" class="form-control form-control-sm validate"
                                   placeholder="Enter handphone no. ">
+                                <p id="error_msg">Handphone no. must be a valid Singapore number (8 digits)</p> <!--error msg  -->
                               </div>
                         
                               <!--HOME ADDRESS-->
@@ -212,6 +218,7 @@
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Home Address (street)</label>
                                 <input type="text" name="email" id="regHomeAdd" class="form-control form-control-sm validate"
                                   placeholder="Enter home address (street) ">
+                                <p id="error_msg">Please enter your address (street)</p> <!--error msg  -->
                               </div>
   
   
@@ -226,6 +233,7 @@
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">City</label>
                                   <input type="text" name="email" id="regCity" class="form-control form-control-sm validate"
                                   placeholder="Enter city ">
+                                  <p id="error_msg">Please enter the city name</p> <!--error msg  -->
                                 </div>
   
                                 <div class="md-form form-sm mb-3 col-md-3">
@@ -233,6 +241,7 @@
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Unit</label>
                                   <input type="text" name="email" id="regUnit" class="form-control form-control-sm validate"
                                   placeholder="Unit no. ">
+                                  <p id="error_msg">Please enter your unit no.</p> <!--error msg  -->
                                 </div>
   
                                 <div class="md-form form-sm mb-3 col-md-3">
@@ -240,6 +249,7 @@
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Postal Code</label>
                                   <input type="number" name="email" id="regPostal" class="form-control form-control-sm validate"
                                   placeholder="Postal code">
+                                  <p id="error_msg">Please enter your postal code</p> <!--error msg  -->
                                 </div>
   
                               </div>
@@ -250,7 +260,10 @@
                             <div class="text-center form-sm mt-2">
                               <button type="submit" class="btn btn-info" id="signup_submit">Sign up</button>
                             </div>
-                          </form>                                 <!---------------------------SIGNUP Form (registration) ends here------------------------>
+                          </form> <!---------------------------SIGNUP Form (registration) ends here------------------------>
+                            
+                          <!---------------------SIGNUP Form (registration) ends here--------------------->
+
                           <!--Body (Modal Register Tab) (end)-->
   
                         </div>

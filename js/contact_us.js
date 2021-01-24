@@ -5,21 +5,31 @@
 const input = document.querySelectorAll('.signup_form > div > input');       //NodeList
 console.log(input);
 
-const form = document.querySelector('.signup_form');                               
+const form1 = document.querySelector('#panel8 > div.modal-body.modalTwo > .signup_form');     
+console.log(form1);
 
 //foreach
-const name = document.querySelector('#regName');
+const name1 = document.querySelector('#regName');
+console.log(name1);
 const email = document.querySelector('#regEmail');
+console.log(email);
 const password = document.querySelector('#regPw');
+console.log(password);
 const passwordAgain = document.querySelector('#regPwAgain');
+console.log(passwordAgain);
 const handphone = document.querySelector('#regHP');
+console.log(handphone);
 const homeAddress = document.querySelector('#regHomeAdd');
+console.log(homeAddress);
 const homeCity = document.querySelector('#regCity');
+console.log(homeCity);
 const homeUnit = document.querySelector('#regUnit');
+console.log(homeUnit);
 const homePostalCode = document.querySelector('#regPostal');
+console.log(homePostalCode);
 
 const patterns = {
-    regName: /^([a-z,A-Z]+)$/,
+    regName: /^([a-z]{1,50})$/i,
     regEmail: /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/,  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
     regPw: /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i,          // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ 
     regPwAgain: /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i,
@@ -30,29 +40,38 @@ const patterns = {
     regPostal: /^[\d]{5,6}$/                            //postal code: 123456
 };
 
-form.addEventListener('submit', function(e){
+form1.addEventListener('submit', function(e){
     e.preventDefault();                                 //prevent signup "submit" from refreshing page
+    // console.log(name1.value);
+    // console.log(e.target);                           //refers to form1       
+    //regex testing   
+    const regNamePattern = /^([a-z]{1,50})$/i;            
+    let regexTest = regNamePattern.test(name1.value);
+    console.log(regexTest);
+    
 
 
 //validation function
 
-function validate(field, patterns){             //returns true or false, returns true when field is valid and false when the input differs from the regex in the objects
-    console.log(patterns.test(field.value));    //comparison of whether patterns is the same as the value in the textbox
-    if(patterns.test(field.value)){             //if its a match it will give a class of "valid"
-        field.classList = 'Valid';
-        console.log("ok");
-    }else{
-        field.classList = 'Invalid';
-        console.log("not ok");
-    }
-}
 
-input.forEach((ip) => {
-    ip.addEventListener('keyup',function(e){
-        // console.log(e.target.attributes.name.value);
-        validate(e.target, patterns[e.target.attributes.id.value]);
-    })
-});
+
+//function validate(field, patterns){             //returns true or false, returns true when field is valid and false when the input differs from the regex in the objects
+//    console.log(patterns.test(field.value));    //comparison of whether patterns is the same as the value in the textbox
+//    if(patterns.test(field.value)){             //if its a match it will give a class of "valid"
+//        field.classList = 'Valid';
+//        console.log("ok");
+//    }else{
+//        field.classList = 'Invalid';
+//        console.log("not ok");
+//    }
+//}
+
+// input.forEach((ip) => {
+//     ip.addEventListener('keyup',function(e){
+//         // console.log(e.target.attributes.name.value);
+//         validate(e.target, patterns[e.target.attributes.id.value]);
+//     })
+// });
 
 
 })
