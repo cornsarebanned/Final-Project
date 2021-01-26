@@ -187,12 +187,13 @@
                               <div class=" mb-0 col-md-6">
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
-                                password <a id="tooltipFont" href="#" data-tool-tip="Password needs to include min 10 and max 20 characters: {a-z}, {A-Z}, {0-9}, {!, @, #, $, %, &, *, -, _, ?} ">
+                                password <a id="tooltipFont" href="#" data-tool-tip="1. Your password must be between 10 and 20 characters. 2. Your password must contain at least one uppercase, lowercase letters and number digits. 
+                                 3. Special characters allowed: ! @ # $ % & * - _ ?">
                                   <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
                                 <input type="password" name="regPw" id="regPw" 
                                   class="form-control form-control-sm validate" placeholder="Enter password"> 
                                   <i class="fa fa-eye fa-md" id="toggleEye"></i>
-                                <p id="error_msg2">Password must be alphanumeric (! @ # $ % & * - _ ?), with min 10 and max 20 characters</p> <!--error msg  -->
+                                <p id="error_msg2">Password invalid. Please kindly refer to "?" icon for password requirements.</p> <!--error msg  -->
                               </div>
   
                               <div class=" mb-2 col-md-6">
@@ -202,7 +203,7 @@
                                 <input type="password" name="regPwAgain" id="regPwAgain"
                                   class="form-control form-control-sm validate" placeholder="Enter password again">
                                   <i class="fa fa-eye fa-md" id="toggleEye1"></i>
-                                  <p id="error_msg3">Please enter your password again</p> <!--error msg  -->
+                                  <p id="error_msg3">Passwords do not match, please enter your password again</p> <!--error msg  -->
                               </div>
                             </div>  
   
@@ -212,7 +213,7 @@
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
                                 <input type="number" name="regHP" id="regHP" class="form-control form-control-sm validate"
                                   placeholder="Enter handphone no. ">
-                                <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits)</p> <!--error msg  -->
+                                <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits; Starts from 8 or 9)</p> <!--error msg  -->
                               </div>
                         
                               <!--HOME ADDRESS-->

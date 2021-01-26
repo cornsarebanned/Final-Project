@@ -36,7 +36,7 @@ const regNamePattern = /^([a-z,\s,\-]{1,50})$/i;
 const regEmailPattern = /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/;  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
 const regPwPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ , at least a lowercase,Uppercase and digit is needed
 const regPwAgainPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;    //.any single character, (?=)positive lookahead, *0 or more chars
-const regHPPattern = /^[0-9]{8}$/;                              //set to 8 digits
+const regHPPattern = /^(?=8|9)[0-9]{8}$/;                       //set to 8 digits (Start from 8 or 9)
 const regHomeAddPattern = /^([a-z,A-Z,\d,\,\s]+)$/;             //Blk123, Woodlands Dr 70 
 const regCityPattern = /^[a-z,A-Z]{2,56}$/;                     //set to 4-56 alphabets eg: singaPore
 const regUnitPattern = /^(\#?[a-z,\-,\d]{2,6})$/i;              //1A, #08-188 can opt not to use # as well
@@ -119,11 +119,16 @@ form1.addEventListener('submit', function(e){
         return false;
     }
 
+    if(regexTestName !== false && regexTestEmail !== false && regexTestPw !== false && regexTestPwAgain !== false && regexTestHp !== false && regexTestAddress !== false && regexTestCity !== false && regexTestUnit !== false && regexTestPostal !== false){
+        alert('Your details have been registered with us. Thank you.');
+        document.location.href="contact_us.html";
+    }
+
     //setting local storage (Objects values)
     const userForm = {
         regName: name1.value,
         regEmail: email.value,
-        regPw: email.value,
+        regPw: password.value,
         regPwAgain: passwordAgain.value,
         regHP: handphone.value,
         regHomeAdd: homeAddress.value,
@@ -131,6 +136,7 @@ form1.addEventListener('submit', function(e){
         regUnit: homeUnit.value,
         regPostal: homePostalCode.value
     };
+
 
     let keyData;
 
