@@ -34,56 +34,117 @@ console.log(homePostalCode);
 
 const regNamePattern = /^([a-z,\s,\-]{1,50})$/i;   
 const regEmailPattern = /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/;  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
-const regPwPattern = /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ 
-const regPwAgainPattern = /^[\w\@\-\!\?\*\&\%\$\#]{10,20}$/i;
+const regPwPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ , at least a lowercase,Uppercase and digit is needed
+const regPwAgainPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;    //.any single character, (?=)positive lookahead, *0 or more chars
 const regHPPattern = /^[0-9]{8}$/;                              //set to 8 digits
 const regHomeAddPattern = /^([a-z,A-Z,\d,\,\s]+)$/;             //Blk123, Woodlands Dr 70 
-const regCityPattern = /^[a-z,A-Z]{3,56}$/;                     //set to 4-56 alphabets eg: singaPore
-const regUnitPattern = /^(\#?[\-,\d]+)$/;                       //#08-188 can opt not to use # as well
+const regCityPattern = /^[a-z,A-Z]{2,56}$/;                     //set to 4-56 alphabets eg: singaPore
+const regUnitPattern = /^(\#?[a-z,\-,\d]{2,6})$/i;              //1A, #08-188 can opt not to use # as well
 const regPostalPattern = /^[\d]{6}$/;                           //postal code: 123456
 
 
 form1.addEventListener('submit', function(e){
 
     e.preventDefault();                                 //prevent signup "submit" from refreshing page      
-           
-    let regexTestName = regNamePattern.test(name1.value);
+    
+    let regexTestName = regNamePattern.test(name1.value); //returns boolean
     console.log(regexTestName);
+    if (regexTestName === false){     //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid name (in full)');
+        return false;
+    }
 
     let regexTestEmail = regEmailPattern.test(email.value);
     console.log(regexTestEmail);
+    if (regexTestEmail === false){     //boolean compares to boolean
+        e.preventDefault();
+        alert('Please key in a valid email address');
+        return false;
+    }
 
     let regexTestPw = regPwPattern.test(password.value);
     console.log(regexTestPw);
+    if (regexTestPw === false){     //boolean compares to boolean
+        e.preventDefault();
+        alert('Please key in a valid password');
+        return false;
+    }
 
     let regexTestPwAgain = regPwAgainPattern.test(passwordAgain.value);
     console.log(regexTestPwAgain);
+    if (regexTestPwAgain === false){     //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter the password again');
+        return false;
+    }
 
     let regexTestHp = regHPPattern.test(handphone.value);
     console.log(regexTestHp);
+    if (regexTestHp === false){        //boolean compares to boolean
+        e.preventDefault();
+        alert('Please key in a valid handphone no.');
+        return false;
+    }
 
     let regexTestAddress = regHomeAddPattern.test(homeAddress.value);
     console.log(regexTestAddress);
+    if (regexTestAddress === false){   //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid address (street)');
+        return false;
+    }
 
     let regexTestCity = regCityPattern.test(homeCity.value);
     console.log(regexTestCity);
+    if (regexTestCity === false){      //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid city name');
+        return false;
+    }
 
     let regexTestUnit = regUnitPattern.test(homeUnit.value);
     console.log(regexTestUnit);
+    if (regexTestUnit === false){      //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter your unit no.');
+        return false;
+    }
 
     let regexTestPostal = regPostalPattern.test(homePostalCode.value);
     console.log(regexTestPostal);
+    if (regexTestPostal === false){    //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid postal code');
+        return false;
+    }
 
-    //setting local storage
-    localStorage.setItem('name1', name1.value);
-    localStorage.setItem('password', password.value);
-    localStorage.setItem('passwordAgain', passwordAgain.value);
-    localStorage.setItem('handphone', handphone.value);
-    localStorage.setItem('homeAddress', homeAddress.value);
-    localStorage.setItem('homeCity', homeCity.value);
-    localStorage.setItem('homeUnit', homeUnit.value);
-    localStorage.setItem('homePostalCode', homePostalCode.value);
-})
+    //setting local storage (Objects values)
+    const userForm = {
+        regName: name1.value,
+        regEmail: email.value,
+        regPw: email.value,
+        regPwAgain: passwordAgain.value,
+        regHP: handphone.value,
+        regHomeAdd: homeAddress.value,
+        regCity: homeCity.value,
+        regUnit: homeUnit.value,
+        regPostal: homePostalCode.value
+    };
+
+    let keyData;
+
+    if (localStorage.getItem('keyData') === null){
+        keyData = [];                                   
+    }else{
+        keyData = JSON.parse(localStorage.getItem('keyData')); //extract data out from local storage hence use parse (str to readable format in js)
+    }
+
+    keyData.push(userForm);
+    localStorage.setItem('keyData', JSON.stringify(keyData));  //local storage only accepts string hence need to stringify
+
+    
+});
 
 //Add new class list to toggle border color (live updates)
 name1.addEventListener('keyup', function(ev){
@@ -118,7 +179,7 @@ password.addEventListener('keyup', function(ev){
 })
 
 passwordAgain.addEventListener('keyup', function(ev){
-    if(ev.target.value === password.value){
+    if(ev.target.value === password.value && regPwAgainPattern.test(ev.target.value)){
         ev.target.classList = "green";
         document.getElementById('error_msg3').style.opacity = '0';
     }else if(ev.target.value !== password.value){
@@ -190,115 +251,6 @@ togglePwAgain.addEventListener('click',function(e){
     passwordAgain.setAttribute('type',type);
     this.classList.toggle('fa-eye-slash');
 });
-
-
-//local storage
-if(window.localStorage){
-    console.log('Supported');
-    localStorage.setItem("","");
-}else{
-    console.log('Unsupported');
-}
-
-
-
-// ------------------------------- Register Tab(end)--------------------------------- //
-
-
-// function signup(){
-//     var regEmail = document.getElementById('regEmail');
-//     var regPw = document.getElementById('regPw');
-//     var regPwAgain = document.getElementById('regPwAgain');
-//     var lowerCaseLetters = /[a-z]/g;
-//     var upperCaseLetters = /[A-Z]/g;
-//     var numbers = /[0-9]/g;
-
-
-// if (regEmail.value.length == 0){                       
-//     alert("Please fill in your email address");
-//     return;
-// }
-// else if (regPw.value.length == 0){                      
-//     alert("Please fill in your password");
-//     return;
-// }
-// else if (regPwAgain.value.length == 0){                 
-//     alert("Please retype your password");
-//     return;
-// }
-// else if (regEmail.value.length == 0 || regPw.value.length == 0 || regPwAgain.value.length == 0){
-//     alert("Please fill in your email address and passwords");
-// }
-// else if (regPw.value != regPwAgain.value){              
-//     alert("Please kindly retype the passwords. Passwords do not match.");
-//     return;
-// }
-// else if (regPw.value.length < 10 || regPwAgain.value.length < 10){            
-//     alert("Please input 10 characters/digits. You are currently short of " + ( 10 - regPw.value.length ) +" characters/digits for 'Your Password' field." );
-//     return;
-// }
-// else if (!regPw.value.match(numbers) && !regPwAgain.value.match(numbers)){              
-//     alert("You have not met the password requirements: Number");
-//     return;
-// }
-// else if (!regPw.value.match(lowerCaseLetters) || !regPwAgain.value.match(lowerCaseLetters)){    
-//     alert("You have not met the password requirements: [a-z]");       
-//     return;                          
-// }
-// else if (!regPw.value.match(upperCaseLetters) || !regPwAgain.value.match(upperCaseLetters)){    
-//     alert("You have not met the password requirements: [A-Z]");
-//     return;
-// }
-// else {
-//     localStorage.setItem("regEmail", regEmail.value);
-//     localStorage.setItem("regPw", regPw.value);
-//     localStorage.setItem("regPwAgain", regPwAgain.value);
-//     alert("You have successfully created your account.");
-// }
-
-// }
-
-
-//checking
-// function check(){
-
-//     //stored data from the register-form (localStorage)
-//     var storedregEmail = localStorage.getItem('regEmail');
-//     var storedregPw = localStorage.getItem('regPw');
-   
-//     //user entered data from the login-form
-//     var userregEmail = document.getElementById('logEmail');
-//     var userregPw = document.getElementById('logPw');
-
-    
-//     //check if stored data from register-form is equivalent to the data entered in the login-form
-//     if(userregEmail.value == storedregEmail && userregPw.value == storedregPw){
-//         alert("You have successfully logged in!" + userregEmail);
-//     }else{
-//         alert("Access denied. Valid username and password is required.");
-//     }
-// }
-
-
-//Take input data and store as a new object in key/value pairs
-
-// function addNewUser(regEmail,regPw,regPwAgain) {
-//     var addNewUserList = JSON.parse(localStorage.getItem("addNewUserList") || "[]");
-      
-//     var newUser = {
-//       email: regEmail,
-//       password: regPw,
-//       passwordAgain: regPwAgain
-//     };
-    
-//     addNewUserList.push(newUser);
-//     // addNewUserList.push(JSON.parse(localStorage.getItem('addNewUserList')));
-//     console.log(addNewUserList);
-
-//     localStorage.setItem("addNewUserList", JSON.stringify(addNewUserList));
-// };
-
-
 
 
 

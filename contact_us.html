@@ -123,7 +123,7 @@
                               <i class="fas prefix"></i>
                               <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
                                 Address</label>
-                              <input type="email" id="logEmail" class="form-control form-control-sm validate"
+                              <input type="email" name="logEmail" id="logEmail" class="form-control form-control-sm validate"
                                 placeholder="Enter email">
                             </div>
   
@@ -132,13 +132,13 @@
                               <i class="fas prefix"></i>
                               <label id="email_font" data-error="wrong" data-success="right"
                                 for="modalLRInput11">Password</label>
-                              <input type="password" id="logPw" class="form-control form-control-sm validate"
+                              <input type="password" name="logPw" id="logPw" class="form-control form-control-sm validate"
                                 placeholder="Enter password">
                             </div>
   
                             <div class="text-center mt-2">
                               <!--Login Button-->
-                              <button id="login_btn" class="login_btn btn btn-warning" onclick="check()">Log in <i
+                              <button id="login_btn" class="login_btn btn btn-warning">Log in <i
                                   class="fas ml-1"></i></button>
                             </div>
                           </form>              <!-----------------------------------LOGIN FORM (END)--------------------------------------->
@@ -169,7 +169,7 @@
                             <div class="mb-3">
                               <i class="fas prefix"></i>
                               <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name (in full)</label>
-                              <input type="text" name="email" id="regName" class="form-control form-control-sm validate"
+                              <input type="text" name="regName" id="regName" class="form-control form-control-sm validate"
                                 placeholder="Enter name (in full)">
                                 <p id="error_msg">Please enter a valid name (in full)</p>
                             </div>
@@ -177,7 +177,7 @@
                             <div class="mb-3">
                               <i class="fas prefix"></i>
                               <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Email address</label>
-                              <input type="email" name="email" id="regEmail" class="form-control form-control-sm validate"
+                              <input type="email" name="regEmail" id="regEmail" class="form-control form-control-sm validate"
                                 placeholder="Enter email address ">
                               <p id="error_msg1">Email must be a valid address, e.g. me@mydomain.com</p> <!--error msg  -->
                             </div>
@@ -189,7 +189,7 @@
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
                                 password <a id="tooltipFont" href="#" data-tool-tip="Password needs to include min 10 and max 20 characters: {a-z}, {A-Z}, {0-9}, {!, @, #, $, %, &, *, -, _, ?} ">
                                   <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
-                                <input type="password" name="email" id="regPw" 
+                                <input type="password" name="regPw" id="regPw" 
                                   class="form-control form-control-sm validate" placeholder="Enter password"> 
                                   <i class="fa fa-eye fa-md" id="toggleEye"></i>
                                 <p id="error_msg2">Password must be alphanumeric (! @ # $ % & * - _ ?), with min 10 and max 20 characters</p> <!--error msg  -->
@@ -199,7 +199,7 @@
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
                                 password</label>
-                                <input type="password" name="email" id="regPwAgain"
+                                <input type="password" name="regPwAgain" id="regPwAgain"
                                   class="form-control form-control-sm validate" placeholder="Enter password again">
                                   <i class="fa fa-eye fa-md" id="toggleEye1"></i>
                                   <p id="error_msg3">Please enter your password again</p> <!--error msg  -->
@@ -210,7 +210,7 @@
                               <div class="md-form form-sm mb-3 signup_form">
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
-                                <input type="number" name="email" id="regHP" class="form-control form-control-sm validate"
+                                <input type="number" name="regHP" id="regHP" class="form-control form-control-sm validate"
                                   placeholder="Enter handphone no. ">
                                 <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits)</p> <!--error msg  -->
                               </div>
@@ -219,7 +219,7 @@
                               <div class="md-form form-sm mb-3 signup_form">
                                 <i class="fas prefix"></i>
                                 <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Home Address (street)</label>
-                                <input type="text" name="email" id="regHomeAdd" class="form-control form-control-sm validate"
+                                <input type="text" name="regHomeAdd" id="regHomeAdd" class="form-control form-control-sm validate"
                                   placeholder="Enter home address (street) ">
                                 <p id="error_msg5">Please enter a valid address (street)</p> <!--error msg  -->
                               </div>
@@ -234,7 +234,7 @@
                                 <div class="md-form form-sm mb-3 col-md-6">
                                   <i class="fas prefix"></i>
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">City</label>
-                                  <input type="text" name="email" id="regCity" class="form-control form-control-sm validate"
+                                  <input type="text" name="regCity" id="regCity" class="form-control form-control-sm validate"
                                   placeholder="Enter city ">
                                   <p id="error_msg6">Please enter a valid city name</p> <!--error msg  -->
                                 </div>
@@ -242,7 +242,7 @@
                                 <div class="md-form form-sm mb-3 col-md-3">
                                   <i class="fas prefix"></i>
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Unit</label>
-                                  <input type="text" name="email" id="regUnit" class="form-control form-control-sm validate"
+                                  <input type="text" name="regUnit" id="regUnit" class="form-control form-control-sm validate"
                                   placeholder="Unit no. ">
                                   <p id="error_msg7">Please enter your unit no.</p> <!--error msg  -->
                                 </div>
@@ -250,7 +250,7 @@
                                 <div class="md-form form-sm mb-3 col-md-3">
                                   <i class="fas prefix"></i>
                                   <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Postal Code</label>
-                                  <input type="number" name="email" id="regPostal" class="form-control form-control-sm validate"
+                                  <input type="number" name="regPostal" id="regPostal" class="form-control form-control-sm validate"
                                   placeholder="Postal code">
                                   <p id="error_msg8">Please enter a valid postal code</p> <!--error msg  -->
                                 </div>
