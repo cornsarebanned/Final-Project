@@ -1,4 +1,3 @@
-
 // ------------------------------- Register Tab(start)------------------------------- //
 
 const input1 = document.querySelectorAll('.signup_form > div > input');       //NodeList
@@ -32,7 +31,7 @@ console.log(homeUnit);
 const homePostalCode = document.querySelector('#regPostal');
 console.log(homePostalCode);
 
-const regNamePattern = /^([a-z,\s,\-]{1,50})$/i;   
+const regNamePattern = /^([a-z,\s,\-]{2,50})$/i;   
 const regEmailPattern = /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/;  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars                                
 const regPwPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ , at least a lowercase,Uppercase and digit is needed
 const regPwAgainPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;    //.any single character, (?=)positive lookahead, *0 or more chars
@@ -42,6 +41,8 @@ const regCityPattern = /^[a-z,A-Z]{2,56}$/;                     //set to 4-56 al
 const regUnitPattern = /^(\#?[a-z,\-,\d]{2,6})$/i;              //1A, #08-188 can opt not to use # as well
 const regPostalPattern = /^[\d]{6}$/;                           //postal code: 123456
 
+let keyData;
+console.log(keyData);
 
 form1.addEventListener('submit', function(e){
 
@@ -124,7 +125,7 @@ form1.addEventListener('submit', function(e){
         document.location.href="contact_us.html";
     }
 
-    //setting local storage (Objects values)
+    // setting local storage (Objects values)
     const userForm = {
         regName: name1.value,
         regEmail: email.value,
@@ -137,8 +138,7 @@ form1.addEventListener('submit', function(e){
         regPostal: homePostalCode.value
     };
 
-
-    let keyData;
+    // let keyData;
 
     if (localStorage.getItem('keyData') === null){
         keyData = [];                                   
@@ -148,8 +148,7 @@ form1.addEventListener('submit', function(e){
 
     keyData.push(userForm);
     localStorage.setItem('keyData', JSON.stringify(keyData));  //local storage only accepts string hence need to stringify
-
-    
+   
 });
 
 //Add new class list to toggle border color (live updates)
@@ -188,7 +187,7 @@ passwordAgain.addEventListener('keyup', function(ev){
     if(ev.target.value === password.value && regPwAgainPattern.test(ev.target.value)){
         ev.target.classList = "green";
         document.getElementById('error_msg3').style.opacity = '0';
-    }else if(ev.target.value !== password.value){
+    }else{
         ev.target.classList = "red";
         document.getElementById('error_msg3').style.opacity = '1';
     }    
@@ -259,9 +258,48 @@ togglePwAgain.addEventListener('click',function(e){
 });
 
 
+// ----------------------------------Login (start)----------------------------------- //
 
+let loginForm = document.querySelector('.login_form');
+console.log(loginForm);
+let logEmail = document.querySelector('.modalOne > .login_form > div > #logEmail');
+console.log(logEmail);
+let logPassword = document.querySelector('.modalOne > .login_form > div > #logPw');
+console.log(logPassword);
 
-// ------------------------------- Google maps api (start)------------------------------- //
+loginForm.addEventListener('submit', function(e){
+
+   e.preventDefault();
+
+// check if stored data (local storage) from register-form is the same as data entered by user
+
+    // stored data from in local storage
+    var storedData = JSON.parse(localStorage.getItem("keyData"));
+    console.log(storedData);
+
+    // user entered data in login-form
+    let logEmailVal = logEmail.value;
+    console.log(logEmailVal);
+    let logPasswordVal = logPassword.value;
+    console.log(logPasswordVal);
+
+    for(var i = 0; i < storedData.length; i++){
+        // test(compare)
+        if(storedData[i].regEmail == " " || storedData[i].regPw == " "){
+            alert('Please enter your email and password.');
+        }else if(storedData[i].regEmail !== logEmailVal || storedData[i].regPw !== logPasswordVal){
+            alert('Your email address and password do not match. Please try again.');
+
+        }else if(storedData[i].regEmail === logEmailVal && storedData[i].regPw === logPasswordVal){
+            alert('Welcome to Appeaseofcake. You have successfully logged in.');
+            document.location.href="contact_us.html";
+        }
+    }
+}) 
+
+// -------------------------------------Login (end)----------------------------------- //
+
+// ------------------------------ Google maps api (start)----------------------------- //
 
 function initMap() {
     // The location of Tampines

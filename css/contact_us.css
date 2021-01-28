@@ -200,6 +200,22 @@ a[data-tool-tip]:hover::after{
     transform: scale(1);
 }
 
+/* Login Form(start)*/
+.login_form >  div > input{
+    display: block;
+    font-size: 1em;
+    height:40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #0072b1;
+    outline: none !important;
+}
+
+/* Login Form(end)*/
+
+/*Registration Form(start)*/
+
 .signup_form > div > input{
     display: block;
     font-size: 1em;
@@ -239,6 +255,9 @@ a[data-tool-tip]:hover::after{
     top: 44px;
     cursor: pointer;
 }
+/* Registration Form(end)*/
+
+
 
 /*--------------------------------------(end)Login Modal css-------------------------------------*/
 
