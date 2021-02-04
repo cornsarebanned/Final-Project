@@ -1,0 +1,375 @@
+/*----------------------------------------(start)NAVBAR css ------------------------------------*/
+ 
+.container {                           /* container of navigation bar, bs containers are padded, need to remove them*/
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#f2f4f5;         /*nav background color */
+    padding-top:0px; 
+ }
+
+ .container_0{                           /*free deliv container */
+     background-color: #343346;
+     padding: 0px 0px;
+     margin-top: 7px;
+     line-height:27px;
+ }
+
+ .container_nav{                    
+     /* border: 5px dotted red; */       /* nav margin-top push up whitespace */
+     margin-top: -12px;
+ }
+ 
+  #free_deliv_font{                      /*"Free delivery font", first row */
+     color: white;
+     font-size: 13px;
+     font-family: 'Montserrat', sans-serif;
+     text-align: center;
+     letter-spacing: 0.03em;
+ }
+
+.logo_image{                             /* cake image */
+    height:47px;
+    width:53px;
+    position: relative; 
+    left: 12px;
+    bottom:1px;
+}
+
+.company_logo{                           /* div that wraps around company logo and name */
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:0;
+    padding:2px;
+/*  margin-left:auto;
+    margin-right:auto; */                /* if logo wants to be centered */
+}
+
+.appeaseofcake_font{                     /* font "appeaseofcake" <h6> */
+    position: absolute;
+    bottom: 12px;    
+    left: 90px;
+    color:#fa2871;
+    font-size: 22px;
+    font-family: 'PT Mono', monospace;
+    letter-spacing: 3px;
+}
+
+ul > li{                                  /*remove dot from listed items*/
+    list-style-type: none;
+    
+}
+
+ul > li >a{                               /*change font for <li> items*/
+    color: grey;    
+    font-size: 16px;
+    font-family: 'PT Mono', monospace;
+    padding-right: 3px;
+    margin-left: 20px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.modal_button{                            /*change fonts for login/register button*/
+    font-family: 'PT Mono', monospace;
+    font-size: 16px;
+    margin-left: 20px;
+    color: #3F45D7;
+}
+
+.modal_button:hover{
+    text-decoration: underline;
+}
+
+/*---------------------------------------(end)NAVBAR css ---------------------------------------*/
+
+/*----------------------------------(start) SHOPPING CART FONT ---------------------------------*/
+.container_shopcarttitle{
+    margin-top: 25px;   
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+/*-----------------------------------(end) SHOPPING CART FONT ----------------------------------*/
+
+/*-------------------------------------(start) Checkout FORM -----------------------------------*/
+.cart_product_font, .cart_productprice_font, .cart_totalproductprice_font, .continue-shopping{
+    /* letter-spacing: 0.01em; */
+    font-family: 'Montserrat', sans-serif;
+}
+/*---------------------------------------(end) Checkout FORM -----------------------------------*/
+
+/*-----------------------------------------(start)CART TOTAL -----------------------------------*/
+.price1{
+    /* letter-spacing: 0.01em; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+/*-------------------------------------------(end)CART TOTAL -----------------------------------*/
+
+
+
+
+
+
+
+
+
+/*---------------------------------------(start) Footer-----------------------------------------*/
+
+.logo1{                                             /* footer cake logo adjust width/height */
+    width: 128px;
+    height: 115px;
+}
+
+#f2020_2021{
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    position: relative;
+    left: 28px;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+
+#content_box{                                               /* footer cake logo adjust position */
+    margin:0px;
+    /* border:5px dotted blue; */
+    position: relative;
+    left: 75px;
+    top: 20px;
+}
+
+.listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+    position: relative;
+    left: -15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 0.09em ;
+    color: white;
+}
+
+.writetous_font_footer{                                      /*  WRITE TO US (GMAIL) */
+    top: -4px;
+}
+
+.writetous_font_footer1{                                     /*  WRITE TO US (HP NO.) */
+    top: 2.5px;
+}
+
+.writetous_font_footer, .writetous_font_footer1{             /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+    font-size: 13.5px;
+    letter-spacing: 0.095em;
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    left: -36px;
+}
+
+.writetous_font_footer:hover, .writetous_font_footer1:hover, .writetous_font_footer2:hover{
+    color:hotpink;                                      /*  WRITE TO US (GMAIL), (HP NO.), CONTACT US, WHO WE ARE: HOVER */
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.writetous_font_footer2{                                  /* WRITE TO US (contact us/abt us) */
+    font-size: 12.5px;
+    letter-spacing: 0.15em;
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    top: 9px;
+    font-weight: bold;
+    color: white;
+    left: -36px;
+}
+
+/*  WRITE TO US (end) */
+
+/*  LOCATE US (start) */
+
+#location_font_footer, .address_font_footer, #op_hours_footer{/* LOCATE US (Glocal Connect Village),(43 Tampines Ave 1),(Bold 10-6pm Daily) */
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    color: white;
+    left: -15px;
+    top: 1px;
+}
+
+#location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+    font-size: 13.2px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+    font-size: 11.1px;
+    letter-spacing: 0.15em;
+}
+
+#op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+}
+
+/*  LOCATE US (end) */
+
+/*  FOLLOW US (start) */
+
+.fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+    color:white;
+    position: relative;
+}
+
+.fa-facebook:hover{
+    color: #4267B2;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
+}
+
+.fa-twitter:hover{
+    color: #1DA1F2;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
+}
+
+.fa-instagram:hover{
+    color:hotpink;
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;
+}
+
+.fa-linkedin:hover{
+    color:#0072b1;  
+    transform: rotate(35deg);
+    transition: 500ms ease-in-out all;          
+}
+
+.fa-facebook{
+    right: 35px;
+}
+
+.fa-twitter{
+    right: 25px;
+}
+
+.fa-instagram{
+    right: 15px;
+}
+
+.fa-linkedin{
+    right: 5px;
+}
+
+/*  FOLLOW US (end) */
+
+hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+    margin: 0rem 1rem 1rem 2rem;
+    border-color: grey;
+    position: relative;
+    left: -50px;
+}
+
+/*************************************** copyright (start)**************************************/
+
+.container_copyright{
+    /* border: 5px dotted blue;  */
+    /* background-color: #343346; */
+    background-color: black;
+    padding: 1px;
+}
+
+#copyright{
+    text-align: center;
+    font-size: 9.7px;
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    line-height: center;
+    position: relative;
+    top: 9px;
+}
+/************************************** copyright (end)*****************************************/
+
+/*---------------------------------------------(end) Footer------------------------------------*/
+
+/*---------------- ----------------(start) adjust footer padding ------------------------------*/
+.footer-container-1{                            
+    /* border: 2px solid blue; */              /*To adjust padding of footer*/
+    padding-top:25px;
+    padding-bottom:70px;
+}
+
+.footer-container{
+    background-color:#252B34;                /*background color for footer*/
+}
+
+/*----------------------------------(start) adjust footer padding ------------------------------*/
+
+
+/*----------------------------- Footer Button (Back to top) starts here ------------------------*/
+
+.container_backtotop{
+    background-color:#252B34;
+    text-align: center;
+    padding-bottom: 58px;
+}
+
+/*------------------------------ Footer Button (Back to top) ends here --------------------------*/
+
+
+
+
+
+
+
+/*---------------------------------(start)Media queries for navbar-------------------------------*/
+
+/* media queries */
+@media screen and (min-width: 768px){            /* hide toggle button*/
+    .navbar_toggler{
+        visibility:hidden;
+    }
+}                                     
+                                                   
+@media screen and (max-width: 1199px){             /* use max-width because resize from browser down */
+
+/* navbar start*/
+
+    ul > li >a{                     
+        font-size: 15.5px;                         /* decrease by 0.5 */
+        padding-right: 2.8px;                      /* decrease by 0.2 */
+        margin-left: 18px;                         /* decrease by 2 */
+    }
+
+    .modal_button{                                  /* change fonts for login/register button */
+        font-size: 15.5px;                          /* decrease by 0.5 */
+        margin-left: 9.5px;                         /* decrease by 0.5 */
+    }
+
+    .appeaseofcake_font{        
+        position: absolute;
+        bottom: 12px;    
+        left: 90px;
+        font-size: 21px;                            /* decrease by 1 */
+        letter-spacing: 2.9px;                      /* decrease by 0.1 */
+    }
+
+    .logo_image{                
+        height:46px;                                /* decrease by 1 */
+        width:52px;                                 /* decrease by 1 */
+        position: relative; 
+        left: 12px;
+        bottom:1px; 
+    }
+
+    #free_deliv_font{                               /*"Free delivery font", first row */
+        font-size: 12.5px;                          /* decrease by 0.5 */
+        letter-spacing: 0.04em;                     /* increase by 0.01 */
+    }
+}

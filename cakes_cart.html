@@ -29,7 +29,7 @@
   <!--load all styles -->
 
   <!-- stylesheet main_page -->
-  <link rel="stylesheet" type="text/css" href="css/cakes.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/cakes_cart.css" media="screen" />
 
   <title>SHOPPING CART</title>
 
@@ -228,17 +228,125 @@
   </header>
 <!--------------------------------------------------- navbar ends here ----------------------------------------------------->
 
- <!--------------------------------------------------(Start)title"SHOPPING CART"----------------------------------------------------->
- <div class="container container_caketitle">
-      <h3>SHOPPING CART</h3>
- </div>
- <!---------------------------------------------------(End)title"SHOPPING CART"------------------------------------------------------->
- <!--------------------------------------------------(Start)cards(json)------------------------------------------------------>
+ <!--------------------------------------------------(Start)title"SHOPPING CART"-------------------------------------------->
+<div class="container container_shopcarttitle bg-white text-center py-0 my-5">
+  <h3>SHOPPING CART</h3>
+</div>
+ <!---------------------------------------------------(End)title"SHOPPING CART"--------------------------------------------->
+
+ <!----------------------------------------------------------(Start)FORM---------------------------------------------------->
+<div class="container bg-white py-2 my-5">
+  <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-2">
+            <img src="images/cakes_images/blueRaspberryCrop_1_500x500.png"
+                alt="Blueberries and Vanilla Cake"
+                class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
+          </div>
+          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+            Blueberries and Vanilla Cake </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="cart_productprice_font col-sm-3 text-left mb-2">
+            $55.00 </div> 
+          <div class="col-sm-3 text-left mb-2">
+            <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
+              data-original="1">
+          </div>
+          <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
+          <div class="col-sm-2 text-right mb-2">
+            <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
+                class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-2">
+            <img src="images/cakes_images/blueRaspberryCrop_1_500x500.png"
+                alt="Blueberries and Vanilla Cake"
+                class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
+          </div>
+          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+            Blueberries and Vanilla Cake </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="cart_productprice_font col-sm-3 text-left mb-2">
+            $55.00 </div> 
+          <div class="col-sm-3 text-left mb-2">
+            <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
+              data-original="1">
+          </div>
+          <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
+          <div class="col-sm-2 text-right mb-2">
+            <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
+                class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+ <!------------------------------------------------------------(End)FORM---------------------------------------------------->
+
+ <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
+ <div class="row mt-5">
+  <label class="col-sm-3 text-center control-label"><strong>Cart Total</strong></label>
+  <div class="col-md-5 offset-md-4 col-sm-7 offset-sm-2">
+    <table class="table table-totals">
+                  <tbody><tr>
+        <td class="text-left"><strong>Sub-Total:</strong></td>
+        <td class="price1 text-right">$55.00</td>
+        <td class="text-right">
+                        </td>
+      </tr>
+                  <tr>
+        <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>
+        <td class="price1 text-right">$3.85</td>
+        <td class="text-right">
+                        </td>
+      </tr>
+                  <tr>
+        <td class="text-left"><strong>Total:</strong></td>
+        <td class="price1 text-right">$55.00</td>
+        <td class="text-right">
+                        </td>
+      </tr>
+                </tbody></table>
+              <table class="table table-promotions-removed">
+                  <tbody><tr>
+        <td class="text-left"></td>
+        <td class="text-right"><a href="#" class="toggle-promotion text-success" data-id="12"><i class="fa fa-check-circle"></i></a></td>
+      </tr>
+                </tbody></table>
+              <table class="table">
+      <tbody><tr><td class="text-center"><a href="https://www.catandthefiddle.com/checkout/checkout" class="checkout_btn btn btn-warning">Checkout</a></td></tr>
+      <tr><td class="text-center"><a href="cakes.html" class="text-primary continue-shopping">Or Continue Shopping</a></td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+</div> <!--End of container div (FORM)-->
+ <!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
+
+ <!------------------------------------------------------(Start)cards(json)------------------------------------------------->
  
- <div>
+ <!-- <div>
  <P>testing below here</P>
 <p>Tentatively, all cakes items stored in cakes.js file</p>
-<p>So cakes.html will simply pass me id number, then i retrieve cake item info from cakes.js file</p>
+<p>So cakes.html will simply pass me id number, then i retrieve cake item info from cakes.js file</p> -->
 <!-- cake_template.html line 351 submit button, sends these info to this page -->
 
 <!--
@@ -260,7 +368,7 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
  
 -->
 
-<div class="container container_productname bg-white mt-3 mb-3">
+<!-- <div class="container container_productname bg-white mt-3 mb-3">
   <div id="productName"></div>
 </div>
 
@@ -289,7 +397,7 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
 <div>
 <a href="cakes.html">Continue Shopping</a>
 <p></p>
-</div>
+</div> -->
 <!----------------------------------------------------(End)cards(json)------------------------------------------------------->
 
 
