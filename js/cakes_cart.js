@@ -76,20 +76,47 @@ var cakeProducts = [
 */
 document.getElementById("cart").innerHTML = `
 <div id="container_products" class="container">
-<div class="product-container">
+    <div class="product-container">
 
-${cakeProducts.map(function (cake) {
-    return ` 
-   <!-- <a href ="cake_template.html?img=${cake.imageUrl}&name=${cake.productName}&desc=${cake.description}&price=${cake.price}"> -->
-    <div>
-        <img class="product-img" src="${cake.imageUrl}" width="100">
-        <p class="product-description">${cake.productName}</p>
-        <p class="product-price"> $${cake.price}</p>
+    ${cakeProducts.map(function (cake) {
+        return ` 
+        
+            <div class="container bg-white py-2 my-5"> 
+            <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
+            <div class="row mb-3"> 
+                <div class="col-12 col-sm-6"> 
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 mb-2"> 
+                    <img src="${cake.imageUrl}"
+                        alt="Picture of my Cake"
+                        class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
+                    </div>
+                    <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+                    ${cake.productName} </div>
+                </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                <div class="row">
+                    <div class="cart_productprice_font col-sm-3 text-left mb-2">
+                    $${cake.price} </div> 
+                    <div class="col-sm-3 text-left mb-2">
+                    <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
+                        data-original="1">
+                    </div>
+                    <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
+                    <div class="col-sm-2 text-right mb-2">
+                    <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
+                        class="fa fa-trash"></i></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </form>
+            </div> <!--End of container div (FORM)-->
+        
+        `
+    }).join('')}
     </div>
-    </a>
-`
-}).join('')}
 </div>
-    </div>
 `
 
