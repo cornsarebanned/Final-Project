@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -10,8 +9,8 @@
   <!--------------------------------------- Bootstrap CSS --------------------------------------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-    <!--Gooogle fonts-->
+
+  <!--Gooogle fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -68,15 +67,15 @@
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+            <li class="navbar-item"><a id="shopping_cart_icon" href="cakes_cart.html"><i
+                  class="fa fa-shopping-cart fa-lg"></i></a></li>
           </ul>
 
           <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
           <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
 
-          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
-              
-              aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
               <!--Content-->
               <div class="modal-content modal-popout-bg">
@@ -94,8 +93,7 @@
                         Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                          class="fas"></i>
+                      <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas"></i>
                         Register</a>
                     </li>
                   </ul>
@@ -166,7 +164,9 @@
                           <div class="md-form form-sm mb-5">
                             <i class="fas prefix"></i>
                             <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
-                              password <a href="#" data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                              password <a href="#"
+                                data-tool-tip="Password needs to include 10 characters: {a-z}, {A-Z}, {0-9}, {!, #, $, %, &} "><i
+                                  class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
                             <input type="password" name="password" id="regPw"
                               class="form-control form-control-sm validate" placeholder="Enter password">
                           </div>
@@ -181,8 +181,7 @@
                           </div>
 
                           <div class="text-center form-sm mt-2">
-                            <button class="btn btn-info" onclick="signup()">Sign up <i
-                                class="fas ml-1"></i></button>
+                            <button class="btn btn-info" onclick="signup()">Sign up <i class="fas ml-1"></i></button>
                           </div>
                         </form>
                         <!--Body (Modal Register Tab) (end)-->
@@ -211,8 +210,8 @@
 
           <!--------------(start)Login/Register Button to toggle Modal---------------->
           <div class="text-center">
-            <a href="" class="btn btn-link modal_button" data-toggle="modal"
-              data-target="#modalLRForm">Login / Register</a>
+            <a href="" class="btn btn-link modal_button" data-toggle="modal" data-target="#modalLRForm">Login /
+              Register</a>
             <!--Login Button for Modal Linkage-->
           </div>
           <!--------------(end)Login/Register Button to toggle Modal------------------>
@@ -226,130 +225,81 @@
 
 
   </header>
-<!--------------------------------------------------- navbar ends here ----------------------------------------------------->
+  <!--------------------------------------------------- navbar ends here ----------------------------------------------------->
 
- <!--------------------------------------------------(Start)title"SHOPPING CART"-------------------------------------------->
-<div class="container container_shopcarttitle bg-white text-center py-0 my-5">
-  <h3>SHOPPING CART</h3>
-</div>
- <!---------------------------------------------------(End)title"SHOPPING CART"--------------------------------------------->
-
- <!----------------------------------------------------------(Start)FORM---------------------------------------------------->
-<div class="container bg-white py-2 my-5">
-  <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
-    <div class="row mb-3">
-      <div class="col-12 col-sm-6">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 mb-2">
-            <img src="images/cakes_images/blueRaspberryCrop_1_500x500.png"
-                alt="Blueberries and Vanilla Cake"
-                class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
-          </div>
-          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
-            Blueberries and Vanilla Cake </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div class="row">
-          <div class="cart_productprice_font col-sm-3 text-left mb-2">
-            $55.00 </div> 
-          <div class="col-sm-3 text-left mb-2">
-            <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
-              data-original="1">
-          </div>
-          <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
-          <div class="col-sm-2 text-right mb-2">
-            <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
-                class="fa fa-trash"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-
-  <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
-    <div class="row mb-3">
-      <div class="col-12 col-sm-6">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 mb-2">
-            <img src="images/cakes_images/blueRaspberryCrop_1_500x500.png"
-                alt="Blueberries and Vanilla Cake"
-                class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
-          </div>
-          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
-            Blueberries and Vanilla Cake </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div class="row">
-          <div class="cart_productprice_font col-sm-3 text-left mb-2">
-            $55.00 </div> 
-          <div class="col-sm-3 text-left mb-2">
-            <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
-              data-original="1">
-          </div>
-          <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
-          <div class="col-sm-2 text-right mb-2">
-            <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
-                class="fa fa-trash"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-
- <!------------------------------------------------------------(End)FORM---------------------------------------------------->
-
- <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
- <div class="row mt-5">
-  <label class="col-sm-3 text-center control-label"><strong>Cart Total</strong></label>
-  <div class="col-md-5 offset-md-4 col-sm-7 offset-sm-2">
-    <table class="table table-totals">
-                  <tbody><tr>
-        <td class="text-left"><strong>Sub-Total:</strong></td>
-        <td class="price1 text-right">$55.00</td>
-        <td class="text-right">
-                        </td>
-      </tr>
-                  <tr>
-        <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>
-        <td class="price1 text-right">$3.85</td>
-        <td class="text-right">
-                        </td>
-      </tr>
-                  <tr>
-        <td class="text-left"><strong>Total:</strong></td>
-        <td class="price1 text-right">$55.00</td>
-        <td class="text-right">
-                        </td>
-      </tr>
-                </tbody></table>
-              <table class="table table-promotions-removed">
-                  <tbody><tr>
-        <td class="text-left"></td>
-        <td class="text-right"><a href="#" class="toggle-promotion text-success" data-id="12"><i class="fa fa-check-circle"></i></a></td>
-      </tr>
-                </tbody></table>
-              <table class="table">
-      <tbody><tr><td class="text-center"><a href="https://www.catandthefiddle.com/checkout/checkout" class="checkout_btn btn btn-warning">Checkout</a></td></tr>
-      <tr><td class="text-center"><a href="cakes.html" class="text-primary continue-shopping">Or Continue Shopping</a></td></tr>
-    </tbody></table>
+  <!--------------------------------------------------(Start)title"SHOPPING CART"-------------------------------------------->
+  <div class="container container_shopcarttitle bg-white text-center py-0 my-5">
+    <h3>SHOPPING CART</h3>
   </div>
-</div>
+  <!---------------------------------------------------(End)title"SHOPPING CART"--------------------------------------------->
 
+  <!----------------------------------------------------------(Start)FORM---------------------------------------------------->
+  <div class="container bg-white py-2 my-5">
+    <div id="cart"></div>
 
-</div> <!--End of container div (FORM)-->
- <!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
+    <!------------------------------------------------------------(End)FORM---------------------------------------------------->
 
- <!------------------------------------------------------(Start)cards(json)------------------------------------------------->
- 
- <!-- <div>
+    <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
+    <div class="row mt-5">
+      <label class="col-sm-3 text-center control-label"><strong>Cart Total</strong></label>
+      <div class="col-md-5 offset-md-4 col-sm-7 offset-sm-2">
+        <table class="table table-totals">
+          <tbody>
+            <tr>
+              <td class="text-left"><strong>Sub-Total:</strong></td>
+              <td class="price1 text-right">$55.00</td>
+              <td class="text-right"></td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>
+              <td class="price1 text-right">$3.85</td>
+              <td class="text-right"></td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>Total:</strong></td>
+              <td class="price1 text-right">$55.00</td>
+              <td class="text-right"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-promotions-removed">
+          <tbody>
+            <tr>
+              <td class="text-left"></td>
+              <td class="text-right"><a href="#" class="toggle-promotion text-success" data-id="12"><i
+                    class="fa fa-check-circle"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td class="text-center"><a href="#" class="checkout_btn btn btn-warning">Checkout</a></td>
+            </tr>
+            <tr>
+              <td class="text-center"><a href="cakes.html" class="text-primary continue-shopping">Or Continue
+                  Shopping</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- want to create checkout page? example https://www.catandthefiddle.com/checkout/checkout -->
+
+  </div>
+  <!--End of container div (FORM)-->
+  <!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
+
+  <!------------------------------------------------------(Start)cards(json)------------------------------------------------->
+
+  <!-- <div>
  <P>testing below here</P>
 <p>Tentatively, all cakes items stored in cakes.js file</p>
 <p>So cakes.html will simply pass me id number, then i retrieve cake item info from cakes.js file</p> -->
-<!-- cake_template.html line 351 submit button, sends these info to this page -->
+  <!-- cake_template.html line 351 submit button, sends these info to this page -->
 
-<!--
+  <!--
 product name <div id="productName"></div>
 description <div id="productDesc" class="mb-3"></div>
 price <div id="productPrice" class="mb-3" style="font-size: 28px;"></div>
@@ -367,45 +317,15 @@ name="quantity", value=min="0" max="100"
 should be: "cake-size=(A/B/C)&quantity=(0-100)"
  
 -->
-
-<!-- <div class="container container_productname bg-white mt-3 mb-3">
-  <div id="productName"></div>
-</div>
-
-<div class="container product_cards_desc bg-white">
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_img">
-      <div class="object_fit" style="border:2px solid black;">
-        <div id="productImg" class="img-fluid bg-white m-3"></div>
-      </div>
-    </div>
-    
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_desc">
-      <div class="mb-2" style="font-weight: bold; font-size:25px;">Description:</div>
-      <div id="productDesc" class="mb-3"></div>
-      <div id="productPrice" class="mb-3" style="font-size: 28px;"></div>
-
- 
-</div>
-
-<div id="cart"></div>
-
-<form class="payment">
-  <div class='text-left my-10'>
-    <button type="submit" class="btn btn-success">Checkout</button> 
-  </div>
-</form>
-<div>
-<a href="cakes.html">Continue Shopping</a>
-<p></p>
-</div> -->
-<!----------------------------------------------------(End)cards(json)------------------------------------------------------->
+  <!----------------------------------------------------(End)cards(json)------------------------------------------------------->
 
 
-<!----------------------------------------------- Ending credits starts here ------------------------------------------------>
+  <!----------------------------------------------- Ending credits starts here ------------------------------------------------>
 
   <div class="container footer-container">
     <footer class="border-top footer-container-1">
-      <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
+      <div class="row pt-5 pb-2 footer-container-row">
+        <!--Adjust padding-->
 
         <div id="content_box" class="col-3">
           <img class="logo1" src="images/logo1.png" alt="footer cake logo">
@@ -427,10 +347,12 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
           <h5 class="listed_item2">LOCATE US</h5>
           <hr>
           <h6 id="location_font_footer">Glocal Connect Village</h6>
-          <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7" style="color:white">43 Tampines Ave 1, <br>Singapore 529762</p></a>
-          
+          <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7" style="color:white">43 Tampines
+              Ave 1, <br>Singapore 529762</p></a>
+
           <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,
-            <br> By Appointment Only</p>
+            <br> By Appointment Only
+          </p>
         </div>
 
         <div class="col-3">
@@ -438,9 +360,9 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
           <hr>
           <ul class="list-unstyled d-flex">
             <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
-            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
-            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
+            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -453,7 +375,8 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
     <div class="row">
       <div class="col-12">
         <!-- <a href="#free_deliv_font"><p>Back to top</p></a> -->
-        <button onclick="window.location.href='#free_deliv_font'" type="button" class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>
+        <button onclick="window.location.href='#free_deliv_font'" type="button"
+          class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>
       </div>
     </div>
   </div>
@@ -468,13 +391,13 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
   <!-------------------------------- copyright footer ends here --------------------------------->
 
 
-  
- 
 
 
 
-      
-    
+
+
+
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -498,11 +421,7 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
   </script>
 
   <!---------- Javascript --------->
-  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="js/cakes_cart.js"></script>
 </body>
 
 </html>
-
-
-
-
