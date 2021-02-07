@@ -37,8 +37,8 @@ var cakeProducts = [
     {
         "productId": 6,
         "productName": "Red Velvet Macarons Cake",
-        "description": "Rich valrhona chocolate cake layers, frosted with chocolate fudge cream cheese, finished with a salted caramel sauce drizzle wreath and cocoa nibs.",
-        "price": 69.00,
+        "description": "Sandwiched between 2 Strawberry red coloured large macaron shells are Fresh Strawberries Cream and our Signature Chocolate Ganache filling.",
+        "price": 55.00,
         "imageUrl": "images/cakes_images/macaron_cake_crop_500x500.jpg"
     },
     {

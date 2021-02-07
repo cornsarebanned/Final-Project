@@ -33,28 +33,32 @@ consumerForm.addEventListener('submit', function(e){
 
     if(sixInch.checked == true){
         // alert(sixInch.value +'" inch cake selected');
-        if(noOfCandles.value == 0){
+        //if(noOfCandles.value <= 0){
             //Prompt user to check whether they want any candle
-            alert('Will you like to include any candles? If not, press submit to continue.');
-            }
+            //alert('Will you like to include any candles? If not, press submit to continue.');
+            //    if(noOfCandles >= 0){
+                    window.location = "cakes_cart.html";
+            
     }else if(eightInch.checked == true){
         // alert(eightInch.value + '" inch cake selected');
-        if(noOfCandles.value == 0){
+        //if(noOfCandles.value < 1){
             //Prompt user to check whether they want any candle
-            alert('Will you like to include any candles? If not, press submit to continue.');
-            }
+            //alert('Will you like to include any candles? If not, press submit to continue.');
+            window.location = "cakes_cart.html";
+            
     }else if(tenInch.checked == true){
         // alert(tenInch.value + '" inch cake selected');
-        if(noOfCandles.value == 0){
+        //if(noOfCandles.value < 1){
             //Prompt user to check whether they want any candle
-            alert('Will you like to include any candles? If not, press submit to continue.');
-            }
+            //alert('Will you like to include any candles? If not, press submit to continue.');
+            //}else{
+                window.location = "cakes_cart.html";
+            //}
     }else{
         alert('Please indicate the size selection.');
     } 
 
-   
-
 })
 // Parsing Form to CHECKOUT CART (END)
 
+//Fetch JSON to HTML page
