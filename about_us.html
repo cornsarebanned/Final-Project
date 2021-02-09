@@ -1,183 +1,312 @@
 <!doctype html>
-<html lang="en">
+  <html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!--------------------------------------- Bootstrap CSS --------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+      <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  
+    <!--Animate on scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--load all styles -->
+  
+    <!-- stylesheet main_page -->
+    <link rel="stylesheet" type="text/css" href="css/about_us.css" media="screen" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-  <!-- stylesheet main_page -->
-  <link rel="stylesheet" type="text/css" href="css/about_us.css" media="screen" />
-
-  <title>APPEASEOFCAKE</title>
-
-</head>
-
-<body>
-
-  <header>
-  <!-------------------------------------------------- Free Delivery (starts) here -------------------------------------------------->
-    <div class="container container_0">
-      <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
-    </div>
-  <!-------------------------------------------------- Free Delivery (ends) -------------------------------------------------------->
-
- <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------->
-    <div class="container container_nav">
-      <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
-
-        <div class="company_logo navbar-brand">
-          <!--div created to contain the cake image and name of company together -->
-          <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png"
-              alt="company logo"></a>
-        </div>
-        <h6 class="appeaseofcake_font">appeaseofcake</h6>
-
-        <div>
-          <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
-            aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
-              class="navbar-toggler-icon"></span></button>
-          <!------------------Button to toggle nav collapse----------------->
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarContents">
-          <!----------------------collapsing nav ------------------->
-          <ul class="navbar-nav ml-auto">
-            <!--  shifting nav links to the right side of the page -->
-            <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
-            <li class="navbar-item"><a href="about_us.html">About</a></li>
-            <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a href="cakes_cart.html">Cart</a></li>
-          </ul>
-
-          <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
-
-          <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog cascading-modal" role="document">
-              <!--Content-->
-              <div class="modal-content">
-
-                <!--Modal cascading tabs-->
-                <div class="modal-c-tabs">
-
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                          class="fas fa-user mr-1"></i>
-                        Login</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                          class="fas fa-user-plus mr-1"></i>
-                        Register</a>
-                    </li>
-                  </ul>
-
-                  <!-- Tab panels -->
-                  <div class="tab-content">
-                    <!--Panel 7-->
-                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
-                      <!--Body-->
-                      <div class="modal-body mb-1">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+    <!--google map api-->
+     <!-- <script defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiLcRpWIwNNf_wLXt0jPwKDlh9Odr1oGs&callback=initMap">
+    </script> -->
+  
+    <title>ABOUT</title>
+  
+  </head>
+  
+  <body>
+  
+    <header>
+      <!---------------------------- Free Delivery (starts) here -------------------------------->
+      <div class="container container_0">
+        <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+      </div>
+      <!------------------------------ Free Delivery (ends) ------------------------------------->
+  
+      <!----------------------------- Navbar (starts) here -------------------------------------->
+      <div class="container container_nav pt-2 pb-2">
+        <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
+  
+          <div class="company_logo navbar-brand">
+            <!--div created to contain the cake image and name of company together -->
+            <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
+          </div>
+          <h6 class="appeaseofcake_font">appeaseofcake</h6>
+  
+          <div>
+            <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
+              aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+            <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
+          </div>
+  
+          <div class="collapse navbar-collapse" id="navbarContents">
+            <!----------------------collapsing nav ------------------->
+            <ul class="navbar-nav ml-auto">
+              <!--  shifting nav links to the right side of the page -->
+              <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
+              <li class="navbar-item"><a href="about_us.html">About</a></li>
+              <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
+              <li class="navbar-item"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+            </ul>
+  
+            <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
+            <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
+  
+            <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
+                
+                aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog cascading-modal" style="max-width: 50%;" role="document">  <!--Increase width of modal-->
+                <!--Content-->
+                <div class="modal-content modal-popout-bg">
+                  <!--Add backgnd image-->
+  
+                  <!--Modal cascading tabs-->
+                  <div class="modal-c-tabs">
+  
+                    <!-- Modal tabs Login/Register starts here-->
+                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                      <!--If want to change Tabs background-->
+                      <li class="nav-item">
+                        <a class="login_text nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
+                            class="fas"></i>
+                          Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+                            class="fas"></i>
+                          Register</a>
+                      </li>
+                    </ul>
+                    <!-- Modal tabs Login/Register ends here-->
+  
+                    <!-- Modal Tab panels -->
+                    <div class="tab-content">
+                      <!--Panel 7-->
+  
+                      <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+  
+                        <!--Login Body-->
+                        <div class="modal-body mb-1 modalOne">
+                          <!--Your Email-->
+                          <form role="form" class="login_form">   <!-----------------------------------LOGIN FORM (START)------------------------------------>
+                            <div class="md-form form-sm mb-5">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
+                                Address</label>
+                              <input type="email" name="logEmail" id="logEmail" class="form-control form-control-sm validate"
+                                placeholder="Enter email">
+                            </div>
+  
+                            <div class="md-form form-sm mb-4">
+                              <!--Your Password-->
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right"
+                                for="modalLRInput11">Password</label>
+                              <input type="password" name="logPw" id="logPw" class="form-control form-control-sm validate"
+                                placeholder="Enter password">
+                            </div>
+  
+                            <div class="text-center mt-2">
+                              <!--Login Button-->
+                              <button type="submit" class="login_btn btn btn-warning" id="login_submit">
+                                Log in</button>
+                            </div>
+                          </form>              <!-----------------------------------LOGIN FORM (END)--------------------------------------->
                         </div>
-
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                        <!--Footer of Login Tab "Not a member?" "Forgot Password"-->
+                        <div class="modal-footer">
+                          <div class="options text-center text-md-right mt-1">
+                            <p id="notamember_font">Not a member? <a href="#" class="blue-text signup_click">Sign Up</a>
+                            </p>
+                            <p id="notamember_font">Forgot <a href="#" class="blue-text password_click">Password?</a></p>
+                          </div>
+                          <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
+                            data-dismiss="modal">Close</button>
                         </div>
-                        <div class="text-center mt-2">
-                          <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
+  
                       </div>
-                      <!--Footer-->
-                      <div class="modal-footer">
-                        <div class="options text-center text-md-right mt-1">
-                          <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                          <p>Forgot <a href="#" class="blue-text">Password?</a></p>
-                        </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                          data-dismiss="modal">Close</button>
-                      </div>
+                      <!--/.Panel 7-->
+  
+                      <!--Panel 8-->
+                      <div class="tab-pane fade" id="panel8" role="tabpanel">
+  
+                        <!--Body (Modal Register Tab) (start)-->
+                        <!--EMAIL ADDRESS-->
+                        <div class="modal-body modalTwo">
+                          <!----------------SIGNUP Form (registration) starts here-------------->
+                          <form role="form" class="signup_form">   <!----------------SIGNUP Form (registration) starts here-------------->
+                           
+                            <div class="mb-3">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name (in full)</label>
+                              <input type="text" name="regName" id="regName" class="form-control form-control-sm validate"
+                                placeholder="Enter name (in full)">
+                                <p id="error_msg">Please enter a valid name (in full)</p>
+                            </div>
+  
+                            <div class="mb-3">
+                              <i class="fas prefix"></i>
+                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Email address</label>
+                              <input type="email" name="regEmail" id="regEmail" class="form-control form-control-sm validate"
+                                placeholder="Enter email address ">
+                              <p id="error_msg1">Email must be a valid address, e.g. me@mydomain.com</p> <!--error msg  -->
+                            </div>
+  
+                            <!--PASSWORD/PASSWORD AGAIN-->
+                            <div class="form-row signup_form">
+                              <div class=" mb-0 col-md-6">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
+                                password <a id="tooltipFont" href="#" data-tool-tip="1. Your password must be between 10 and 20 characters. 2. Your password must contain at least one uppercase, lowercase letters and number digits. 
+                                 3. Special characters allowed: ! @ # $ % & * - _ ?">
+                                  <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                                <input type="password" name="regPw" id="regPw" 
+                                  class="form-control form-control-sm validate" placeholder="Enter password"> 
+                                  <i class="fa fa-eye fa-md" id="toggleEye"></i>
+                                <p id="error_msg2">Password invalid. Please kindly refer to "?" icon for password requirements.</p> <!--error msg  -->
+                              </div>
+  
+                              <div class=" mb-2 col-md-6">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
+                                password</label>
+                                <input type="password" name="regPwAgain" id="regPwAgain"
+                                  class="form-control form-control-sm validate" placeholder="Enter password again">
+                                  <i class="fa fa-eye fa-md" id="toggleEye1"></i>
+                                  <p id="error_msg3">Passwords do not match, please enter your password again</p> <!--error msg  -->
+                              </div>
+                            </div>  
+  
+                              <!--HANDPHONE-->
+                              <div class="md-form form-sm mb-3 signup_form">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
+                                <input type="number" name="regHP" id="regHP" class="form-control form-control-sm validate"
+                                  placeholder="Enter handphone no. ">
+                                <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits; Starts from 8 or 9)</p> <!--error msg  -->
+                              </div>
+                        
+                              <!--HOME ADDRESS-->
+                              <div class="md-form form-sm mb-3 signup_form">
+                                <i class="fas prefix"></i>
+                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Home Address (street)</label>
+                                <input type="text" name="regHomeAdd" id="regHomeAdd" class="form-control form-control-sm validate"
+                                  placeholder="Enter home address (street) ">
+                                <p id="error_msg5">Please enter a valid address (street)</p> <!--error msg  -->
+                              </div>
+  
+  
+  
+  
+                              <!--CITY/UNIT/POSTAL CODE-->
+                              <div class="form-row signup_form">
+  
+  
+                                <div class="md-form form-sm mb-3 col-md-6">
+                                  <i class="fas prefix"></i>
+                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">City</label>
+                                  <input type="text" name="regCity" id="regCity" class="form-control form-control-sm validate"
+                                  placeholder="Enter city ">
+                                  <p id="error_msg6">Please enter a valid city name</p> <!--error msg  -->
+                                </div>
+  
+                                <div class="md-form form-sm mb-3 col-md-3">
+                                  <i class="fas prefix"></i>
+                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Unit</label>
+                                  <input type="text" name="regUnit" id="regUnit" class="form-control form-control-sm validate"
+                                  placeholder="Unit no. ">
+                                  <p id="error_msg7">Please enter your unit no.</p> <!--error msg  -->
+                                </div>
+  
+                                <div class="md-form form-sm mb-3 col-md-3">
+                                  <i class="fas prefix"></i>
+                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Postal Code</label>
+                                  <input type="number" name="regPostal" id="regPostal" class="form-control form-control-sm validate"
+                                  placeholder="Postal code">
+                                  <p id="error_msg8">Please enter a valid postal code</p> <!--error msg  -->
+                                </div>
+  
+                              </div>
+                        
+                          
+  
+                            <div class="text-center form-sm mt-2">
+                              <button type="submit" class="btn btn-info" id="signup_submit">Sign up</button>
+                            </div>
+                          </form> <!---------------------------SIGNUP Form (registration) ends here------------------------>
+                            
+                          <!---------------------SIGNUP Form (registration) ends here--------------------->
 
+                          <!--Body (Modal Register Tab) (end)-->
+  
+                        </div>
+                        <!--Footer of Register Tab (Modal) (start)-->
+                        <div class="modal-footer">
+                          <div class="options text-right">
+                            <p id="notamember_font" class="pt-1">Already have an account? <a href="#"
+                                class="blue-text reg_login">Log In</a></p>
+                          </div>
+                          <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
+                            data-dismiss="modal">Close</button>
+                        </div>
+                        <!--Footer of Register Tab (Modal) (end)-->
+                      </div>
+                      <!--/.Panel 8-->
                     </div>
-                    <!--/.Panel 7-->
-
-                    <!--Panel 8-->
-                    <div class="tab-pane fade" id="panel8" role="tabpanel">
-
-                      <!--Body-->
-                      <div class="modal-body">
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-envelope prefix"></i>
-                          <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
-                        </div>
-
-                        <div class="md-form form-sm mb-5">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
-                        </div>
-
-                        <div class="md-form form-sm mb-4">
-                          <i class="fas fa-lock prefix"></i>
-                          <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                          <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
-                        </div>
-
-                        <div class="text-center form-sm mt-2">
-                          <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
-                        </div>
-
-                      </div>
-                      <!--Footer-->
-                      <div class="modal-footer">
-                        <div class="options text-right">
-                          <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
-                        </div>
-                        <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                          data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                    <!--/.Panel 8-->
+  
                   </div>
-
                 </div>
+                <!--/.Content-->
               </div>
-              <!--/.Content-->
             </div>
+            <!--End of Modal: Login / Register Form-->
+  
+            <!--------------(start)Login/Register Button to toggle Modal---------------->
+            <div class="text-center">
+              <a href="" class="btn btn-link modal_button" data-toggle="modal"
+                data-target="#modalLRForm">Login / Register</a>
+              <!--Login Button for Modal Linkage-->
+            </div>
+            <!--------------(end)Login/Register Button to toggle Modal------------------>
+  
           </div>
-          <!--End of Modal: Login / Register Form-->
-
-          <div class="text-center">
-            <a href="" class="btn btn-link" data-toggle="modal" data-target="#modalLRForm">Login / Register</a>  <!--Login Button for Modal Linkage-->
-          </div>
-
-        </div>
-        <!--closing for unlisted items -->
-      </nav>
-      <!--closing for nav -->
-    </div>
-    <!--closing for container -->
-
-
-  </header>
-  <!---------------------------------- navbar ends here -------------------------------->
+          <!--closing for unlisted items -->
+        </nav>
+        <!--closing for nav -->
+      </div>
+      <!--closing for container -->
+  
+  
+    </header>
+    
+  <!---------------------------------- navbar ends here ---------------------------------------->
+  
     <!-- <div class="container container_white">
         <h1>About Us</h1>
         <h2>Singapore's Best Cakes</h2>
@@ -261,29 +390,167 @@
     </div> -->
 
 
-    <!--------------------------collage imgs (start)---------------------->
+ <!--------------------------------------collage imgs (start)----------------------------------->
+ <div class="container bg-white text-center">
+  <div class="appeaseofcake_header">
+    <h2>Team Appeaseofcake</h2>
+  </div>
+</div>
+
+  <div class="container photos_container bg-white">
+   <div class="sub_container">
+    <div class="team">
+      <img src="images/vincent.png" height="260px" width="260px" alt="teammate A">
+      <div class="name">Vincent</div>
+      <div class="title">Back-end Developer</div>
+      <div class="about mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+         laboris nisi ut aliquip ex ea commodo consequat.</div>
     
-    <div class="container content">
-      <div class="row">
-        <div class="column">
-            <img id="img_canyon" src="images/cakes_images/pexels-klaus-nielsen-6287257.jpg" alt="usa canyon">
-            <img id="img_2" src="images/cakes_images/pexels-eva-elijas-5742674.jpg" alt="pink ballcourt">
-            <img id="img_3" src="images/cakes_images/pexels-eva-elijas-5741917_lg.jpg" alt="magazine bay">
-        </div>
+         <div class="social-medias mt-2">
+          <a href="#"><i class="fa fa-github fa-lg" style="color: #6e5494";></i></a> 
+          <a href="#"><i class="fa fa-linkedin fa-lg ml-3" style="color: #0E76A8";></i></a>
+         </div>
+     </div>
+    
+
+    <div class="team">
+      <img src="images/vincent.png" height="260px" width="260px" alt="teammate B">
+      <div class="name">Jonathan</div>
+      <div class="title">Full-Stack Developer</div>
+      <div class="about mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+         laboris nisi ut aliquip ex ea commodo consequat.</div>
+    
+         <div class="social-medias mt-2">
+          <a href="#"><i class="fa fa-github fa-lg" style="color: #6e5494";></i></a> 
+          <a href="#"><i class="fa fa-linkedin fa-lg ml-3" style="color: #0E76A8";></i></a>
+         </div>
+    </div>
+
+    <div class="team">
+      <img src="images/vincent.png" height="260px" width="260px" alt="teammate C">
+      <div class="name">Yingqi</div>
+      <div class="title">Front-end Developer</div>
+      <div class="about mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+         laboris nisi ut aliquip ex ea commodo consequat.</div>
+    
+         <div class="social-medias mt-2">
+          <a href="#"><i class="fa fa-github fa-lg" style="color: #6e5494";></i></a> 
+          <a href="#"><i class="fa fa-linkedin fa-lg ml-3" style="color: #0E76A8";></i></a>
+         </div>
+    </div>
+   </div>
+  </div>
+ 
+
+  
+ <!---------------------------------------collage imgs (end)------------------------------------>
+  
 
 
 
+
+
+ <!---------------------------------- Ending credits starts here ------------------------------->
+
+ <div class="container footer-container">
+  <footer class="border-top footer-container-1">
+    <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
+
+      <div id="content_box" class="col-3">
+        <img class="logo1" src="images/logo1.png" alt="footer cake logo">
+        <p id="f2020_2021">&copy; 2020-2021</p>
+      </div>
+
+      <div class="col-3">
+        <h5 class="listed_item1">WRITE TO US</h5>
+        <hr>
+        <ul class="list-unstyled text-small">
+          <li><a class="writetous_font_footer" href="mailto:yqseah001@gmail.com">appeaseofcake@gmail.com</a></li>
+          <li><a class="writetous_font_footer1" href="tel:+6598338043">(HP)+65 98338043</a></li>
+          <li><a class="writetous_font_footer2" href="contact_us.html">Contact us</a></li>
+          <li><a class="writetous_font_footer2" href="about_us.html">Who we are</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <h5 class="listed_item2">LOCATE US</h5>
+        <hr>
+        <h6 id="location_font_footer">Glocal Connect Village</h6>
+        <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7" style="color:white">43 Tampines Ave 1, <br>Singapore 529762</p></a>
+        
+        <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,
+          <br> By Appointment Only</p>
+      </div>
+
+      <div class="col-3">
+        <h5 class="listed_item3">FOLLOW US</h5>
+        <hr>
+        <ul class="list-unstyled d-flex">
+          <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
+          <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
+          <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
+        </ul>
       </div>
     </div>
-  
-    <!----------------------------collage imgs (end)---------------------->
-  
+  </footer>
+</div>
+<!-------------------------------- Ending credits ends here ----------------------------------->
+
+<!-------------------------------- Button (Back to top) starts here --------------------------->
+<div class="container container_backtotop">
+  <div class="row">
+    <div class="col-12">
+      <!-- <a href="#free_deliv_font"><p>Back to top</p></a> -->
+      <button onclick="window.location.href='#free_deliv_font'" type="button" class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>
+    </div>
+  </div>
+</div>
+<!-------------------------------- Button (Back to top) ends here ----------------------------->
+
+<!-------------------------------- copyright footer starts here ------------------------------->
+<div class="container container_copyright">
+  <div id="copyright" class="col-12">
+    <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
+  </div>
+</div>
+<!-------------------------------- copyright footer ends here --------------------------------->
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+
+
+
+
+
+    
+  
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+
+<!---------- Javascript aos --------->
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 200,
+    duration: 1000
+  });
+</script> -->
+
+<!---------- Javascript --------->
+<script src="js/about_us.js"></script>
+</body>
+
 </html>

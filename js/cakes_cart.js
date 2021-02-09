@@ -74,30 +74,72 @@ let myCakeProducts = [
   }
 ];
 
-//store arrays in local storage as key: cakesData
+// store arrays in local storage as key: cakesData
 localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
 
+    let output = "";
+    // get stored data from in local storage
+    var storedCakesData = JSON.parse(localStorage.getItem("cakesData"));
+    console.log(storedCakesData);
+
+    for (let i = 0; i < storedCakesData.length; i++) {
+    output +=
+    `
+    <div class="container bg-white py-2 my-3">
+    <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-2">
+            <img src="${storedCakesData[i].imageUrl}"
+                alt="${storedCakesData[i].productName}"
+                class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
+          </div>
+          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+          ${storedCakesData[i].productName} </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="row">
+          <div class="cart_productprice_font col-sm-3 text-left mb-2">
+            $${storedCakesData[i].price}  </div> 
+          <div class="col-sm-3 text-left mb-2">
+            <input type="number" name="quantity" value="1" size="1" min="0" max="10" class="form-control quantity-input"
+              data-original="1">
+          </div>
+          <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$${storedCakesData[i].price}</div>
+          <div class="col-sm-2 text-right mb-2">
+            <button type="button" class="btn btn-danger"><i
+                class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    `   
+        document.getElementById("cart").innerHTML = output;
+    }
+    
 
 
 
 
 
-// var cakeProducts = [
-//     {
-//         "productId": 1,
-//         "productName": "Blueberries and Vanilla Cake",
-//         "description": "Sandwiched between 2 Strawberry red coloured large macaron shells are Fresh Strawberries Cream and our Signature Chocolate Ganache filling.",
-//         "price": 55.00,
-//         "imageUrl": "images/cakes_images/blueRaspberryCrop_1_500x500.png"
-//     },
-//     {
-//         "productId": 2,
-//         "productName": "Blueberries Crusted Cheesecake",
-//         "description": "Three thick and rich layers of chocolate cake are stacked and immersed with generous amounts of mouth-watering Vanilla Buttercream. Last but not least, a beautiful melted dark chocolate drip is drizzled to create this masterpiece!",
-//         "price": 65.00,
-//         "imageUrl": "images/cakes_images/blueberries_syrup_lg_crop_500x500.jpg"
-//     }
-// ];
+
+//  var cakeProducts = [
+//      {
+//          "productId": 1,
+//          "productName": "Blueberries and Vanilla Cake",
+//          "description": "Sandwiched between 2 Strawberry red coloured large macaron shells are Fresh Strawberries Cream and our Signature Chocolate Ganache filling.",
+//          "price": 55.00,
+//          "imageUrl": "images/cakes_images/blueRaspberryCrop_1_500x500.png"
+//      },
+//      {
+//          "productId": 2,
+//          "productName": "Blueberries Crusted Cheesecake",
+//          "description": "Three thick and rich layers of chocolate cake are stacked and immersed with generous amounts of mouth-watering Vanilla Buttercream. Last but not least, a beautiful melted dark chocolate drip is drizzled to create this masterpiece!",
+//          "price": 65.00,         "imageUrl": "images/cakes_images/blueberries_syrup_lg_crop_500x500.jpg"
+//      }
+//  ];
 /*
     },
     {
@@ -158,51 +200,50 @@ localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
     }
 ];
 */
-// document.getElementById("cart").innerHTML = `
-// <div id="container_products" class="container">
-//     <div class="product-container">
+//  document.getElementById("cart").innerHTML = `
+//  <div id="container_products" class="container">
+//      <div class="product-container">
 
-//     ${cakeProducts.map(function (cake) {
-//         return ` 
+//      ${cakeProducts.map(function (cake) {
+//          return ` 
         
-//             <div class="container bg-white py-2 my-5"> 
-//             <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
-//             <div class="row mb-3"> 
-//                 <div class="col-12 col-sm-6"> 
-//                 <div class="row">
-//                     <div class="col-sm-6 col-md-3 mb-2"> 
-//                     <img src="${cake.imageUrl}"
-//                         alt="Picture of my Cake"
-//                         class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
-//                     </div>
-//                     <div class="cart_product_font col-sm-6 col-md-8 mb-2">
-//                     ${cake.productName} </div>
-//                 </div>
-//                 </div>
-//                 <div class="col-12 col-sm-6">
-//                 <div class="row">
-//                     <div class="cart_productprice_font col-sm-3 text-left mb-2">
-//                     $${cake.price} </div> 
-//                     <div class="col-sm-3 text-left mb-2">
-//                     <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
-//                         data-original="1">
-//                     </div>
-//                     <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
-//                     <div class="col-sm-2 text-right mb-2">
-//                     <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i
-//                         class="fa fa-trash"></i></button>
-//                     </div>
-//                 </div>
-//                 </div>
-//             </div>
-//             </form>
-//             </div> <!--End of container div (FORM)-->
+//              <div class="container bg-white py-2 my-5"> 
+//              <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">             <div class="row mb-3"> 
+//                  <div class="col-12 col-sm-6"> 
+//                  <div class="row">
+//                      <div class="col-sm-6 col-md-3 mb-2"> 
+//                      <img src="${cake.imageUrl}"
+//                          alt="Picture of my Cake"
+//                          class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
+//                      </div>
+//                      <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+//                      ${cake.productName} </div>
+//                  </div>
+//                  </div>
+
+//                  <div class="col-12 col-sm-6">
+//                  <div class="row">
+//                      <div class="cart_productprice_font col-sm-3 text-left mb-2">
+//                      $${cake.price} </div> 
+//                      <div class="col-sm-3 text-left mb-2">
+//                      <input type="number" name="quantity" value="1" size="1" class="form-control quantity-input"
+//                          data-original="1">
+//                      </div>
+//                      <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$55.00</div>
+//                      <div class="col-sm-2 text-right mb-2">
+//                      <button type="button" class="btn btn-danger" onclick="cart.remove('1627023');"><i                         class="fa fa-trash"></i></button>
+//                      </div>
+//                  </div>
+//                  </div>
+//              </div>
+//              </form>
+//              </div> <!--End of container div (FORM)-->
         
-//         `
-//     }).join('')}
-//     </div>
-// </div>
-// `
+//          `
+//      }).join('')}
+//      </div>
+//  </div>
+//  `
 
 
 

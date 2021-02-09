@@ -10,7 +10,6 @@ function load() {
 
 document.onload = load();
 
-
 // Parsing Form to CHECKOUT CART (START)
 const consumerForm = document.querySelector('.consumer_selection'); 
 console.log(consumerForm);
@@ -26,6 +25,15 @@ const tenInch = document.querySelector('#ten_inch');
 const noOfCandles = document.querySelector('#candlesQuantity');
 // console.log(noOfCandles.value);
 
+
+const sample = document.querySelectorAll('.consumer_radioBtn > div > input');
+console.log(sample);
+var prev = null;
+sample.forEach(element => {
+   if(sixInch.checked)     
+});
+
+
 consumerForm.addEventListener('submit', function(e){
 
     e.preventDefault();
@@ -37,7 +45,7 @@ consumerForm.addEventListener('submit', function(e){
             //Prompt user to check whether they want any candle
             //alert('Will you like to include any candles? If not, press submit to continue.');
             //    if(noOfCandles >= 0){
-                    window.location = "cakes_cart.html";
+            window.location = "cakes_cart.html";
             
     }else if(eightInch.checked == true){
         // alert(eightInch.value + '" inch cake selected');
@@ -61,4 +69,3 @@ consumerForm.addEventListener('submit', function(e){
 })
 // Parsing Form to CHECKOUT CART (END)
 
-//Fetch JSON to HTML page
