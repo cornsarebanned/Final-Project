@@ -46,7 +46,7 @@ let myCakeProducts = [
     productId: 5,
     productName: "Vanilla Cake with Chocolate Drizzle",
     description: "Pastel pink floral cake with edible Dried Rose Petals with Classic Vanilla Cream.",
-    price: 65.99,
+    price: 65.00,
     cakesQuantity: 1,
     cakeSize: 6,
     candles: 1,
@@ -106,18 +106,31 @@ let myCakeProducts = [
 
 // store arrays in local storage as key: cakesData
 localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
+
     const inch8 = 12; // add $12 for 8inch cake choice
     const inch10 = 16; // add $16 for 12inch cake choice
-    var selectedCakeSizeCost = 0; // updated cost of cake, depending on chosen cake size
-    var subTotalCakeCost = 0;
-
+    var selectedCakeSizeCost = 0.0; // updated cost of cake, depending on chosen cake size
+    var subTotalCakeCost = 0.0;
+    var totalCost = 0.0; // customer will pay this final amount, to pass to cakes_cart.html 
+    var gst = 0.0;
+    
+    sessionStorage.setItem("totalCost",JSON.stringify(totalCost));
+    sessionStorage.setItem("gst",JSON.stringify(gst));
     let output = "";
     // get stored data from in local storage
     var storedCakesData = JSON.parse(localStorage.getItem("cakesData"));
-    console.log(storedCakesData);
+    // console.log(storedCakesData);
 
     for (let i = 0; i < storedCakesData.length; i++) {
+      
       subTotalCakeCost = (storedCakesData[i].price * storedCakesData[i].cakesQuantity);
+      // console.log("1 cake price =$"+storedCakesData[i].price+" x "+storedCakesData[i].cakesQuantity+" cakes=$"+subTotalCakeCost);
+      totalCost = totalCost + subTotalCakeCost;
+      sessionStorage.setItem("totalCost",JSON.stringify(totalCost));
+      
+      gst = (totalCost*0.07).toFixed(2);
+      sessionStorage.setItem("gst",JSON.stringify(gst));
+
       switch(storedCakesData[i].cakeSize) {
         case 8:
           selectedCakeSizeCost = storedCakesData[i].price + inch8;
@@ -128,11 +141,12 @@ localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
         default: // 6inch here
           selectedCakeSizeCost = storedCakesData[i].price;
       } 
-    
+      // console.log("totalCost = "+totalCost);
+      // console.log("gst = " + gst);
     output +=
     `
     <div class="container bg-white py-2 my-3">
-    <form action="#" id="edit-cart" method="post" enctype="multipart/form-data">
+    <form action="#" id="edit-cart${i}" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
       <div class="col-12 col-sm-6">
         <div class="row">
@@ -164,12 +178,16 @@ localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
     `   
         document.getElementById("cart").innerHTML = output;
     }
-    
+    console.log("totalCost = "+totalCost);
+    console.log("gst = " + gst);
+// --------------------------------------------------------------
+// pass totalCost & gst to cakes_cart.html File, via localstorage
 
+    document.getElementById("overallSubTotalCost").innerHTML = `$${totalCost}`;
+    document.getElementById("gstHere").innerHTML = `$${gst}`;
+    document.getElementById("overallTotalCost").innerHTML = `$${totalCost}`;
 
-
-
-
+// --------------------------------------------------------------
 
 //  var cakeProducts = [
 //      {
