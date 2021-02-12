@@ -105,5 +105,11 @@ let myCakeProducts = [
   }
 ];
 
+// For development purpose only, load all cakes to local storage
+// when first run this application, for testing purpose.
+var testCanReload = JSON.parse(sessionStorage.getItem("canReloadAllCakesAgain"));
+console.log("reloadflag ="+testCanReload);
+if (testCanReload == true) {
 // store arrays in local storage as key: cakesData
-localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
+  localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
+}
