@@ -38,13 +38,13 @@
 
   <header>
     <!-------------------------------------------------- Free Delivery (starts) here -------------------------------------------------->
-    <div class="container container_0">
+    <div class="container-fluid container_0">
       <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
     </div>
     <!-------------------------------------------------- Free Delivery (ends) -------------------------------------------------------->
 
     <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------->
-    <div class="container container_nav pt-2 pb-2">
+    <div class="container-fluid container_nav pt-1 pb-1">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
         <div class="company_logo navbar-brand">
@@ -64,10 +64,11 @@
           <!----------------------collapsing nav ------------------->
           <ul class="navbar-nav ml-auto">
             <!--  shifting nav links to the right side of the page -->
+            <li class="navbar-item active"><a href="#">Sales</a></li>
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-            <li class="navbar-item"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+            <li class="navbar-itemCart"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
           </ul>
 
           <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
@@ -211,7 +212,7 @@
           <!--------------(start)Login/Register Button to toggle Modal---------------->
           <div class="text-center">
             <a href="" class="btn btn-link modal_button" data-toggle="modal"
-              data-target="#modalLRForm">Login / Register</a>
+              data-target="#modalLRForm">Login | Register</a>
             <!--Login Button for Modal Linkage-->
           </div>
           <!--------------(end)Login/Register Button to toggle Modal---------------->
@@ -228,7 +229,7 @@
   <!---------------------------------- navbar ends here -------------------------------------->
 
   <!-------------------------------- carousel starts here ------------------------------------>
-  <div class="container cont_carousel">
+  <div class="container-fluid cont_carousel">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -280,7 +281,7 @@
   <!-------------------------------- carousel ends here --------------------------------------->
 
   <!------------------------------------- 3rd row starts here --------------------------------->
-  <div class="container container_4images">
+  <!-- <div class="container-fluid container_4images">
     <div class="row container_4images_row">
 
       <div id="img_resize" class="col-lg-4 col-md-6 col-sm-12 img-fluid ">
@@ -306,7 +307,7 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
 
  
@@ -346,9 +347,9 @@
 
   <!------------------------------------ 6th row starts here (aos) ----------------------------->
 
-    <main class="container container_aos">
+    <main class="container-fluid container_aos">
       <section class="card" data-aos="fade-up-right">
-        <img id="aos_img" src="images/cakes_images/cake_burnout_candles_lg_copy.jpg" alt="fresh pink marbled cake with macarons">
+        <img id="aos_img" src="images/cakes_images/cake_burnout_candles_sm_resize1_500x500.jpg" alt="fresh pink marbled cake with macarons">
         <div>
           <h3 id="big_font">Fresh Pink Marbled Cake with Macarons</h3>
           <p id="small_font">
@@ -362,7 +363,7 @@
       </section>
 
       <section class="card" data-aos="fade-up-left">
-        <img id="aos_chocolate_cake" src="images/cakes_images/heritage_chocolate_cake.jpg" alt="vanilla cake with chocolate drizzle">
+        <img id="aos_chocolate_cake" src="images/cakes_images/heritage_chocolate_cake_crop_500x500.jpg" alt="vanilla cake with chocolate drizzle">
         <div>
           <h3 id="big_font">Vanilla Cake with Chocolate Drizzle</h3>
           <p id="small_font">
@@ -376,7 +377,7 @@
       </section>
 
       <section class="card" data-aos="fade-up-right">
-        <img src="images/cakes_images/blueberries_syrup_lg_copy.jpg" alt="blueberries crusted cheesecake">
+        <img src="images/cakes_images/blueberries_syrup_lg_crop_500x500.jpg" alt="blueberries crusted cheesecake">
         <div>
           <h3 id="big_font">Blueberries Crusted Cheesecake</h3>
           <p id="small_font">
@@ -394,7 +395,7 @@
   <!------------------------------------- 6th row ends here (aos) --------------------------------->
 
   <!-------------------------- Parallax scrolling x fixed bckgnd (starts) ------------------------->
-  <div class="container container_parallax">
+  <div class="container-fluid container_parallax">
     <div class="margin"></div> <!--Create whitespace above img-->
 
       <section class="parallax">
@@ -413,7 +414,7 @@
 
   <!-------------------------------- Ending credits starts here -------------------------------->
 
-  <div class="container footer-container">
+  <div class="container-fluid footer-container">
     <footer class="border-top footer-container-1">
       <div class="row pt-5 pb-2 footer-container-row">  <!--Adjust padding-->
 
@@ -446,11 +447,11 @@
         <div class="col-3">
           <h5 class="listed_item3">FOLLOW US</h5>
           <hr>
-          <ul class="list-unstyled d-flex">
-            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a></li>
-            <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa-lg" ></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa fa-instagram fa-lg" ></i></a></li>
-            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-lg" ></i></a></li> 
+          <ul class="list-unstyled d-flex pr-5">
+            <li><a class="facebook mr-4" href="https://www.facebook.com/"><i class="fa fa-facebook fa"></i></a></li>
+            <li><a class="twitter mr-4" href="https://twitter.com/home"><i class="fa fa-twitter fa" ></i></a></li>
+            <li><a class="instagram mr-4" href="https://www.instagram.com/"><i class="fa fa-instagram fa" ></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa" ></i></a></li> 
           </ul>
         </div>
       </div>
@@ -459,7 +460,7 @@
   <!-------------------------------- Ending credits ends here -------------------------------->
 
   <!-------------------------------- Button (Back to top) starts here ---------------------------->
-  <div class="container container_backtotop">
+  <div class="container-fluid container_backtotop">
     <div class="row">
       <div class="col-12">
         <!-- <a href="#free_deliv_font"><p>Back to top</p></a> -->
@@ -470,7 +471,7 @@
   <!-------------------------------- Button (Back to top) ends here ------------------------------->
 
   <!-------------------------------- copyright footer starts here --------------------------------->
-  <div class="container container_copyright">
+  <div class="container-fluid container_copyright">
     <div id="copyright" class="col-12">
       <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>
     </div>
@@ -502,7 +503,7 @@
   <script>
     AOS.init({
       offset: 200,
-      duration: 1000
+      duration: 1200
     });
   </script>
 
