@@ -49,10 +49,10 @@ if (storedCakesData!==null) {
       default: // 6inch here
         selectedCakeSizeCost = storedCakesData[i].price;
     } 
-      
+
     output +=
     `
-    <div class="container bg-white py-2 my-3">
+    <div class="container">
     <form action="#" id="edit-cart${i}" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
       <div class="col-12 col-sm-6">
