@@ -100,6 +100,10 @@ body {
     /* letter-spacing: 0.01em; */
     font-family: 'Montserrat', sans-serif;
 }
+
+.cartSmallScreenImage{
+    max-width: 30%;
+}
 /*---------------------------------------(end) Checkout FORM -----------------------------------*/
 
 /*-----------------------------------------(start)CART TOTAL -----------------------------------*/

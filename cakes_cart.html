@@ -247,27 +247,18 @@
           <tbody>
             <tr>
               <td class="text-left"><strong>Sub-Total:</strong></td>
-              <td class="price1 text-right">$55.00</td>
+              <td class="price1 text-right"><div id="overallSubTotalCost"></div></td>
               <td class="text-right"></td>
             </tr>
             <tr>
               <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>
-              <td class="price1 text-right">$3.85</td>
+              <td class="price1 text-right" id="gstHere"></td>
               <td class="text-right"></td>
             </tr>
             <tr>
               <td class="text-left"><strong>Total:</strong></td>
-              <td class="price1 text-right">$55.00</td>
+              <td class="price1 text-right"><div id="overallTotalCost"></div></td>
               <td class="text-right"></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table table-promotions-removed">
-          <tbody>
-            <tr>
-              <td class="text-left"></td>
-              <td class="text-right"><a href="#" class="toggle-promotion text-success" data-id="12"><i
-                    class="fa fa-check-circle"></i></a></td>
             </tr>
           </tbody>
         </table>
@@ -277,48 +268,16 @@
               <td class="text-center"><a href="cakes_checkout.html" class="checkout_btn btn btn-warning">Checkout</a></td>
             </tr>
             <tr>
-              <td class="text-center"><a href="index.html" class="text-primary continue-shopping">Or Continue
+              <td class="text-center"><a href="cakes.html" class="text-primary continue-shopping">Or Continue
                   Shopping</a></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-
-    <!-- want to create checkout page? example https://www.catandthefiddle.com/checkout/checkout -->
-
   </div>
   <!--End of container div (FORM)-->
   <!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
-
-  <!------------------------------------------------------(Start)cards(json)------------------------------------------------->
-
-  <!-- <div>
- <P>testing below here</P>
-<p>Tentatively, all cakes items stored in cakes.js file</p>
-<p>So cakes.html will simply pass me id number, then i retrieve cake item info from cakes.js file</p> -->
-  <!-- cake_template.html line 351 submit button, sends these info to this page -->
-
-  <!--
-product name <div id="productName"></div>
-description <div id="productDesc" class="mb-3"></div>
-price <div id="productPrice" class="mb-3" style="font-size: 28px;"></div>
-cake size <input type="radio" id="six_inch" name="cake-size" value='A' unchecked>  value 'A' is 6", 'B' is 8", 'C' is 10"
-candles <input type="number" id="quantity" name="quantity" min="0" max="100" placeholder="0">
-
-<form class="selection"> i need to action here => <form action="/action_page.php">
-resultant info sent by form submit button is
-id="productName",
-id="productDesc",
-id="productPrice",
-name="cake-size", value='A'/'B'/'C',
-name="quantity", value=min="0" max="100"
-
-should be: "cake-size=(A/B/C)&quantity=(0-100)"
- 
--->
-  <!----------------------------------------------------(End)cards(json)------------------------------------------------------->
-
 
   <!----------------------------------------------- Ending credits starts here ------------------------------------------------>
 
@@ -421,6 +380,7 @@ should be: "cake-size=(A/B/C)&quantity=(0-100)"
   </script>
 
   <!---------- Javascript --------->
+  <script type="text/javascript" src="js/load10CakesToLocalStorage4Testing.js"></script>
   <script type="text/javascript" src="js/cakes_cart.js"></script>
 </body>
 

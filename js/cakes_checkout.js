@@ -1,0 +1,2 @@
+sessionStorage.clear();
+localStorage.clear();
