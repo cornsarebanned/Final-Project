@@ -76,7 +76,7 @@ if (storedCakesData!==null) {
           </div>
           <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$${subTotalCakeCost}</div>
           <div class="col-sm-2 text-right mb-2">
-            <button type="button" id="trashBtn${i}" class="btn btn-danger" onclick="trashCake(${i})"><i
+            <button type="button" class="btn btn-danger" onclick="trashCake(${i})"><i
                 class="fa fa-trash"></i></button>
           </div>
         </div>
