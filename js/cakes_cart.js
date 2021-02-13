@@ -93,5 +93,9 @@ document.getElementById("overallSubTotalCost").innerHTML = `$${totalCost}`;
 document.getElementById("gstHere").innerHTML = `$${gst}`;
 document.getElementById("overallTotalCost").innerHTML = `$${totalCost}`;
 
+if (totalCost !== 0){
+document.getElementById("noMoneyNoHoney").style.display = "block";
+} else {document.getElementById("noMoneyNoHoney").style.display = "none";}
+
 
     
