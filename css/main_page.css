@@ -728,23 +728,8 @@ a[data-tool-tip]:hover::after{
     transform: scale(1.5);
 }
 
-.fa-facebook{
-    right: 18px;
-}
-
-.fa-twitter{
-    right: 8px;
-}
-
-.fa-instagram{
-    right: -2px;
-}
-
-.fa-linkedin{
-    right: -12px;
-}
-
 .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+    right: 18px;
     font-size: 21px;
 }
 
@@ -809,6 +794,1412 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
 
 
 
+@media screen and (min-width: 0px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 458px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 18.5px;           /*-2.0px*/
+       position: relative;
+       top: -65px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 9.3px;           /*-1.5px*/
+       letter-spacing: 0.07em;
+       position: relative;
+       top: -69px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 9.5px;           /*-2.0px*/
+       right: 30px;
+       letter-spacing: 0.07em;
+       bottom: 350px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.04em;
+       font-size: 9.5px;           /*-1.0px*/
+       right: 30px;
+       bottom: 355px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:74%;            /*-5.0%*/
+       left:30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 7px;
+       left: 30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 17.5px;     /*-0.5px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 85%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 1.5em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 87%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 11px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 9.5px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 9.2px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 9.3px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 19px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:18px;   /*-2px*/
+        padding-bottom:8px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 200px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 458px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 18.5px;           /*-2.0px*/
+       position: relative;
+       top: -65px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 9.3px;           /*-1.5px*/
+       letter-spacing: 0.07em;
+       position: relative;
+       top: -69px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 9.5px;           /*-2.0px*/
+       right: 30px;
+       letter-spacing: 0.07em;
+       bottom: 350px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.04em;
+       font-size: 9.5px;           /*-1.0px*/
+       right: 30px;
+       bottom: 355px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:74%;            /*-5.0%*/
+       left:30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 7px;
+       left: 30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 17.5px;     /*-0.5px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 85%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 1.5em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 87%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 11px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 9.5px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 9.2px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 9.3px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 19px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:18px;   /*-2px*/
+        padding-bottom:8px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 300px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 460px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 19px;           /*-2.0px*/
+       position: relative;
+       top: -65px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 9.5px;           /*-1.5px*/
+       letter-spacing: 0.07em;
+       position: relative;
+       top: -69px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 11.5px;           /*-2.0px*/
+       right: 30px;
+       letter-spacing: 0.07em;
+       bottom: 350px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.04em;
+       font-size: 9.5px;           /*-1.0px*/
+       right: 30px;
+       bottom: 355px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:76%;            /*-5.0%*/
+       left:30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 8px;
+       left: 30px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 18px;     /*-0.5px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 89%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 1.7em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 87.5%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 11.4px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 10px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12.2px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 9.5px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 9.5px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 20px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:20px;   /*-2px*/
+        padding-bottom:11px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 400px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 465px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 20.5px;           /*-2.0px*/
+       position: relative;
+       top: -65px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 9.5px;           /*-1.5px*/
+       letter-spacing: 0.07em;
+       position: relative;
+       top: -69px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 13px;           /*-2.0px*/
+       right: 30px;
+       letter-spacing: 0.07em;
+       bottom: 5px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.08em;
+       font-size: 10px;           /*-1.0px*/
+       right: 30px;
+       bottom: 5px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:79%;            /*-5.0%*/
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 9.5px;
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 22px;     /*-0.5px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 86%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 2.4em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 88%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 11.8px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 10.5px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12.4px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 9.8px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 9.7px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 20px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:22px;   /*-2px*/
+        padding-bottom:14px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 500px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 466px !important;    /*-2px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 23px;           /*-2.0px*/
+       position: relative;
+       top: -58px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 10.5px;           /*-1.5px*/
+       letter-spacing: 0.07em;
+       position: relative;
+       top: -59px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 13px;           /*-2.0px*/
+       right: 66px;
+       letter-spacing: 0.07em;
+       bottom: 305px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.08em;
+       font-size: 10px;           /*-1.0px*/
+       right: 65px;
+       bottom: 305px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:82%;            /*-5.0%*/
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 10.5px;
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 22px;     /*-0.5px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 93%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 3.1em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 88.5%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 12.2px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 11px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12.6px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 10.1px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 9.9px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 20px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:24px;   /*-2px*/
+        padding-bottom:17px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 576px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 469px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 23.5px;           /*-2.0px*/
+       position: relative;
+       top: -35px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 11px;           /*-1.5px*/
+       letter-spacing: 0.1em;
+       position: relative;
+       top: -36px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 14px;           /*-2.0px*/
+       right: 66px;
+       letter-spacing: 0.07em;
+       bottom: 305px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.12em;
+       font-size: 10px;           /*-1.0px*/
+       right: 65px;
+       bottom: 305px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:83%;            /*-5.0%*/
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 11px;
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 22.5px;     /*-1px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 97%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 3.8em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 89%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 12.6px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 11.5px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 12.8px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 10.4px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 10.1px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 20px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:26px;   /*-2px*/
+        padding-bottom:20px; /*-3px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 700px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 470px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 25.5px;           /*-2.0px*/
+       position: relative;
+       top: -4px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 12.5px;           /*-1.5px*/
+       letter-spacing: 0.1em;
+       position: relative;
+       top: -5px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 13px;           /*-2.0px*/
+       right: 66px;
+       letter-spacing: 0.07em;
+       bottom: 232px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.16em;
+       font-size: 9px;           /*-1.0px*/
+       right: 65px;
+       bottom: 232px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:88%;            /*10.0%*/
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 11.6px;
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 23.5px;     /*-1px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 101%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 4.4em;   /*-0.5em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 89.5%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 13px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 12px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 13px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 10.7px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 10.3px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 21px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:26px;   /*-2px*/
+        padding-bottom:23px; /*-5px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 75px;           /*-5px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
+
+
+@media screen and (min-width: 800px){
+    /*------------------(start)carousel css-----------------*/
+
+    .carousel-item > img{                /* size of images on carousel*/
+       object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
+       height: 471px !important;    /*-1px*/ /*to resize height of carousel*/
+    }    
+
+   /************************ fonts adjustments on imgs ************************/
+    .carousel_blueberry_img{                        /* blueberry*/
+       font-size: 27.5px;           /*-2.0px*/
+       position: relative;
+       top: 6px;
+       letter-spacing: 0.05em;
+    }
+
+    .carousel_blueberry_img1{                       /* blueberry*/
+       font-size: 14px;           /*-1.5px*/
+       letter-spacing: 0.1em;
+       position: relative;
+       top: 5px;
+    }
+
+    .carousel_fruits_img{                           /* artistic fruits*/
+       font-size: 15px;           /*-2.0px*/
+       right: 66px;
+       letter-spacing: 0.07em;
+       bottom: 232px;
+    }
+
+    .carousel_fruits_img1{                          /* artistic fruits*/
+       letter-spacing: 0.16em;
+       font-size: 10px;           /*-1.0px*/
+       right: 65px;
+       bottom: 232px;
+    }
+
+    .carousel_sparkles_img{                        /* colorful sparkles*/
+       font-size:98%;            /*-8.0%*/
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+
+    .carousel_sparkles_img1{                        /* colorful sparkles*/
+       font-size: 11.6px;
+       left:45px;
+       bottom:270px;
+       letter-spacing:0.1em;
+    }
+    /*--------------------(end) carousel css-----------------*/
+
+    /*---------(start) 4th row Our Signatures (words)------------*/
+
+    .signature_font{                                
+        font-size: 24.5px;     /*-1px*/
+        letter-spacing: 0.04em;
+        top: 25px;
+    }
+
+    /*------------(end) 4th row Our Signatures (words)--------------*/
+
+    /*-------(start) 5th row (words) "The ultimate sanctuary..."----*/
+
+    #lorem_font{
+        font-size: 105%;    /*-4%*/
+        letter-spacing: 0.02em;
+    }
+
+    /*--------(end) 5th row (words) "The ultimate sanctuary..."------*/
+
+
+    /*-------- Parallax scrolling x fixed bckgnd (starts) ---------*/
+
+    #font_parallax{
+       font-size: 4.9em;   /*-0.4em*/
+    }
+
+    /*-------- Parallax scrolling x fixed bckgnd (ends) -----------*/
+
+
+    /*---------------------(start) Footer--------------------*/
+    .logo1{                                             /* footer cake logo adjust width/height */
+       width: 124px;  /*-2px*/
+       height: 111px; /*-2px*/
+    }
+   
+    #f2020_2021{
+       font-size: 9px;
+       letter-spacing: 0.2em;
+       position: relative;
+       left: 28px;
+       margin-left: -50px;   
+    }
+   
+    #content_box{                                               /* footer cake logo adjust position */
+       margin:0px;
+       left: 75px;   
+       top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+       font-size: 89.5%;         /*-0.5%*/
+       /* border: 5px solid red; */
+    }
+
+    .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
+       font-size: 13px;        /*-0.4px*/
+       letter-spacing: 0.1em;    
+    }
+    .writetous_font_footer2{                                    /* WRITE TO US (contact us/abt us) */
+       font-size: 12px;          /*-0.5px*/
+       letter-spacing: 0.15em;
+    }
+    /*  WRITE TO US (end) */
+
+    /*  LOCATE US (start) */
+    #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
+       font-size: 13px;      /*-0.2px*/
+       letter-spacing: 0.1em; 
+    }
+   
+    .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
+       font-size: 10.7px;      /*-0.3px*/
+       letter-spacing: 0.17em; /*+0.02px*/
+    }
+   
+    #op_hours_footer{               /* LOCATE US (\Bold 10-6pm Daily) */
+        font-size: 10.3px;      /*-0.2px*/
+        letter-spacing: 0.1em;
+    }
+   
+    /*  LOCATE US (end) */
+
+    .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
+        font-size: 21px;
+    }
+    
+    /*---------------------(end) Footer---------------------*/
+
+    hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDERLINE)*/ 
+        margin: 0rem 0rem 1rem 2rem;
+        left: -50px;
+    }
+
+    /*-----------------(start) adjust footer padding ----------------*/
+    .footer-container-1{                            
+        padding-top:26px;   /*-2px*/
+        padding-bottom:28px; /*-10px*/
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+  
+    /*------------------(end) adjust footer padding -----------------*/
+
+
+    /*------------ Footer Button (Back to top) starts here -----------*/
+
+    .container_backtotop{
+        height: 80px;           /*-10px*/
+        padding-bottom: 58px;  
+    }
+
+    /*------------- Footer Button (Back to top) ends here ------------*/
+}
 
 
 
@@ -903,17 +2294,25 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
        font-size: 9px;
        letter-spacing: 0.2em;
        position: relative;
-       left: 28px;   
+       left: 28px;
+       margin-left: -50px;   
     }
    
     #content_box{                                               /* footer cake logo adjust position */
        margin:0px;
        left: 75px;   
        top: 20px;
+       margin-left: -90px;
+       margin-bottom: 30px;
+    }
+
+    .adjust-footer{
+        text-align: center;
     }
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
        font-size: 89.5%;         /*-0.5%*/
+       /* border: 5px solid red; */
     }
 
     .writetous_font_footer, .writetous_font_footer1{            /*  WRITE TO US (GMAIL) */  /*  WRITE TO US (HP NO.) */
@@ -925,10 +2324,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
        letter-spacing: 0.15em;
     }
     /*  WRITE TO US (end) */
+
     /*  LOCATE US (start) */
     #location_font_footer{          /* LOCATE US (Glocal Connect Village) */
        font-size: 13px;      /*-0.2px*/
-       letter-spacing: 0.1em;  
+       letter-spacing: 0.1em; 
     }
    
     .address_font_footer{           /* LOCATE US (43 Tampines Ave 1) */         
@@ -943,24 +2343,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
    
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -973,7 +2357,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     /*-----------------(start) adjust footer padding ----------------*/
     .footer-container-1{                            
         padding-top:28px;
-        padding-bottom:68px; /*-2px*/
+        padding-bottom:38px; /*-30px*/
     }
 
     .footer-container{
@@ -986,15 +2370,14 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     /*------------ Footer Button (Back to top) starts here -----------*/
 
     .container_backtotop{
-        height: 110px;
-        padding-bottom: 58px;
+        height: 90px;           /*-20px*/
+        padding-bottom: 58px;   /*-30px*/
     }
 
     /*------------- Footer Button (Back to top) ends here ------------*/
 }
 
-
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 992px){
     /*------------------(start)carousel css-----------------*/
 
     .carousel-item > img{                /* size of images on carousel*/
@@ -1085,13 +2468,17 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
        font-size: 9px;
        letter-spacing: 0.2em;
        position: relative;
-       left: 28px;   
+       left: 70px;   
     }
    
     #content_box{                                               /* footer cake logo adjust position */
        margin:0px;
        left: 75px;   
        top: 20px;
+    }
+
+    .adjust-footer{
+        text-align: left;
     }
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
@@ -1125,24 +2512,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
    
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -1269,7 +2640,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
        font-size: 9px;
        letter-spacing: 0.2em;
        position: relative;
-       left: 28px;   /*-2px*/
+       left: 72px;   /*-2px*/
     }
    
     #content_box{                                               /* footer cake logo adjust position */
@@ -1277,6 +2648,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
        left: 75px;   /*-2px*/
        top: 20px;
     }
+
+    .adjust-footer{
+        text-align: left;
+    }
+
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
        font-size: 90%;         /*-0.5%*/
@@ -1309,24 +2685,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
    
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -1426,7 +2786,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 28px;   /*-2px*/
+        left: 74px;   /*-2px*/
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -1434,6 +2794,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         left: 75px;   /*-2px*/
         top: 20px;
     }
+
+    .adjust-footer{
+        text-align: left;
+    }
+
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 90%;         /*-0.5%*/
@@ -1466,24 +2831,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -1577,7 +2926,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 30px;   /*+2px*/
+        left: 76px;   /*+2px*/
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -1585,6 +2934,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         left: 77px;   /*+2px*/
         top: 20px;
     }
+
+    .adjust-footer{
+        text-align: left;
+    }
+
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 90.5%;         /*-0.5%*/
@@ -1617,24 +2971,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -1723,13 +3061,17 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 31px;   /*+1px*/
+        left: 78px;   /*+1px*/
     }
     
     #content_box{                                               /* footer cake logo adjust position */
         margin:0px;
         left: 81px;   /*+4px*/
         top: 20px;
+    }
+
+    .adjust-footer{
+        text-align: left;
     }
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
@@ -1763,24 +3105,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 21px;
     }
 
@@ -1869,7 +3195,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 32px;   /*+5px*/
+        left: 78px;   
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -1877,6 +3203,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         left: 90px;   /*+9px*/
         top: 20px;
     }
+
+    .adjust-footer{
+        text-align: left;
+    }
+
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 92%;         /*+1%*/
@@ -1909,23 +3240,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 22px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -2014,7 +3330,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 32px;   
+        left: 80px;   
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -2022,7 +3338,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         left: 99px;   /*+9px*/
         top: 20px;
     }
-      
+    
+    .adjust-footer{
+        text-align: left;
+    }
+
       .listed_item1, .listed_item2, .listed_item3{              /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 93%;         /*+1%*/
     }
@@ -2054,23 +3374,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 22px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -2158,7 +3463,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 32px;   
+        left: 83px;    
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -2166,6 +3471,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         left: 108px;   /*+9px*/
         top: 20px;
     }
+
+    .adjust-footer{
+        text-align: left;
+    }
+
 
     .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 94%;         /*+1%*/
@@ -2198,23 +3508,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 23px;
     }
     /*---------------------(end) Footer---------------------*/
@@ -2303,7 +3598,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         font-size: 9px;
         letter-spacing: 0.2em;
         position: relative;
-        left: 32px;   
+        left: 85px;   
     }
     
     #content_box{                                               /* footer cake logo adjust position */
@@ -2312,7 +3607,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         top: 20px;
     }
 
-      .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
+    .adjust-footer{
+        text-align: left;
+    }
+
+    .listed_item1, .listed_item2, .listed_item3{                /* WRITE TO US/ LOCATE US/ FOLLOW US (start) */
         font-size: 95%;         /*+1%*/
     }
 
@@ -2343,23 +3642,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     
     /*  LOCATE US (end) */
 
-    .fa-facebook{
-        right: 18px;
-    }
-
-    .fa-twitter{
-        right: 8px;
-    }
-
-    .fa-instagram{
-        right: -2px;
-    }
-
-    .fa-linkedin{
-        right: -12px;
-    }
-
     .fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin{
+        right: 18px;
         font-size: 24px;
     }
     /*---------------------(end) Footer---------------------*/
