@@ -1,57 +1,58 @@
+
 //Register Tab
 
-function signup(){
-    var regEmail = document.getElementById('regEmail');
-    var regPw = document.getElementById('regPw');
-    var regPwAgain = document.getElementById('regPwAgain');
-    var lowerCaseLetters = /[a-z]/g;
-    var upperCaseLetters = /[A-Z]/g;
-    var numbers = /[0-9]/g;
+// function signup(){
+//     var regEmail = document.getElementById('regEmail');
+//     var regPw = document.getElementById('regPw');
+//     var regPwAgain = document.getElementById('regPwAgain');
+//     var lowerCaseLetters = /[a-z]/g;
+//     var upperCaseLetters = /[A-Z]/g;
+//     var numbers = /[0-9]/g;
 
 
-if (regEmail.value.length == 0){                        //check
-    alert("Please fill in your email address");
-    return;
-}
-else if (regPw.value.length == 0){                      //check
-    alert("Please fill in your password");
-    return;
-}
-else if (regPwAgain.value.length == 0){                 //check
-    alert("Please retype your password");
-    return;
-}
-// else if (regEmail.value.length == 0 || regPw.value.length == 0 || regPwAgain.value.length == 0){
-//     alert("Please fill in your email address and passwords");
+// if (regEmail.value.length == 0){                        //check
+//     alert("Please fill in your email address");
+//     return;
 // }
-else if (regPw.value != regPwAgain.value){               //check
-    alert("Please kindly retype the passwords. Passwords do not match.");
-    return;
-}
-else if (regPw.value.length < 10 || regPwAgain.value.length < 10){            //check
-    alert("Please input 10 characters/digits. You are currently short of " + ( 10 - regPw.value.length ) +" characters/digits for 'Your Password' field." );
-    return;
-}
-else if (!regPw.value.match(numbers) && !regPwAgain.value.match(numbers)){              //Check
-    alert("You have not met the password requirements: Number");
-    return;
-}
-else if (!regPw.value.match(lowerCaseLetters) || !regPwAgain.value.match(lowerCaseLetters)){    //Check
-    alert("You have not met the password requirements: [a-z]");       
-    return;                          
-}
-else if (!regPw.value.match(upperCaseLetters) || !regPwAgain.value.match(upperCaseLetters)){    //Check
-    alert("You have not met the password requirements: [A-Z]");
-    return;
-}
-else {
-    localStorage.setItem("regEmail", regEmail.value);
-    localStorage.setItem("regPw", regPw.value);
-    localStorage.setItem("regPwAgain", regPwAgain.value);
-    alert("You have successfully created your account.");
-}
+// else if (regPw.value.length == 0){                      //check
+//     alert("Please fill in your password");
+//     return;
+// }
+// else if (regPwAgain.value.length == 0){                 //check
+//     alert("Please retype your password");
+//     return;
+// }
+// // else if (regEmail.value.length == 0 || regPw.value.length == 0 || regPwAgain.value.length == 0){
+// //     alert("Please fill in your email address and passwords");
+// // }
+// else if (regPw.value != regPwAgain.value){               //check
+//     alert("Please kindly retype the passwords. Passwords do not match.");
+//     return;
+// }
+// else if (regPw.value.length < 10 || regPwAgain.value.length < 10){            //check
+//     alert("Please input 10 characters/digits. You are currently short of " + ( 10 - regPw.value.length ) +" characters/digits for 'Your Password' field." );
+//     return;
+// }
+// else if (!regPw.value.match(numbers) && !regPwAgain.value.match(numbers)){              //Check
+//     alert("You have not met the password requirements: Number");
+//     return;
+// }
+// else if (!regPw.value.match(lowerCaseLetters) || !regPwAgain.value.match(lowerCaseLetters)){    //Check
+//     alert("You have not met the password requirements: [a-z]");       
+//     return;                          
+// }
+// else if (!regPw.value.match(upperCaseLetters) || !regPwAgain.value.match(upperCaseLetters)){    //Check
+//     alert("You have not met the password requirements: [A-Z]");
+//     return;
+// }
+// else {
+//     localStorage.setItem("regEmail", regEmail.value);
+//     localStorage.setItem("regPw", regPw.value);
+//     localStorage.setItem("regPwAgain", regPwAgain.value);
+//     alert("You have successfully created your account.");
+// }
 
-}
+// }
 
 
 //checking

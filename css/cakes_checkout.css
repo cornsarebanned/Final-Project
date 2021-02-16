@@ -1,7 +1,6 @@
-  
- /*--------------------------------(start)FreeIslandwide css ------------------------------*/
+/*--------------------------------(start)FreeIslandwide css ------------------------------*/
  
- .container-fluid {                     /* container of navigation bar, bs containers are padded, need to remove them*/
+.container-fluid {                     /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
@@ -402,390 +401,77 @@
     }
 }
 
-/*-----------------------------------(end)FreeIslandwide css -----------------------------*/
+/*-------------------------------------(end)FreeIslandwide css -------------------------------*/
 
-/*--------------------------------------(start)carousel css-------------------------------*/
+/*---------------------------------------(start)Cards css ------------------------------------*/
 
-.group-together{
-    padding: 0px;
-}
-                                /* if container-fluid, and you want full width */
- .cont_carousel{                 
-    padding :0;
- }
-
-.carousel{
-    width:100%;
-    /* border: 4px solid #343346;   */
-  }
-
-.carousel-inner{
-   height:100%;                      /* make sure .items will get correct height */
-   width:100%;  
+.container_shopcarttitle{
+    margin: 100px auto 0px;
 }
 
-.carousel-item{                      /* the sliding pages on carousel */
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 100%;
-    height: 100%;     
-} 
-
-.carousel-item > img{                /* size of images on carousel*/
-    object-fit: cover;               /*resize backgnd img to cover entire container, stretch and cut a little*/
-    /*height: 450px !important;         to resize height of carousel*/
-    height: 475px !important;
-    /* height: 800px !important; */
-}
-
-/************************ fonts adjustments on imgs ************************/
-.carousel_blueberry_img{                        /* blueberry*/
-    color: black;
-    font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 31px;
-    position: relative;
-    top: 12px;
-    letter-spacing: 0.05em;
-}
-
-.carousel_blueberry_img1{                       /* blueberry*/
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    letter-spacing: 0.1em;
-    position: relative;
-    top: 11px;
-    font-weight: bold;
-}
-
-.carousel_fruits_img{                           /* artistic fruits*/
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    position: relative;
-    right: 66px;
-    letter-spacing: 0.07em;
-    bottom: 210px;
-    color:white;
-}
-
-.carousel_fruits_img1{                          /* artistic fruits*/
-    letter-spacing: 0.1em;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13.8px;
-    position: relative;
-    right: 65px;
-    bottom: 210px;
-}
-
-.carousel_sparkles_img{                        /* colorful sparkles*/
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    /* font-size: 1.5em; */
-    font-size:120%;
-    position: relative;
-    left:45px;
-    bottom:250px;
-    letter-spacing:0.1em;
-}
-
-.carousel_sparkles_img1{                        /* colorful sparkles*/
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11.5px;
-    position: relative;
-    left:45px;
-    bottom:250px;
-    letter-spacing:0.1em;
-}
-/*--------------------------------------(end)carousel css------------------------------------*/
-
-/*--------------------------------------(start)Login Modal css-------------------------------*/
-
- .login_text{
-    font-family: 'Questrial', sans-serif;  /*change tab modal font*/
-}
-
- .register_text{
-    font-family: 'Questrial', sans-serif;  /*change tab modal font*/ 
-} 
-
-
-#email_font{
-    font-family: 'Questrial', sans-serif;   /*change Login/Register Email and password font*/ 
-    font-size:16px;
-}
-
-#password_font{
-    font-family: 'Questrial', sans-serif;   /*change Login password font*/ 
-    font-size:16px;
-}
-
-input {
-    font-size: 14px;       
-    font-family: 'Questrial', sans-serif; 
-}
-
-input::-webkit-input-placeholder {          /*change login/register modal placeholder size*/
-    font-size: 14px;
-    font-family: 'Questrial', sans-serif;
-}
-
-.login_btn{                                 /*login button*/
-    font-family: 'Questrial', sans-serif;  
-    /* border-radius: 7px; */
-    padding-left:16px;
-    padding-right:16px;
-}
-
-.signup_click{
-    font-family: 'Questrial', sans-serif;   /*Login: edit Login Sign Up link */ 
-    font-size:13px;
-}
-
-.password_click{                            /*Login: edit Login Password link */ 
-    font-family: 'Questrial', sans-serif; 
-    font-size:13px;
-}
-
-.reg_login{                                 /*Register: "Log in" link */ 
-    font-family: 'Questrial', sans-serif; 
-    font-size:13px;
-}
-
-.close_btn_modal{                           /*Register/Login Tab(Footer): Close button fonts*/
-    font-family: 'Questrial', sans-serif;
-}
-
-#notamember_font{                           /*Register/Login Tab: Footer texts fonts (non-links texts)*/
-    font-family: 'Questrial', sans-serif;
-    font-size: 14px;
-}
-
-.modal .modal-popout-bg {
-    background-image: url("../images/cakes_images/modal-background2.jpg");
-    /* background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80"); */
-    background-repeat : no-repeat;
-    background-size: cover;  
-    background-position: center;
-}
-
-.fa-question-circle{            /*font awesome qn mark logo register tab modal*/
-    position: relative;
-    bottom: 2px;
-    color:  #343346;
-}
-
-.fa-question-circle:hover{            /*font awesome qn mark logo register tab modal*/
-    color: hotpink;
-}
-
-a[data-tool-tip]{
-    position: relative;
-}
-
-a[data-tool-tip]::after{
-    content: attr(data-tool-tip);
-    display: block;
-    width: 310px;
-    background-color: #0F2776;
-    padding: 4px 7px;
-    color: white;
-    border-radius: 5px;
-    font-size: 0.80em;      /*85% of the parent fonts "Your password"*/
-    position: absolute;
-    bottom: 100%;
-    left: 46%;
-    /* white-space:nowrap; */
-    /* display: none; */
-    letter-spacing: 1px;
-    transform: scale(0);
-    transition: transform ease-out 300ms;
-}
-
-a[data-tool-tip]:hover::after{
-    transform: scale(1);
-}
-
-/*--------------------------------------(end)Login Modal css-------------------------------------*/
-
-/*-------------------------------(start) 4th row Our Signatures (words)--------------------------*/
-
-.container_oursignatures{
-    margin-top: 60px;
-    /* box-sizing: border-box; */
-    /* border: 5px solid lightgrey;  */
-}
-
-.row_signature_cakes, .row_lorem{
-    margin:0;
-    padding:0;
-}
-
-.col_signature_cakes{
-    text-align: center;
-    background-color: white;
-}
-
-.signature_font{                                
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
-    letter-spacing: 0.04em;
-    position: relative;
-    top: 25px;
-    color: #121178;
-    display: block;
-}
-
-
-.signature_font::after{
-    content: url(../images/txt_border.png);
-    display: block;
-    margin-top: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
-    position: relative;
-}
-
-/*-----------------------------------(end) 4th row Our Signatures (words)----------------------------*/
-
-/*---------------------------(start) 5th row (words) "The ultimate sanctuary..."---------------------*/
-
-.container_ultimatesanctuary{
-    /* border: 5px solid red; */
+.container_selection{
     padding: 0;
+    box-sizing: border-box;
+    /* border: 5px solid red; */
     margin: 0 auto;
-    /* margin-top: 10px; */
-    box-sizing: border-box;
 }
 
-.col_lorem{
+#your_selection_font{
     text-align: center;
-    padding-top: 0px;
-    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #343346;
+    
+}
+
+.container_productname{
+    margin: 0 auto;
     /* border: 5px solid red; */
 }
 
-#lorem_font{
-    font-size: 117%;
-    letter-spacing: 0.02em;
+#productName{
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
-    /* font-weight: bold; */
 }
 
-/*--------------------------(end) 5th row (words) "The ultimate sanctuary..."--------------------*/
+.product_cards_desc{
+    margin: 0 auto 150px;
+    /* border: 5px solid red; */
+    display: flex;
+    overflow: none;
+    flex-wrap: wrap;
+}
 
-/*-------------------------------------(start) 6th row (aos)-------------------------------------*/
+/* .product_cards_desc > .col_img{
+    object-fit: cover;
+} */
 
-*{
+
+.col_img{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding:0;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* max-width: fit-content; */
 }
 
-.card{
-    border: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    /* background: #F1F0F4; */
-    /* background: #F9FAFC; */
-    background: #F4F1FB;
-    opacity: 0.2;
-    margin-bottom: 5rem;
+.col_desc{
+    margin: 0;
+    padding: 25px 40px;
     font-family: 'Montserrat', sans-serif;
+    background-color: #FEFCFE;
+    /* background-color: white; */
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    /* border: 5px solid black; */
 }
 
-.card h3{
-    margin-bottom: 2rem;
-}
-
-.card img{
-    width: 100%;
-}
-
-.card:nth-child(even) img {
-    order: 2;
-}
-
-.card > div {
-    padding: 2rem;
-}
-
-.container_aos{
-    max-width: 1000px;                
-    margin: auto;
-    margin-top: 70px;
-    overflow: hidden;
-    padding: 0 2rem;
-    background:white;                   
-}
-
-#aos_chocolate_cake{
-    height:100%;
-}
-
-.btn{
-    display: inline-block;
-    position: relative;
-    left: -12px;
-}
-
-#button_font{
-    color: #3F45D7;
-    text-decoration: none;
-    letter-spacing: 0.01em;
-    font-weight: bold;
-}
-
-#button_font:hover{
-    color: hotpink;
-    font-weight: bolder;
-}
-
-@media screen and (max-width: 800px){
-    .card{
-        display: block;
-    }
-}
-
-/*-------------------------------(end) 6th row (animate on scroll)---------------------------------*/
-
-/*-------------------------- Parallax scrolling x fixed bckgnd (starts) ---------------------------*/
-
-.parallax{
-    /* border: 5px solid red; */
-    background-image: url("../images/cakes_images/colored_stars_lg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;     /* height of image */
-}
-
-.parallax-inner{
-    /* border: 5px dotted blue; */
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-#font_parallax{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    font-size: 7em;
-}
-
-.margin{
-    /* border: 5px dotted blue; */
-    margin: 6% 0;
-}
-
-/*------------------------- Parallax scrolling x fixed bckgnd (ends) -----------------------------*/
 
 
-
+/*-----------------------------------------------(end)Cards css ----------------------------------------*/
 
 /*---------------------------------------(start) Footer-------------------------------------*/
 

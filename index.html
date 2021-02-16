@@ -14,11 +14,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
 
   <!--Animate on scroll-->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -36,40 +40,67 @@
 
 <body>
 
-  <header>
+  <!-- <header> -->
     <!-------------------------------------------------- Free Delivery (starts) here -------------------------------------------------->
     <div class="container-fluid container_0">
       <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
     </div>
-    <!-------------------------------------------------- Free Delivery (ends) -------------------------------------------------------->
+    <!-------------------------------------------------- Free Delivery (ends) --------------------------------------------------------->
 
-    <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------->
-    <div class="container-fluid container_nav pt-1 pb-1">
+    <!-----------------------------------------------------navigation (start)---------------------------------------------------------->  
+
+    
+
+    <!----------------------------------------------------------navigation (end)--------------------------------------------------------->
+  <div class="container-fluid container_nav1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 40px;">
+      <a href="index.html">
+      <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
+      </a>
+      <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav navbar_adjust">
+          <a class="nav-item1 nav-link text-center" href ="cakes.html">Cakes</a>
+          <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>
+          <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>
+          <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+          <a class="nav-item5 nav-link text-center" href="register.html">Register</a>
+          <a class="nav-item6 nav-link active text-center" href="login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+    <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------>
+    <!-- <div class="container-fluid container_nav pt-1 pb-1">
       <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
 
-        <div class="company_logo navbar-brand">
+        <div class="company_logo navbar-brand"> -->
           <!--div created to contain the cake image and name of company together -->
-          <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
+          <!-- <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
         </div>
         <h6 class="appeaseofcake_font">appeaseofcake</h6>
 
         <div>
-          <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
+          <button type="button" class="navbar_toggler" style="width:45px;" data-toggle="collapse" data-target="#navbarContents"
             aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
-              class="navbar-toggler-icon"></span></button>
+              class="navbar-toggler-icon"></span></button> -->
           <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
-        </div>
+        <!-- </div>
 
-        <div class="collapse navbar-collapse" id="navbarContents">
+        <div class="collapse navbar-collapse" id="navbarContents"> -->
           <!----------------------collapsing nav ------------------->
-          <ul class="navbar-nav ml-auto">
+          <!-- <ul class="navbar-nav ml-auto"> -->
             <!--  shifting nav links to the right side of the page -->
-            <li class="navbar-item active"><a href="#">Sales</a></li>
+            <!-- <li class="navbar-item active"><a href="#">Sales</a></li>
             <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
             <li class="navbar-item"><a href="about_us.html">About</a></li>
             <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
             <li class="navbar-itemCart"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
-          </ul>
+          </ul> -->
 
           <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
           <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
@@ -210,26 +241,27 @@
           <!--End of Modal: Login / Register Form-->
 
           <!--------------(start)Login/Register Button to toggle Modal---------------->
-          <div class="text-center">
+          <!-- <div class="text-center">
             <a href="" class="btn btn-link modal_button" data-toggle="modal"
-              data-target="#modalLRForm">Login | Register</a>
+              data-target="#modalLRForm">Login | Register</a> -->
             <!--Login Button for Modal Linkage-->
-          </div>
+          <!-- </div> -->
           <!--------------(end)Login/Register Button to toggle Modal---------------->
 
         </div>
         <!--closing for unlisted items -->
-      </nav>
+      <!-- </nav> -->
       <!--closing for nav -->
-    </div>
+    <!-- </div> -->
     <!--closing for container -->
 
 
-  </header>
+  <!-- </header> -->
   <!---------------------------------- navbar ends here -------------------------------------->
 
   <!-------------------------------- carousel starts here ------------------------------------>
-  <div class="container-fluid cont_carousel">
+<div class="container-fluid group-together">
+  <div class="container-fluid cont_carousel" style="z-index: -1;">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -477,6 +509,8 @@
     </div>
   </div>
   <!---------------------------- copyright footer ends here ---------------------------------------->
+
+</div>
 
 
 
