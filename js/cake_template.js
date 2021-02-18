@@ -1,3 +1,11 @@
+// Global variables
+var globPname;
+var globDesc;
+var globPrice;
+var globImage;
+var globCakeSize;
+var globCandles;
+
 function load() {
     var urlParams = new URLSearchParams(window.location.search);
     var image = "<img src = "+'"'+urlParams.get('img')+'">';
@@ -10,62 +18,87 @@ function load() {
 
 document.onload = load();
 
+function sentToLocal() {
+    var urlParams = new URLSearchParams(window.location.search);
+    globPname = urlParams.get('name');
+    globDesc = urlParams.get('desc');
+    globPrice = urlParams.get('price');
+    globImage = urlParams.get('img');
+    globCakeSize = document.querySelector('[name="cakeSize"]:checked').value;
+    globCandles = document.querySelector('[name="candles"]').value;
+        
+    let myCakeProducts = [
+        {
+        productId: 1,
+        productName: globPname,
+        description: globDesc,
+        price: globPrice,
+        cakesQuantity: 1,
+        cakeSize: globCakeSize,
+        candles: globCandles,
+        imageUrl: globImage
+        }];
+  
+    localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
+}
+  
+// ======================================================================================
 // Parsing Form to CHECKOUT CART (START)
-const consumerForm = document.querySelector('.consumer_selection'); 
-console.log(consumerForm);
-const consumerFormRadio = document.querySelectorAll('.consumer_radioBtn > div > input'); //Nodelist(3)
-console.log(consumerFormRadio);
-const sixInch = document.querySelector('#six_inch');
-console.log(sixInch.value);
-// console.log(sixInch);
-const eightInch = document.querySelector('#eight_inch');
-// console.log(eightInch);
-const tenInch = document.querySelector('#ten_inch');
-// console.log(tenInch);
-const noOfCandles = document.querySelector('#candlesQuantity');
-// console.log(noOfCandles.value);
+// const consumerForm = document.querySelector('.consumer_selection'); 
+// console.log(consumerForm);
+// const consumerFormRadio = document.querySelectorAll('.consumer_radioBtn > div > input'); //Nodelist(3)
+// console.log(consumerFormRadio);
+// const sixInch = document.querySelector('#six_inch');
+// console.log(sixInch.value);
+// // console.log(sixInch);
+// const eightInch = document.querySelector('#eight_inch');
+// // console.log(eightInch);
+// const tenInch = document.querySelector('#ten_inch');
+// // console.log(tenInch);
+// const noOfCandles = document.querySelector('#candlesQuantity');
+// // console.log(noOfCandles.value);
 
 
-const sample = document.querySelectorAll('.consumer_radioBtn > div > input');
-console.log(sample);
-var prev = null;
-sample.forEach(element => {
-   if(sixInch.checked)     
-});
+// const sample = document.querySelectorAll('.consumer_radioBtn > div > input');
+// console.log(sample);
+// var prev = null;
+// sample.forEach(element => {
+//    if(sixInch.checked)     
+// });
 
 
-consumerForm.addEventListener('submit', function(e){
+// consumerForm.addEventListener('submit', function(e){
 
-    e.preventDefault();
-    console.log(e.target); //consumerForm
+//     e.preventDefault();
+//     console.log(e.target); //consumerForm
 
-    if(sixInch.checked == true){
-        // alert(sixInch.value +'" inch cake selected');
-        //if(noOfCandles.value <= 0){
-            //Prompt user to check whether they want any candle
-            //alert('Will you like to include any candles? If not, press submit to continue.');
-            //    if(noOfCandles >= 0){
-            window.location = "cakes_cart.html";
+//     if(sixInch.checked == true){
+//         // alert(sixInch.value +'" inch cake selected');
+//         //if(noOfCandles.value <= 0){
+//             //Prompt user to check whether they want any candle
+//             //alert('Will you like to include any candles? If not, press submit to continue.');
+//             //    if(noOfCandles >= 0){
+//             window.location = "cakes_cart.html";
             
-    }else if(eightInch.checked == true){
-        // alert(eightInch.value + '" inch cake selected');
-        //if(noOfCandles.value < 1){
-            //Prompt user to check whether they want any candle
-            //alert('Will you like to include any candles? If not, press submit to continue.');
-            window.location = "cakes_cart.html";
+//     }else if(eightInch.checked == true){
+//         // alert(eightInch.value + '" inch cake selected');
+//         //if(noOfCandles.value < 1){
+//             //Prompt user to check whether they want any candle
+//             //alert('Will you like to include any candles? If not, press submit to continue.');
+//             window.location = "cakes_cart.html";
             
-    }else if(tenInch.checked == true){
-        // alert(tenInch.value + '" inch cake selected');
-        //if(noOfCandles.value < 1){
-            //Prompt user to check whether they want any candle
-            //alert('Will you like to include any candles? If not, press submit to continue.');
-            //}else{
-                window.location = "cakes_cart.html";
-            //}
-    }else{
-        alert('Please indicate the size selection.');
-    } 
+//     }else if(tenInch.checked == true){
+//         // alert(tenInch.value + '" inch cake selected');
+//         //if(noOfCandles.value < 1){
+//             //Prompt user to check whether they want any candle
+//             //alert('Will you like to include any candles? If not, press submit to continue.');
+//             //}else{
+//                 window.location = "cakes_cart.html";
+//             //}
+//     }else{
+//         alert('Please indicate the size selection.');
+//     } 
 
-})
+// })
 // Parsing Form to CHECKOUT CART (END)
 

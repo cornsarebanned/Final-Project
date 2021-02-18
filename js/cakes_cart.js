@@ -4,7 +4,7 @@ function trashCake(cakeId) {
   localStorage.setItem("cakesData",JSON.stringify(storedCakesData));
 
   // For development purpose only, set flag to false, to prevent full reload of all cakes
-  sessionStorage.setItem("canReloadAllCakesAgain","false");
+  // sessionStorage.setItem("canReloadAllCakesAgain","false");
 
   window.location.href = "cakes_cart.html";
 }
@@ -17,7 +17,7 @@ var totalCost = 0.0; // customer will pay this final amount, to pass to cakes_ca
 var gst = 0.0;
 
 // For development purpose only, set flag to false, to prevent full reload of all cakes
-sessionStorage.setItem("canReloadAllCakesAgain","false");
+// sessionStorage.setItem("canReloadAllCakesAgain","false");
 
 sessionStorage.setItem("totalCost",JSON.stringify(totalCost));
 sessionStorage.setItem("gst",JSON.stringify(gst));
