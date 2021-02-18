@@ -98,4 +98,4 @@
   // For cakes_cart trash purpose, set flag to true initially, to load all cakes to localstorage.
   // When customer delete a cake from cakes_cart page, set flag to false
   // to prevent full reload of all cakes in cakes_cart page.
-  sessionStorage.setItem("canReloadAllCakesAgain","true");
+  // sessionStorage.setItem("canReloadAllCakesAgain","true");
