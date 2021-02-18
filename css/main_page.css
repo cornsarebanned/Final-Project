@@ -43,6 +43,8 @@
   #navbarNavAltMarkup > .navbar_adjust{
     position: relative;
     left: 1060px;
+    /* border: 5px solid red; */
+    top:3px;
   }
 
   #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
@@ -105,11 +107,11 @@
     -moz-text-fill-color: transparent;
   }
 
-
   .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
     margin-right: 20px;
   }
-    
+
+/******** MEDIA QUERY (MIN-WIDTH) [START] *********/
   @media screen and (min-width: 992px){
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
@@ -375,6 +377,48 @@
         margin-right: 18px;
     }
   }
+/******** MEDIA QUERY (MIN-WIDTH) [END] ***********/
+
+/******** MEDIA QUERY (MAX-WIDTH) [START] *********/
+
+  @media screen and (max-width: 408px){
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: none;
+    }
+
+    .nav-item1{
+        margin-top:100px;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 0px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 48px;
+        color : gray;
+        margin-bottom: 50px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{
+        color: grey;    
+        font-size: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+    }
+
+    
+    .nav-item6{
+        margin-bottom: 110px;
+    }
+}
 
   @media screen and (max-width: 991px){
 
@@ -397,10 +441,15 @@
         color: grey;    
         font-size: 30px;
         font-family: 'Kumbh Sans', sans-serif;
-        margin-bottom: 45px;
+        margin-bottom: 70px;
         text-transform: uppercase;
     }
+
+    .nav-item6{
+        margin-bottom: 110px;
+    }
 }
+/******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 
 /*-----------------------------------(end)FreeIslandwide css -----------------------------*/
 
