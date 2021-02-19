@@ -1,11 +1,3 @@
-// Global variables
-var globPname;
-var globDesc;
-var globPrice;
-var globImage;
-var globCakeSize;
-var globCandles;
-
 function load() {
     var urlParams = new URLSearchParams(window.location.search);
     var image = "<img src = "+'"'+urlParams.get('img')+'">';
@@ -20,28 +12,50 @@ document.onload = load();
 
 function sentToLocal() {
     var urlParams = new URLSearchParams(window.location.search);
-    globPname = urlParams.get('name');
-    globDesc = urlParams.get('desc');
-    globPrice = urlParams.get('price');
-    globImage = urlParams.get('img');
-    globCakeSize = document.querySelector('[name="cakeSize"]:checked').value;
-    globCandles = document.querySelector('[name="candles"]').value;
+    var pname = urlParams.get('name');
+    var desc = urlParams.get('desc');
+    var price = urlParams.get('price');
+    var image = urlParams.get('img');
+    var cakeSize = document.querySelector('[name="cakeSize"]:checked').value;
+    var candles = document.querySelector('[name="candles"]').value;
         
-    let myCakeProducts = [
-        {
-        productId: 1,
-        productName: globPname,
-        description: globDesc,
-        price: globPrice,
-        cakesQuantity: 1,
-        cakeSize: globCakeSize,
-        candles: globCandles,
-        imageUrl: globImage
-        }];
-  
-    localStorage.setItem("cakesData",JSON.stringify(myCakeProducts));
-}
-  
+    // get existing stored cakesData from local storage if any
+    var storedCakesData =  JSON.parse(localStorage.getItem("cakesData"));
+    var addCakeProduct;
+    var updateId = 0;
+
+    if (storedCakesData!==null) {      // have cakes sitting in cart page, awaiting checkout
+        updateId = storedCakesData.length;
+        
+        addCakeProduct = {
+            productId: updateId,
+            productName: pname,
+            description: desc,
+            price: price,
+            cakesQuantity: 1,
+            cakeSize: cakeSize,
+            candles: candles,
+            imageUrl: image
+            };
+        storedCakesData[updateId] = addCakeProduct;
+        localStorage.setItem("cakesData",JSON.stringify(storedCakesData));
+    } else {                            // empty cart page, no cakes waiting to checkout, 
+        addCakeProduct = [              
+            {
+            productId: 1,               // so add the very 1st cake to cart page
+            productName: pname,
+            description: desc,
+            price: price,
+            cakesQuantity: 1,
+            cakeSize: cakeSize,
+            candles: candles,
+            imageUrl: image
+            }];
+        localStorage.setItem("cakesData",JSON.stringify(addCakeProduct));
+        }
+    }
+
+
 // ======================================================================================
 // Parsing Form to CHECKOUT CART (START)
 // const consumerForm = document.querySelector('.consumer_selection'); 
