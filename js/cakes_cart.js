@@ -52,9 +52,9 @@ if (storedCakesData!==null) {
 
     output +=
     `
-    <div class="container">
+    <div class="container-fluid bg-white" style="width:100%;">
     <form action="#" id="edit-cart${i}" method="post" enctype="multipart/form-data">
-    <div class="row mb-3">
+    <div class="row mb-3" style="width:100%;">
       <div class="col-12 col-sm-6">
         <div class="row">
           <div class="col-sm-6 col-md-3 mb-2 cartSmallScreenImage">
@@ -62,7 +62,7 @@ if (storedCakesData!==null) {
                 alt="${storedCakesData[i].productName}"
                 class="rounded img-fluid d-block mx-auto" style="border:2px solid black;">
           </div>
-          <div class="cart_product_font col-sm-6 col-md-8 mb-2">
+          <div class="cart_product_font col-sm-6 col-md-8 mb-2 text-center">
           ${storedCakesData[i].productName}, ${storedCakesData[i].cakeSize} inch, 
           with ${storedCakesData[i].candles} candle(s)</div>
         </div>
@@ -72,7 +72,7 @@ if (storedCakesData!==null) {
           <div class="cart_productprice_font col-sm-3 text-left mb-2">
             $${selectedCakeSizeCost}  </div> 
           <div class="col-sm-3 text-left mb-2">
-            ${storedCakesData[i].cakesQuantity} cakes =
+            ${storedCakesData[i].cakesQuantity} cake =
           </div>
           <div class="cart_totalproductprice_font col-sm-4 text-left mb-2">$${subTotalCakeCost}</div>
           <div class="col-sm-2 text-right mb-2">

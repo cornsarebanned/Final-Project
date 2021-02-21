@@ -72,7 +72,7 @@ var cakeProducts = [
 ];
 
 document.getElementById("cakes").innerHTML = `
-<div id="container_products" class="container">
+<div id="container_products" class="container-fluid" style="width:100%;">
 <div class="product-container">
 
 ${cakeProducts.map(function (cake) {
@@ -90,8 +90,8 @@ ${cakeProducts.map(function (cake) {
                 </div>
             </div>
         </div>
-        <p class="product-description">${cake.productName}</p>
-        <p class="product-price">From $${cake.price}</p>
+        <p class="product-description" style="margin-bottom: 4px; font-family: 'Montserrat', sans-serif; font-size: 14px;">${cake.productName}</p>
+        <p class="product-price" style="font-family: 'Montserrat', sans-serif;">From $${cake.price}</p>
     </div>
     </a>
 `
