@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+<form th:action="@{/login}" method="POST" role="form" class="login_form">   <!-----------------------------------LOGIN FORM (START)------------------------------------>
+    <div class="md-form form-sm mb-5">
+        <i class="fas prefix"></i>
+        <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
+            Address</label>
+        <input type="text" typeX="email" name="username" nameX="logEmail" id="logEmail" class="form-control form-control-sm validate"
+               placeholder="Enter email">
+    </div>
+
+    <div class="md-form form-sm mb-4">
+        <!--Your Password-->
+        <i class="fas prefix"></i>
+        <label id="email_font" data-error="wrong" data-success="right"
+               for="modalLRInput11">Password</label>
+        <input type="password" name="password" nameX="logPw" id="logPw" class="form-control form-control-sm validate"
+               placeholder="Enter password">
+    </div>
+
+    <div class="text-center mt-2">
+        <!--Login Button-->
+        <button type="submit" class="login_btn btn btn-warning" id="login_submit">
+            Log in</button>
+    </div>
+</form>              <!-----------------------------------LOGIN FORM (END)--------------------------------------->
+
+
+
+</body>
+</html>

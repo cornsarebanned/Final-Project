@@ -1,0 +1,45 @@
+
+
+
+<html>
+
+<div th:fragment="header">
+    <div class="container-fluid container_0">
+        <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+    </div>
+    <!-----------------------------------------------------navigation (start)---------------------------------------------------------->
+    <!----------------------------------------------------------navigation (end)--------------------------------------------------------->
+    <!--<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">-->
+    <div class="container-fluid container_nav1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">
+            <a href="index.html">
+                <img src="/images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
+            </a>
+            <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav navbar_adjust">
+                    <a class="nav-item1 nav-link text-center" href ="cakes.html">Cakes</a>
+                    <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>
+                    <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>
+                    <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+                    <a class="nav-item5 nav-link text-center" href="/register">Register</a>
+                    <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">
+                        <form th:action="@{/logout}" method="post">
+                            <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT"/>
+                        </form>
+                    </li>
+                    <div sec:authorize="isAnonymous()">
+                        <a class="nav-item7 nav-link active text-center"  href="/login">LOGIN</a>
+                        </p>
+                    </div>
+                    </li>
+                    <!--                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+</html>

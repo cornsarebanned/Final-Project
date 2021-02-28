@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+
+    <!--Animate on scroll-->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--load all styles -->
+
+    <!-- stylesheet main_page -->
+    <link rel="stylesheet" type="text/css" href="css/cakes_cart.css" media="screen" />
+
+    <title>SHOPPING CART</title>
+
+</head>
+
+<body>
+
+<!-- <header> -->
+<div th:insert="fragments/h.html :: header"></div>
+
+<!-------------------------------------------navigation (end)---------------------------------------------->
+
+<!--------------------------------------------------(Start)title"SHOPPING CART"-------------------------------------------->
+<div class="container container_shopcarttitle bg-white text-center py-0 my-5">
+    <h3>SHOPPING CART</h3>
+</div>
+<!---------------------------------------------------(End)title"SHOPPING CART"--------------------------------------------->
+
+<!----------------------------------------------------------(Start)FORM---------------------------------------------------->
+<div class="container-fluid bg-white py-2 my-5">
+    <div id="cart"></div>
+
+    <!------------------------------------------------------------(End)FORM---------------------------------------------------->
+
+    <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
+    <div class="row mt-5">
+        <label class="col-sm-3 text-center control-label"><strong>Cart Total</strong></label>
+        <div class="col-md-5 offset-md-4 col-sm-7 offset-sm-2">
+            <table class="table table-totals">
+                <tbody>
+                <tr>
+                    <td class="text-left"><strong>Sub-Total:</strong></td>
+                    <td class="price1 text-right"><div id="overallSubTotalCost"></div></td>
+                    <td class="text-right"></td>
+                </tr>
+                <tr>
+                    <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>
+                    <td class="price1 text-right" id="gstHere"></td>
+                    <td class="text-right"></td>
+                </tr>
+                <tr>
+                    <td class="text-left"><strong>Total:</strong></td>
+                    <td class="price1 text-right"><div id="overallTotalCost"></div></td>
+                    <td class="text-right"></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td class="text-center"><a href="/cakes_checkout" class="checkout_btn btn btn-warning" id="noMoneyNoHoney">Checkout</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="/cakes" class="text-primary continue-shopping">Or Continue
+                        Shopping</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--End of container div (FORM)-->
+<!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
+
+<!--------------------------------------- Ending credits starts here --------------------------------------->
+
+<div th:insert="fragments/footer.html :: footer"></div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!---------- Javascript aos --------->
+<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--<script>-->
+<!--    AOS.init({-->
+<!--        offset: 200,-->
+<!--        duration: 1200-->
+<!--    });-->
+<!--</script>-->
+
+<!---------- Javascript --------->
+<script src="js/cakes_cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--Gooogle fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+
+  <!--Animate on scroll-->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+  <!--Font Awesome CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--load all styles -->
+
+  <!-- stylesheet main_page -->
+  <link rel="stylesheet" type="text/css" href="css/cake_template.css" media="screen" />
+
+  <title>SELECTION</title>
+
+</head>
+
+<body>
+
+<!-- <header> -->
+<div th:insert="fragments/h.html :: header"></div>
+<!---------------------------------------------navigation (start)------------------------------------------------>
+
+<!-------------------------------------------navigation (end)---------------------------------------------->
+
+
+<!-------------------------------- "Selection" text starts here ------------------------------>
+<div class="container container_selection mt-5 bg-white">
+  <div id="container_selection mb-3">
+    <h3 id="your_selection_font">Your Selection</h3>
+  </div>
+</div>
+<!---------------------------------"Selection" text ends here -------------------------------->
+
+<!------------------------------------(Start)Cards-------------------------------------------->
+<div class="container container_productname bg-white mt-3 mb-3">
+  <div id="productName"></div>
+</div>
+
+<div class="container product_cards_desc bg-white">
+  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_img">
+    <div class="object_fit" style="border:2px solid black;">
+      <div id="productImg" class="img-fluid bg-white m-3"></div>
+    </div>
+  </div>
+
+  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col_desc">
+    <div class="mb-2" style="font-weight: bold; font-size:25px;">Description:</div>
+    <div id="productDesc" class="mb-3"></div>
+    <div id="productPrice" class="mb-3" style="font-size: 28px;"></div>
+
+    <!--Selection-->
+    <p class style="font-size:20px; font-weight: bold;" >Size Selection:</p>
+
+    <form class="consumer_selection" action="cakes_cart" method="GET" name="add-to-cart">  <!--Start of form-->
+      <!--1st option-->
+      <div class="consumer_radioBtn">
+        <div class="form-check my-3 ">
+          <input type="radio" id="six_inch" name="cakeSize" value= '6'  unchecked>  <!--name for 3 radio buttons need to be the same in order for no double selection-->
+          <label class='form-check-label'>6" inch</label>
+        </div>
+        <!--2nd option-->
+        <div class="form-check my-3">
+          <input type="radio" id="eight_inch" name="cakeSize" value= '8' unchecked>  <!--The value is different but the name remains the same because they are both options for the first qns-->
+          <label class='form-check-label'>8" inch</label>
+        </div>
+        <!--3rd option-->
+        <div class="form-check mb-3">
+          <input type="radio" id="ten_inch" name="cakeSize" value= '10' unchecked>  <!--The value is different but the name remains the same because they are both options for the first qns-->
+          <label class='form-check-label'>10" inch</label>
+        </div>
+      </div>
+      <!-- </form> -->
+
+      <!--Candles-->
+
+      <p class style="font-size:20px; font-weight: bold;" >Number of Candles:</p>
+      <!-- <form class="Candle:"> -->
+      <!--1st option-->
+      <div class="form-check mb-3">
+        <input type="number" id="candlesQuantity" name="candles" min="0" max="10" value='0' placeholder="0">
+      </div>
+      <!-- </form> -->
+
+      <div class='text-left my-5'>
+        <button type="submit" class="btn btn-success" onclick="sentToLocal()">Submit</button>
+      </div>
+    </form>                     <!--End of form-->
+
+  </div>
+
+</div>
+
+<!--------------------------------------(End)Cards-------------------------------------------->
+<div th:insert="fragments/footer.html :: footer"></div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!---------- Javascript aos --------->
+<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--<script>-->
+<!--    AOS.init({-->
+<!--        offset: 200,-->
+<!--        duration: 1200-->
+<!--    });-->
+<!--</script>-->
+
+<!---------- Javascript --------->
+<script src="/js/cake_template.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--load all styles -->
+    <!-- stylesheet main_page -->
+    <link rel="stylesheet" type="text/css" href="css/register.css" media="screen" />
+
+    <!--title-->
+    <title>REGISTER</title>
+</head>
+
+<body>
+<div th:insert="fragments/h.html :: header"></div>
+
+
+<div class="container-fluid container_registertitle bg-white text-center">
+    <h3>SIGN UP</h3>
+</div>
+<!-----------------------------------------------(End)title"LOGIN"-------------------------------------------->
+
+<div class="container-fluid bg-white modal_registration_1" style="overflow:visible;" >
+
+    <!-- image left -->
+    <div class="row">
+        <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image_registration" >
+            <img src="images/cakes_images/pexels-karolina-grabowska-4040691-cropped.jpg" alt="cake image for login form">
+        </div>
+
+        <!-- form right -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 right_form_register " >
+            <!-- form start -->
+            <form th:action="@{/user/new}" th:object="${user}" method="POST" role="form" class="signup_form">
+
+                <div class="nameinfull_reg signUP" id="signUP1">
+                    <i class="fas prefix"></i>
+                    <label id="email1_font" data-error="wrong" data-success="right">Name (in
+                        full)</label>
+                    <input type="text" th:field="*{username}" name="username" id="regName"
+                           class="form-control form-control-sm validate" placeholder="Enter name (in full)" />
+                    <p id="error_msg">Please enter a valid name (in full)</p>
+                </div>
+
+                <div class="email_address_reg signUP" id="signUP2">
+                    <i class="fas prefix"></i>
+                    <label id="email2_font" data-error="wrong" data-success="right" >Email
+                        address</label>
+                    <input type="email" th:field="*{email}" name="username" id="regEmail"
+                           class="form-control form-control-sm validate" placeholder="Enter email address ">
+                    <p id="error_msg1">Email must be a valid address, e.g. me@mydomain.com</p>
+                </div>
+
+                <!--PASSWORD/PASSWORD AGAIN-->
+                <div class="form-row signup_form_password signup_form">
+                    <div class=" col-md-6 password_reg signUP" id="signUP3">
+                        <i class="fas prefix"></i>
+                        <label id="email3_font" data-error="wrong" data-success="right">Your
+                            password <a id="tooltipFont" href="#" data-tool-tip="1. Your password must be between 10 and 20 characters. 2. Your password must contain at least one uppercase, lowercase letters and number digits.
+                                   3. Special characters allowed: ! @ # $ % & * - _ ?">
+                                <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
+                        <input type="password" th:field="*{password}" name="password" id="regPw"
+                               class="form-control form-control-sm validate" placeholder="Enter password">
+                        <i class="fa fa-eye fa-md" id="toggleEye"></i>
+                        <p id="error_msg2">Password invalid. Please kindly refer to "?" icon for password requirements.</p>
+                        <!-- <input type="hidden" th:value="user" th:attr="name='userType'" /> -->
+                    </div>
+
+                    <div class=" col-md-6 password_again_reg signUP" id="signUP4">
+                        <i class="fas prefix"></i>
+                        <label id="email4_font" data-error="wrong" data-success="right">Repeat
+                            password</label>
+                        <input type="password" th:field="*{retype_password}" name="retype_password" id="regPwAgain"
+                               class="form-control form-control-sm validate" placeholder="Enter password again">
+                        <i class="fa fa-eye fa-md" id="toggleEye1"></i>
+                        <p id="error_msg3">Passwords do not match, please enter your password again</p>
+                        <input type="hidden" th:value="user" th:attr="name='userType'" />
+                    </div>
+                </div>
+
+                <!--HANDPHONE-->
+                <div class="md-form form-sm signup_form_handphone signUP" id="signUP5">
+                    <i class="fas prefix"></i>
+                    <label id="email5_font" data-error="wrong" data-success="right">Handphone
+                        no.</label>
+                    <input type="number" th:field="*{telephone}" name="telephone" id="regHP" class="form-control form-control-sm validate"
+                           placeholder="Enter handphone no. ">
+                    <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits; Starts from 8 or 9)
+                    </p>
+
+                </div>
+
+                <!--HOME ADDRESS-->
+                <div class="md-form form-sm signup_form_address signUP" id="signUP6">
+                    <i class="fas prefix"></i>
+                    <label id="email6_font" class="email_font6" data-error="wrong" data-success="right">Home Address (street)</label>
+                    <input type="text" th:field="*{address}" name="address" id="regHomeAdd" class="form-control form-control-sm validate"
+                           placeholder="Enter home address (street) ">
+                    <p id="error_msg5">Please enter a valid address (street)</p> <!--error msg  -->
+                </div>
+
+
+                <!--CITY/UNIT/POSTAL CODE-->
+                <div class="form-row signup_form signup_form_address_2">
+
+                    <div class="md-form form-sm col-md-6 signup_form_unit signUP" id="signUP7">
+                        <i class="fas prefix"></i>
+                        <label id="email7_font" data-error="wrong" data-success="right">Unit</label>
+                        <input type="text" th:field="*{unit}" name="unit" id="regUnit" class="form-control form-control-sm validate"
+                               placeholder="Unit no. ">
+                        <p id="error_msg7">Please enter your unit no.</p> <!--error msg  -->
+                    </div>
+
+                    <div class="md-form form-sm mb-3 col-md-6 signup_form_postal signUP" id="signUP8">
+                        <i class="fas prefix"></i>
+                        <label id="email8_font" data-error="wrong" data-success="right">Postal Code</label>
+                        <input type="number" th:field="*{postal}" name="postal" min="0" id="regPostal" class="form-control form-control-sm validate"
+                               placeholder="Postal code">
+                        <p id="error_msg8">Please enter a valid postal code</p> <!--error msg  -->
+                    </div>
+
+                </div>
+
+                <div class="homepage_link text-left mt-3">
+                    <a href="/">Go back to Home Page</a> <br>
+                </div>
+
+                <!-- Button [START] -->
+                <div class="text-center form-sm">
+                    <!--Login Button-->
+                    <input type="submit" value="Sign up" class="signup_btn btn btn-warning" id="signup_submit" />
+                </div>
+                <!-- Button [END] -->
+
+            </form>
+
+        </div> <!-- Col [END] -->
+    </div> <!-- Row [END] -->
+</div> <!-- Container-fluid [END] -->
+<!-----------------------------------------MODAL LOGIN FORM (START)----------------------------------------->
+
+
+<!--<h1>New User</h1>-->
+<!--<form th:action="@{/user/new}" th:object="${user}" method="POST">-->
+<!--    <div><label> Name: <input type="text" th:field="*{username}" name="username"/> </label></div>-->
+<!--    <div><label> Email: <input type="text" th:field="*{email}" name="email"/> </label></div>-->
+<!--    <div><label> Password: <input type="password" th:field="*{password}" name="password"/> </label></div>-->
+<!--    <div><label> Retype Password: <input type="password" name="retype_password"/> </label></div>-->
+<!--    <input type="hidden" th:value="user" th:attr="name='userType'"/>-->
+
+<!--    <div><input type="submit" value="New User"/></div>-->
+<!--</form>-->
+
+<!--<div>-->
+<!--    <a href="/every-users">Go back to every users</a> <br>-->
+<!--</div>-->
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"-->
+<!--      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">-->
+
+<!--<head>-->
+<!--    &lt;!&ndash;CDN&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div th:insert="fragments/cdn"></div>&ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Bootstrap CSS &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<!--    &lt;!&ndash;Gooogle fonts&ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">-->
+
+<!--    &lt;!&ndash;Font Awesome CDN&ndash;&gt;-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+<!--    &lt;!&ndash;load all styles &ndash;&gt;-->
+<!--    &lt;!&ndash; stylesheet main_page &ndash;&gt;-->
+<!--    <link rel="stylesheet" type="text/css" href="css/register.css" media="screen" />-->
+
+<!--    &lt;!&ndash;title&ndash;&gt;-->
+<!--    <title>REGISTER</title>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--&lt;!&ndash; <header> &ndash;&gt;-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Free Delivery (starts) here &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container-fluid container_0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Free Delivery (ends) &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;navbar&ndash;&gt;-->
+<!--<div th:insert="fragments/h.html :: header"></div>-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;navigation (start)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container-fluid container_nav1">&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="index.html">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"&ndash;&gt;-->
+<!--&lt;!&ndash;                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        </button>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="navbar-nav navbar_adjust">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="nav-item1 nav-link text-center" href="cakes.html">Cakes</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                    href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="nav-item5 nav-link text-center" href="/register">Register</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <form th:action="@{/logout}" method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    </form>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                <div sec:authorize="isAnonymous()">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-item7 nav-link active text-center" href="/login">LOGIN</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash;<a class="nav-item6 nav-link active text-center" href="/login">Login</a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;navigation (end)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Bryan's Registration Form (start)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--&lt;!&ndash; <h1>New User</h1>-->
+<!--<form th:action="@{/user/new}" th:object="${user}" method="POST">-->
+<!--    <div><label> Name: <input type="text" th:field="*{username}" name="username" /> </label></div>-->
+<!--    <div><label> Email: <input type="text" th:field="*{email}" name="email" /> </label></div>-->
+<!--    <div><label> Password: <input type="password" th:field="*{password}" name="password" /> </label></div>-->
+<!--    <div><label> Retype Password: <input type="password" th:field="*{password}" name="retype_password" /> </label>-->
+<!--    </div>-->
+<!--    <div><label> Retype Password: <input type="password" name="retype_password" /> </label></div>-->
+<!--    <input type="hidden" th:value="user" th:attr="name='userType'" />-->
+
+<!--    <div><input type="submit" value="New User" /></div>-->
+<!--</form>-->
+
+<!--<div>-->
+<!--    <a href="/every-users">Go back to every users</a> <br>-->
+<!--</div> &ndash;&gt;-->
+
+
+<!-------------------------------------Bryan's Registration Form (END)-------------------------------------->
+
+<!-------------------------------------------(Start)title"LOGIN"-------------------------------------------->
+<!--<div class="container-fluid container_registertitle bg-white text-center">-->
+<!--    <h3>SIGN UP</h3>-->
+<!--</div>-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;(End)title"LOGIN"&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;MODAL LOGIN FORM (START)-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<div class="container-fluid bg-white modal_registration_1" >-->
+
+<!--    &lt;!&ndash; image left &ndash;&gt;-->
+<!--    <div class="row">-->
+<!--        <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image_registration">-->
+<!--            <img src="images/cakes_images/modal-background2.jpg" alt="cake image for login form">-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; form right &ndash;&gt;-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 right_form_register">-->
+<!--            &lt;!&ndash; form start &ndash;&gt;-->
+<!--            <form th:action="@{/user/new}" th:object="${user}" method="POST" role="form" class="signup_form">-->
+
+<!--                <div class="nameinfull_reg signUP" id="signUP1">-->
+<!--                    <i class="fas prefix"></i>-->
+<!--                    <label id="email1_font" data-error="wrong" data-success="right">Name (in-->
+<!--                        full)</label>-->
+<!--                    <input type="text" th:field="*{username}" name="username" id="regName"-->
+<!--                           class="form-control form-control-sm validate" placeholder="Enter name (in full)" />-->
+<!--                    <p id="error_msg">Please enter a valid name (in full)</p>-->
+<!--                </div>-->
+
+<!--                <div class="email_address_reg signUP" id="signUP2">-->
+<!--                    <i class="fas prefix"></i>-->
+<!--                    <label id="email2_font" data-error="wrong" data-success="right" >Email-->
+<!--                        address</label>-->
+<!--                    <input type="email" th:field="*{email}" name="username" id="regEmail"-->
+<!--                           class="form-control form-control-sm validate" placeholder="Enter email address ">-->
+<!--                    <p id="error_msg1">Email must be a valid address, e.g. me@mydomain.com</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash;PASSWORD/PASSWORD AGAIN&ndash;&gt;-->
+<!--                <div class="form-row signup_form_password signup_form">-->
+<!--                    <div class=" col-md-6 password_reg signUP" id="signUP3">-->
+<!--                        <i class="fas prefix"></i>-->
+<!--                        <label id="email3_font" data-error="wrong" data-success="right">Your-->
+<!--                            password <a id="tooltipFont" href="#" data-tool-tip="1. Your password must be between 10 and 20 characters. 2. Your password must contain at least one uppercase, lowercase letters and number digits.-->
+<!--                                   3. Special characters allowed: ! @ # $ % & * - _ ?">-->
+<!--                                <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>-->
+<!--                        <input type="password" th:field="*{password}" name="password" id="regPw"-->
+<!--                               class="form-control form-control-sm validate" placeholder="Enter password">-->
+<!--                        <i class="fa fa-eye fa-md" id="toggleEye"></i>-->
+<!--                        <p id="error_msg2">Password invalid. Please kindly refer to "?" icon for password requirements.</p>-->
+<!--                        &lt;!&ndash; <input type="hidden" th:value="user" th:attr="name='userType'" /> &ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                    <div class=" col-md-6 password_again_reg signUP" id="signUP4">-->
+<!--                        <i class="fas prefix"></i>-->
+<!--                        <label id="email4_font" data-error="wrong" data-success="right">Repeat-->
+<!--                            password</label>-->
+<!--                        <input type="password" th:field="*{retype_password}" name="retype_password" id="regPwAgain"-->
+<!--                               class="form-control form-control-sm validate" placeholder="Enter password again">-->
+<!--                        <i class="fa fa-eye fa-md" id="toggleEye1"></i>-->
+<!--                        <p id="error_msg3">Passwords do not match, please enter your password again</p>-->
+<!--                        &lt;!&ndash; <input type="hidden" th:value="user" th:attr="name='userType'" /> &ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash;HANDPHONE&ndash;&gt;-->
+<!--                <div class="md-form form-sm signup_form_handphone signUP" id="signUP5">-->
+<!--                    <i class="fas prefix"></i>-->
+<!--                    <label id="email5_font" data-error="wrong" data-success="right">Handphone-->
+<!--                        no.</label>-->
+<!--                    <input type="number" th:field="*{telephone}" name="telephone" id="regHP" class="form-control form-control-sm validate"-->
+<!--                           placeholder="Enter handphone no. ">-->
+<!--                    <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits; Starts from 8 or 9)-->
+<!--                    </p>-->
+
+<!--                </div>-->
+
+<!--                <div class="homepage_link text-left">-->
+<!--                    <a href="index.html">Go back to Home Page</a> <br>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Button [START] &ndash;&gt;-->
+<!--                <div class="text-center form-sm">-->
+<!--                    &lt;!&ndash;Login Button&ndash;&gt;-->
+<!--                    <input type="submit" value="Sign up" class="signup_btn btn btn-warning" id="signup_submit" />-->
+<!--                </div>-->
+<!--                &lt;!&ndash; Button [END] &ndash;&gt;-->
+
+<!--            </form>-->
+
+<!--        </div> &lt;!&ndash; Col [END] &ndash;&gt;-->
+<!--    </div> &lt;!&ndash; Row [END] &ndash;&gt;-->
+<!--</div> &lt;!&ndash; Container-fluid [END] &ndash;&gt;-->
+<!------------------------------MODAL LOGIN FORM (END)------------------------------->
+
+
+<!----------------------------- Ending credits starts here -------------------------->
+<!--<div th:insert="fragments/footer.html :: footer"></div>-->
+<!--&lt;!&ndash;<div class="container-fluid footer-container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <footer class="border-top footer-container-1">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="row pt-5 pb-2 footer-container-row adjust-footer">&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;Adjust padding&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div id="content_box" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="logo1" src="images/logo1.png" alt="footer cake logo">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p id="f2020_2021">&copy; 2020-2021</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="listed_item1">WRITE TO US</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                <hr>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="list-unstyled text-small">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="writetous_font_footer"&ndash;&gt;-->
+<!--&lt;!&ndash;                           href="mailto:appeaseofcake@gmail.com">appeaseofcake@gmail.com</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="writetous_font_footer1" href="tel:+6598336093">(HP)+65 98336093</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="writetous_font_footer2" href="contact_us.html">Contact us</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="writetous_font_footer2 " href="about_us.html">Who we are</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="listed_item2">LOCATE US</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                <hr>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h6 id="location_font_footer">Glocal Connect Village</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  style="color:white">43 Tampines Ave 1, <br>Singapore 529762</a></p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,&ndash;&gt;-->
+<!--&lt;!&ndash;                    <br> By Appointment Only&ndash;&gt;-->
+<!--&lt;!&ndash;                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="listed_item3">FOLLOW US</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                <hr>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="list-unstyled ">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="facebook" href="https://www.facebook.com/"><i&ndash;&gt;-->
+<!--&lt;!&ndash;                            class="fa fa-facebook fa mb-2"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa mb-2"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="instagram" href="https://www.instagram.com/"><i&ndash;&gt;-->
+<!--&lt;!&ndash;                            class="fa fa-instagram fa mb-2"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i&ndash;&gt;-->
+<!--&lt;!&ndash;                            class="fa fa-linkedin fa"></i></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </footer>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Ending credits ends here &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Button (Back to top) starts here &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container-fluid container_backtotop">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-12">&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; <a href="#free_deliv_font"><p>Back to top</p></a> &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <button onclick="window.location.href='#free_deliv_font'" type="button"&ndash;&gt;-->
+<!--&lt;!&ndash;                    class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Button (Back to top) ends here -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; copyright footer starts here -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container-fluid container_copyright">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div id="copyright" class="col-12">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; copyright footer ends here &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!---------- Javascript aos --------->
+<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--<script>-->
+<!--    AOS.init({-->
+<!--        offset: 200,-->
+<!--        duration: 1200-->
+<!--    });-->
+<!--</script>-->
+
+<!---------- Javascript --------->
+
+
+
+<div th:insert="fragments/footer.html :: footer"></div>
+<script src="js/register.js"></script>
+</body>
+</html>

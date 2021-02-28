@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="header">
+    <div class="container-fluid container_0" style="height:23px; overflow-y: hidden;">
+        <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+    </div>
+    <!-----------------------------------------------------navigation (start)---------------------------------------------------------->
+    <!----------------------------------------------------------navigation (end)--------------------------------------------------------->
+    <!--<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">-->
+    <div class="container-fluid container_nav1 bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 26px; overflow-y: hidden;">
+            <a href="index">
+                <img src="/images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
+            </a>
+            <a class="navbar-brand font_appease" href="index">appeaseofcake</a>
+            <button class="navbar-toggler ml-auto"   type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+                <div class="navbar-nav navbar_adjust">
+                    <a class="nav-item1 nav-link text-center" href ="/cakes">Cakes</a>
+                    <a class="nav-item2 nav-link text-center" href="about_us">About</a>
+                    <a class="nav-item3 nav-link text-center" href="contact_us">Contact</a>
+                    <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+                    <a class="nav-item5 nav-link text-center" href="register">Register</a>
+                    <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">
+                        <form th:action="@{/logout}" method="post">
+                            <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT"/>
+                        </form>
+                    </li>
+                    <div sec:authorize="isAnonymous()">
+                        <a class="nav-item7 nav-link active text-center"  href="/login">LOGIN</a>
+                        </p>
+                    </div>
+                    </li>
+                    <!--                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <!-- stylesheet main_page -->
+
+  <link rel="stylesheet" type="text/css" href="css/cakes.css" media="screen" />
+
+
+
+  <!--title-->
+  <title>CAKES</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--Gooogle fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+
+  <!--Animate on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Font Awesome CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--load all styles -->
+  <link rel="stylesheet" type="text/css" href="css/main_page.css" media="screen" />
+
+</head>
+
+<body>
+
+<!--header-->
+<div th:insert="fragments/h.html :: header"></div>
+
+<!-- <header> -->
+<!---------------------------------------- Free Delivery (starts) here ------------------------------------------>
+<!--    <div class="container-fluid container_0">-->
+<!--        <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>-->
+<!--    </div>-->
+<!------------------------------------------- Free Delivery (ends) ---------------------------------------------->
+<!--navbar-->
+<!---------------------------------------------navigation (start)------------------------------------------------>
+<!--    <div class="container-fluid container_nav1">-->
+<!--        <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">-->
+<!--            <a href="index.html">-->
+<!--                <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">-->
+<!--            </a>-->
+<!--            <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>-->
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"-->
+<!--                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--                <div class="navbar-nav navbar_adjust">-->
+<!--                    <a class="nav-item1 nav-link text-center" href="cakes.html">Cakes</a>-->
+<!--                    <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>-->
+<!--                    <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>-->
+<!--                    <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon"-->
+<!--                            href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>-->
+<!--                    <a class="nav-item5 nav-link text-center" href="/register">Register</a>-->
+<!--                    <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">-->
+<!--                        <form th:action="@{/logout}" method="post">-->
+<!--                            <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT" />-->
+<!--                        </form>-->
+<!--                    </li>-->
+
+
+<!--                    <div sec:authorize="isAnonymous()">-->
+<!--                        <a class="nav-item7 nav-link active text-center" href="/login">LOGIN</a>-->
+<!--                        </p>-->
+<!--                    </div>-->
+
+<!--                    </li>-->
+<!--                    &lt;!&ndash;<a class="nav-item6 nav-link active text-center" href="/login">Login</a>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!-------------------------------------------navigation (end)---------------------------------------------->
+
+<!--------------------------------------------------(Start)title"CAKE"----------------------------------------------------->
+<div class="container-fluid container_caketitle text-center bg-white pt-3">
+  <h3>CAKES</h3>
+</div>
+<!---------------------------------------------------(End)title"CAKE"------------------------------------------------------->
+<!--------------------------------------------------(Start)cards(json)------------------------------------------------------>
+<div class="container-fluid container_caketitle1 bg-white">
+  <div id="cakes"></div>
+</div>
+<!----------------------------------------------------(End)cards(json)------------------------------------------------------->
+
+<!--------------------------------------- Ending credits starts here --------------------------------------->
+<!--footer-->
+<div th:insert="fragments/footer :: footer"></div>
+<!--<div class="container-fluid footer-container mt-5">-->
+<!--  <footer class="border-top footer-container-1">-->
+<!--      <div class="row pt-5 pb-2 footer-container-row adjust-footer">-->
+<!--          &lt;!&ndash;Adjust padding&ndash;&gt;-->
+
+<!--          <div id="content_box" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">-->
+<!--              <img class="logo1" src="images/logo1.png" alt="footer cake logo">-->
+<!--              <p id="f2020_2021">&copy; 2020-2021</p>-->
+<!--          </div>-->
+
+<!--          <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">-->
+<!--              <h5 class="listed_item1">WRITE TO US</h5>-->
+<!--              <hr>-->
+<!--              <ul class="list-unstyled text-small">-->
+<!--                  <li><a class="writetous_font_footer"-->
+<!--                          href="mailto:appeaseofcake@gmail.com">appeaseofcake@gmail.com</a></li>-->
+<!--                  <li><a class="writetous_font_footer1" href="tel:+6598336093">(HP)+65 98336093</a></li>-->
+<!--                  <li><a class="writetous_font_footer2" href="contact_us.html">Contact us</a></li>-->
+<!--                  <li><a class="writetous_font_footer2 " href="about_us.html">Who we are</a></li>-->
+<!--              </ul>-->
+<!--          </div>-->
+
+<!--          <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">-->
+<!--              <h5 class="listed_item2">LOCATE US</h5>-->
+<!--              <hr>-->
+<!--              <h6 id="location_font_footer">Glocal Connect Village</h6>-->
+<!--              <p class="address_font_footer"><a href="https://goo.gl/maps/WuzjB8UoCm2fUPEf7"-->
+<!--                      style="color:white">43 Tampines Ave 1, <br>Singapore 529762</p></a>-->
+
+<!--              <p id="op_hours_footer">Opens from <strong>10 - 6pm Daily</strong> ,-->
+<!--                  <br> By Appointment Only-->
+<!--              </p>-->
+<!--          </div>-->
+
+<!--          <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mb-3">-->
+<!--              <h5 class="listed_item3">FOLLOW US</h5>-->
+<!--              <hr>-->
+<!--              <ul class="list-unstyled ">-->
+<!--                  <li><a class="facebook" href="https://www.facebook.com/"><i-->
+<!--                              class="fa fa-facebook fa mb-2"></i></a></li>-->
+<!--                  <li><a class="twitter" href="https://twitter.com/home"><i class="fa fa-twitter fa mb-2"></i></a>-->
+<!--                  </li>-->
+<!--                  <li><a class="instagram" href="https://www.instagram.com/"><i-->
+<!--                              class="fa fa-instagram fa mb-2"></i></a></li>-->
+<!--                  <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i-->
+<!--                              class="fa fa-linkedin fa"></i></a></li>-->
+<!--              </ul>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--  </footer>-->
+<!--</div>-->
+<!-------------------------------- Ending credits ends here -------------------------------->
+<!--Back to top-->
+<!-------------------------------- Button (Back to top) starts here ---------------------------->
+<!--<div class="container-fluid container_backtotop">-->
+<!--  <div class="row">-->
+<!--      <div class="col-12">-->
+<!--          &lt;!&ndash; <a href="#free_deliv_font"><p>Back to top</p></a> &ndash;&gt;-->
+<!--          <button onclick="window.location.href='#free_deliv_font'" type="button"-->
+<!--              class="btn btn-outline-secondary btn-sm rounded-0 top_button">Back to top</button>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!-------------------------------- Button (Back to top) ends here ------------------------------->
+<!--copyright-->
+<!-------------------------------- copyright footer starts here --------------------------------->
+<!--<div class="container-fluid container_copyright">-->
+<!--  <div id="copyright" class="col-12">-->
+<!--      <p id="copyright_appeaseofcake">© 2020 APPEASEOFCAKE. ALL RIGHTS RESERVED.</p>-->
+<!--  </div>-->
+<!--</div>-->
+<!---------------------------- copyright footer ends here ---------------------------------------->
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!---------- Javascript aos --------->
+<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--<script>-->
+<!--    AOS.init({-->
+<!--        offset: 200,-->
+<!--        duration: 1200-->
+<!--    });-->
+<!--</script>-->
+
+<!---------- Javascript --------->
+<script src="js/cakes.js"></script>
+</body>
+
+</html>
